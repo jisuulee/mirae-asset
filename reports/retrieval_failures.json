@@ -1,0 +1,29 @@
+{
+  "benchmark_question_count": 42,
+  "cold_failures": [],
+  "warm_failures": [],
+  "failure_count": 0,
+  "interpretation": "No SQL runner failures or gold misses occurred. This benchmark supplies curated structured query parameters and does not measure natural-language parsing.",
+  "latent_risks_not_scored_as_failures": [
+    {
+      "category": "company_alias",
+      "detail": "Company matching only removes whitespace and case-folds; historical names and aliases are not resolved."
+    },
+    {
+      "category": "null_source_value",
+      "detail": "Raw '-' becomes normalized NULL, so numeric/date predicates intentionally cannot match those contracts."
+    },
+    {
+      "category": "correction_scope",
+      "detail": "Only explicit/high links are searchable; inferred, ambiguous, unresolved and out-of-corpus predecessors remain unlinked."
+    },
+    {
+      "category": "natural_language_parsing",
+      "detail": "Question text is documentation; the runner executes the reviewed structured query object. Agent intent parsing remains unevaluated."
+    },
+    {
+      "category": "metric_semantics",
+      "detail": "Recall@k is question-level relevant-hit recall, matching the original evaluator, not set coverage of every receipt in broad multi-result questions."
+    }
+  ]
+}

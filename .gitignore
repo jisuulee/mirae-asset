@@ -216,3 +216,30 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Disclosure Agent local datasets and generated database state
+data/
+artifacts/
+role2_final/
+analysis_results/
+*.sqlite
+*.sqlite3
+*.db
+pgdata/
+postgres-data/
+
+# Local-only analysis scripts and scratch outputs outside Retrieval V1
+analyze_disclosures.py
+phase2_analysis.py
+refine_correction_chains.py
+refine_questions.py
+
+# OS/editor/temp files
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+*.tmp
+*.temp
+*.bak
+*~
