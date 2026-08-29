@@ -19,6 +19,11 @@ ALTER TABLE document_sections
       to_tsvector('simple', coalesce(title_normalized,'') || ' ' || coalesce(section_path,'') || ' ' || coalesce(body_text,''))
     ) STORED;
 
+-- Recreating search_tsv drops every index that depends on the old column.
+-- Keep this migration self-contained and safe to rerun from the loader.
+CREATE INDEX IF NOT EXISTS document_sections_search_idx
+    ON document_sections USING gin (search_tsv);
+
 CREATE INDEX IF NOT EXISTS document_sections_search_trgm_idx
     ON document_sections USING gin (search_text_normalized gin_trgm_ops);
 CREATE INDEX IF NOT EXISTS document_sections_title_trgm_idx

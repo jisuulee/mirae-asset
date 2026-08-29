@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parents[2]
 MIGRATION = ROOT / "src" / "db" / "migrations" / "002_periodic_retrieval_tables.sql"
 TABLE_MARKER = re.compile(r"\[TABLE:\s*[^\]]+\]")
 KEYWORD_MIGRATION = ROOT / "src" / "db" / "migrations" / "003_keyword_search.sql"
+FULL_INDEX_MIGRATION = ROOT / "src" / "db" / "migrations" / "004_full_keyword_indexes.sql"
+PERIODIC_MIGRATIONS = (MIGRATION, KEYWORD_MIGRATION, FULL_INDEX_MIGRATION)
 
 
 def _json(value: Any) -> str:
@@ -116,8 +118,8 @@ def load_periodic(
     sections, policy = classify_sections(raw_sections)
 
     with connect(database_url) as connection:
-        connection.execute(MIGRATION.read_text(encoding="utf-8"))
-        connection.execute(KEYWORD_MIGRATION.read_text(encoding="utf-8"))
+        for migration in PERIODIC_MIGRATIONS:
+            connection.execute(migration.read_text(encoding="utf-8"))
         disclosure_count = connection.execute(
             "SELECT count(*) FROM disclosures WHERE receipt_no=ANY(%s)", (list(receipts),)
         ).fetchone()[0]

@@ -6,7 +6,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.db.load_document_sections import classify_sections, infer_file_role, load_pilot
+from src.db.load_document_sections import (
+    FULL_INDEX_MIGRATION,
+    KEYWORD_MIGRATION,
+    PERIODIC_MIGRATIONS,
+    classify_sections,
+    infer_file_role,
+    load_pilot,
+)
 from src.db.load_postgres import connect
 from src.rag.table_projection import SEARCHABLE_TEXT_LIMIT, project_table
 
@@ -15,7 +22,25 @@ def section(key: str, body: str = "", tables: list[str] | None = None, parent: s
     return {"section_key": key, "body_text": body, "table_ids": tables or [], "parent_section_key": parent}
 
 
+
 class SectionPolicyTest(unittest.TestCase):
+    def test_keyword_migration_recreates_fts_index_after_search_vector(self) -> None:
+        sql = KEYWORD_MIGRATION.read_text(encoding="utf-8")
+        drop_position = sql.index("DROP COLUMN IF EXISTS search_tsv")
+        column_position = sql.index("ADD COLUMN search_tsv")
+        index_position = sql.index("CREATE INDEX IF NOT EXISTS document_sections_search_idx")
+        self.assertLess(drop_position, column_position)
+        self.assertLess(column_position, index_position)
+
+    def test_full_index_migration_is_available_to_loader(self) -> None:
+        sql = FULL_INDEX_MIGRATION.read_text(encoding="utf-8")
+        self.assertIn("document_sections_search_idx", sql)
+        self.assertIn("document_sections_loader_namespace_idx", sql)
+        self.assertEqual(
+            ["002_periodic_retrieval_tables.sql", "003_keyword_search.sql", "004_full_keyword_indexes.sql"],
+            [migration.name for migration in PERIODIC_MIGRATIONS],
+        )
+
     def test_empty_table_only_and_parent_policy(self) -> None:
         rows = [section("parent"), section("child", "text", parent="parent"), section("drop"), section("table", "[TABLE: t1]", ["t1"])]
         retained, counts = classify_sections(rows)
