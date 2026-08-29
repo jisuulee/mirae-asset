@@ -1,0 +1,540 @@
+[
+  {
+    "question_id": "pk-007",
+    "query_type": "company_concept",
+    "expected_section_ids": [
+      3162
+    ],
+    "expected_receipt_nos": [
+      "20240312000736"
+    ],
+    "section_rank": null,
+    "receipt_rank": 1,
+    "latency_ms": 61.884100003226195,
+    "results": [
+      {
+        "section_id": 3167,
+        "receipt_no": "20240312000736",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2023.12)",
+        "receipt_date": "2024-03-12",
+        "title": "7. 기타 참고사항",
+        "section_path": "II. 사업의 내용 / 7. 기타 참고사항",
+        "body_snippet": "가. 지적재산권 관련\n\n당사는 R 활동의 지적재산화에도 집중하여 1984년 최초로 미국에 특허를 등록한이래 현재 세계적으로 총 244,731건의 특허를 보유하고 있으며, 특히 미국에서의 분쟁에 효과적으로 대응하고자 미국에서 가장 많은 특허를 보유하고 있습니다.\n\n[TABLE: 20240312000736:t000105]\n\n[TABLE: 20240312000736:t000106]\n\n2023년 중 총 28.4조원의 R 통해 국내 특허 8,909건, 미국 특허 8,952건등을 등록하였습니다.\n\n[TABLE: 20240312000736:t000107]\n\n[TABLE: 20240312000736:t000108]\n\n이 지적재산권은 대부분 스마트폰, 스마트 TV, 메모리, System LSI 등에 관한 특허로써 당사 전략사업 제품에 쓰이거나 향후 활용될 예정이며, 사업 보호의 역할뿐만 아니라 유사 기술ㆍ특허가 난립하는 상황에서 경쟁사 견제의 역할도 하고 있습니다. 또한, 미래 신기술 관련 선행 특",
+        "score": 0.36022784798406066,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20240312000736_annual_2023_12\\20240312000736.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[7]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[7]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ATOC": "Y",
+            "ATOCID": "16",
+            "AASSOCNOTE": "L-0-2-7-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20240312000736_annual_2023_12/20240312000736.xml",
+          "source_line": 6537,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3288,
+        "receipt_no": "20250311001085",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2024.12)",
+        "receipt_date": "2025-03-11",
+        "title": "7. 기타 참고사항",
+        "section_path": "II. 사업의 내용 / 7. 기타 참고사항",
+        "body_snippet": "가. 지적재산권 관련\n\n당사는 R 활동의 지적재산화에도 집중하여 1984년 최초로 미국에 특허를 등록한이래 현재 세계적으로 총 265,410건의 특허를 보유하고 있으며, 특히 미국에서의 분쟁에 효과적으로 대응하고자 미국에서 가장 많은 특허를 보유하고 있습니다.\n\n[TABLE: 20250311001085:t000103]\n\n[TABLE: 20250311001085:t000104]\n\n2024년 중 총 35조원의 R 통해 국내 특허 7,804건, 미국 특허 9,228건 등을 등록하였습니다.\n\n[TABLE: 20250311001085:t000105]\n\n[TABLE: 20250311001085:t000106]\n\n이 지적재산권은 대부분 스마트폰, 스마트 TV, 메모리, System LSI 등에 관한 특허로서 당사 전략사업 제품에 쓰이거나 향후 활용될 예정이며, 사업 보호의 역할뿐만 아니라 유사 기술ㆍ특허가 난립하는 상황에서 경쟁사 견제의 역할도 하고 있습니다. 또한, 미래 신기술 관련 선행 특허",
+        "score": 0.3602213348436635,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20250311001085_annual_2024_12\\20250311001085.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[7]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[7]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "7. Other details",
+            "ATOC": "Y",
+            "ATOCID": "194",
+            "AASSOCNOTE": "L-0-2-7-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20250311001085_annual_2024_12/20250311001085.xml",
+          "source_line": 5996,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3398,
+        "receipt_no": "20260310002820",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2025.12)",
+        "receipt_date": "2026-03-10",
+        "title": "1. 회사의 개요",
+        "section_path": "I. 회사의 개요 / 1. 회사의 개요",
+        "body_snippet": "가. 회사의 법적ㆍ상업적 명칭 당사의 명칭은 삼성전자주식회사이고 영문명은 Samsung Electronics Co., Ltd.\n\n입니다.\n\n나. 설립일자\n\n당사는 1969년 1월 13일에 삼성전자공업주식회사로 설립되었으며,\n\n1975년 6월 11일 기업공개를 실시하였습니다.\n\n당사는 1984년 2월 28일 정기주주총회 결의에 의거하여 상호를 삼성전자공업주식회사에서 삼성전자주식회사로 변경하였습니다.\n\n다. 본사의 주소, 전화번호 및 홈페이지\n\n주소: 경기도 수원시 영통구 삼성로 129(매탄동)\n\n전화번호: 031-200-1114\n\n홈페이지: https://www.samsung.com/sec\n\n라. 주요 사업의 내용 당사는 제품의 특성에 따라 DX(Device eXperience), DS(Device Solutions) 2개의 부문과 패널 사업을 영위하는 SDC(삼성디스플레이㈜ 및 그 종속기업), 전장부품사업 등을 영위하는 Harman(Harman International Industr",
+        "score": 0.30080267556477336,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20260310002820_annual_2025_12\\20260310002820.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[2]/SECTION-2[1]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[2]/SECTION-2[1]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "1. Company overview",
+            "ATOC": "Y",
+            "ATOCID": "4",
+            "AASSOCNOTE": "D-0-1-1-0"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20260310002820_annual_2025_12/20260310002820.xml",
+          "source_line": 201,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3276,
+        "receipt_no": "20250311001085",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2024.12)",
+        "receipt_date": "2025-03-11",
+        "title": "1. 회사의 개요",
+        "section_path": "I. 회사의 개요 / 1. 회사의 개요",
+        "body_snippet": "가. 회사의 법적ㆍ상업적 명칭 당사의 명칭은 삼성전자주식회사이고 영문명은 Samsung Electronics Co., Ltd.\n\n입니다.\n\n나. 설립일자\n\n당사는 1969년 1월 13일에 삼성전자공업주식회사로 설립되었으며,\n\n1975년 6월 11일 기업공개를 실시하였습니다.\n\n당사는 1984년 2월 28일 정기주주총회 결의에 의거하여 상호를 삼성전자공업주식회사에서 삼성전자주식회사로 변경하였습니다.\n\n다. 본사의 주소, 전화번호 및 홈페이지\n\n주소: 경기도 수원시 영통구 삼성로 129(매탄동)\n\n전화번호: 031-200-1114\n\n홈페이지: https://www.samsung.com/sec\n\n라. 주요 사업의 내용 당사는 제품의 특성에 따라 DX(Device eXperience), DS(Device Solutions) 2개의 부문과 패널 사업을 영위하는 SDC(삼성디스플레이㈜ 및 그 종속기업), 전장부품사업 등을 영위하는 Harman(Harman International Industr",
+        "score": 0.3007999999914318,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20250311001085_annual_2024_12\\20250311001085.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[2]/SECTION-2[1]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[2]/SECTION-2[1]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "1. Company overview",
+            "ATOC": "Y",
+            "ATOCID": "4",
+            "AASSOCNOTE": "D-0-1-1-0"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20250311001085_annual_2024_12/20250311001085.xml",
+          "source_line": 201,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3155,
+        "receipt_no": "20240312000736",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2023.12)",
+        "receipt_date": "2024-03-12",
+        "title": "1. 회사의 개요",
+        "section_path": "I. 회사의 개요 / 1. 회사의 개요",
+        "body_snippet": "가. 회사의 법적ㆍ상업적 명칭 당사의 명칭은 삼성전자주식회사이고 영문명은 Samsung Electronics Co., Ltd.\n\n입니다.\n\n나. 설립일자\n\n당사는 1969년 1월 13일에 삼성전자공업주식회사로 설립되었으며,\n\n1975년 6월 11일 기업공개를 실시하였습니다.\n\n당사는 1984년 2월 28일 정기주주총회 결의에 의거하여 상호를 삼성전자공업주식회사에서 삼성전자주식회사로 변경하였습니다.\n\n다. 본사의 주소, 전화번호 및 홈페이지\n\n주소: 경기도 수원시 영통구 삼성로 129(매탄동)\n\n전화번호: 031-200-1114\n\n홈페이지: https://www.samsung.com/sec\n\n라. 주요 사업의 내용 당사는 제품의 특성에 따라 DX(Device eXperience), DS(Device Solutions) 2개의 부문과 패널 사업을 영위하는 SDC(삼성디스플레이㈜ 및 그 종속기업), 전장부품사업 등을 영위하는 Harman(Harman International Industr",
+        "score": 0.30077669899910686,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20240312000736_annual_2023_12\\20240312000736.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[2]/SECTION-2[1]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[2]/SECTION-2[1]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ATOC": "Y",
+            "ATOCID": "4",
+            "AASSOCNOTE": "D-0-1-1-0"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20240312000736_annual_2023_12/20240312000736.xml",
+          "source_line": 702,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3410,
+        "receipt_no": "20260310002820",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2025.12)",
+        "receipt_date": "2026-03-10",
+        "title": "7. 기타 참고사항",
+        "section_path": "II. 사업의 내용 / 7. 기타 참고사항",
+        "body_snippet": "가. 지적재산권 관련\n\n당사는 R 활동의 지적재산화에도 집중하여 1984년 최초로 미국에 특허를 등록한이래 현재 세계적으로 총 281,857건의 특허를 보유하고 있으며, 특히 미국에서의 분쟁에 효과적으로 대응하고자 미국에서 가장 많은 특허를 보유하고 있습니다.\n\n[TABLE: 20260310002820:t000114]\n\n[TABLE: 20260310002820:t000115]\n\n2025년 중 총 38조원의 R 통해 국내 특허 10,639건, 미국 특허 10,347건 등을 등록하였습니다.\n\n[TABLE: 20260310002820:t000116]\n\n[TABLE: 20260310002820:t000117]\n\n이 지적재산권은 대부분 스마트폰, 스마트 TV, 메모리, System LSI 등에 관한 특허로서 당사 전략사업 제품에 쓰이거나 향후 활용될 예정이며, 사업 보호의 역할뿐만 아니라 유사 기술ㆍ특허가 난립하는 상황에서 경쟁사 견제의 역할도 하고 있습니다. 또한, 미래 신기술 관련 선행 ",
+        "score": 0.30022594614420084,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20260310002820_annual_2025_12\\20260310002820.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[7]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[7]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "7. Other details",
+            "ATOC": "Y",
+            "ATOCID": "194",
+            "AASSOCNOTE": "L-0-2-7-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20260310002820_annual_2025_12/20260310002820.xml",
+          "source_line": 6903,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3404,
+        "receipt_no": "20260310002820",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2025.12)",
+        "receipt_date": "2026-03-10",
+        "title": "1. 사업의 개요",
+        "section_path": "II. 사업의 내용 / 1. 사업의 개요",
+        "body_snippet": "당사는 본사를 거점으로 한국과 DX 부문 산하 해외 9개 지역총괄 및 DS 부문 산하 해외 5개 지역총괄의 생산ㆍ판매법인, SDC 및 Harman 산하 종속기업 등 308개의 종속기업으로 구성된 글로벌 전자 기업입니다.\n\n사업별로 보면, Set 사업은 DX(Device eXperience) 부문이 TV를 비롯하여 모니터, 냉장고, 세탁기, 에어컨, 스마트폰, 네트워크시스템, PC 등을 생산ㆍ판매하며, 부품 사업은 DS(Device Solutions) 부문에서 DRAM, NAND Flash, 모바일AP 등의 제품을 생산ㆍ판매하고, SDC가 스마트폰용 OLED 패널 등을 생산ㆍ판매하고 있습니다.또한, Harman에서는 디지털 콕핏(Digital Cockpit), 카오디오 등 전장제품과 포터블/사운드바 스피커 등 컨슈머오디오 제품 등을 개발, 생산, 판매하고 있습니다.☞ 부문별 사업에 관한 자세한 사항은 '7. 기타 참고사항'의 '다. 사업부문별 현황'과 '라. 사업부문별 요약 재무 현황",
+        "score": 0.12131579127162695,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20260310002820_annual_2025_12\\20260310002820.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[1]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[1]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "1. Business overview",
+            "ATOC": "Y",
+            "ATOCID": "188",
+            "AASSOCNOTE": "L-0-2-1-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20260310002820_annual_2025_12/20260310002820.xml",
+          "source_line": 4134,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3282,
+        "receipt_no": "20250311001085",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2024.12)",
+        "receipt_date": "2025-03-11",
+        "title": "1. 사업의 개요",
+        "section_path": "II. 사업의 내용 / 1. 사업의 개요",
+        "body_snippet": "당사는 본사를 거점으로 한국과 DX 부문 산하 해외 9개 지역총괄 및 DS 부문 산하 해외 5개 지역총괄의 생산ㆍ판매법인, SDC 및 Harman 산하 종속기업 등 228개의종속기업으로 구성된 글로벌 전자 기업입니다.\n\n사업별로 보면, Set 사업은 DX(Device eXperience) 부문이 TV를 비롯하여 모니터, 냉장고, 세탁기, 에어컨, 스마트폰, 네트워크시스템, PC 등을 생산ㆍ판매하며, 부품 사업은 DS(Device Solutions) 부문에서 DRAM, NAND Flash, 모바일AP 등의 제품을 생산ㆍ판매하고, SDC가 스마트폰용 OLED 패널 등을 생산ㆍ판매하고 있습니다.또한, Harman에서는 디지털 콕핏(Digital Cockpit), 카오디오 등 전장제품과 포터블/사운드바 스피커 등 소비자오디오 제품 등을 생산ㆍ판매하고 있습니다.☞ 부문별 사업에 관한 자세한 사항은 '7. 기타 참고사항'의 '다. 사업부문별 현황'과 '라. 사업부문별 요약 재무 현황' 항목을 ",
+        "score": 0.12130861678160727,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20250311001085_annual_2024_12\\20250311001085.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[1]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[1]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "1. Business overview",
+            "ATOC": "Y",
+            "ATOCID": "188",
+            "AASSOCNOTE": "L-0-2-1-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20250311001085_annual_2024_12/20250311001085.xml",
+          "source_line": 3152,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3161,
+        "receipt_no": "20240312000736",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2023.12)",
+        "receipt_date": "2024-03-12",
+        "title": "1. 사업의 개요",
+        "section_path": "II. 사업의 내용 / 1. 사업의 개요",
+        "body_snippet": "당사는 본사를 거점으로 한국과 DX 부문 산하 해외 9개 지역총괄 및 DS 부문 산하 해외 5개 지역총괄의 생산ㆍ판매법인, SDC 및 Harman 산하 종속기업 등 232개의 종속기업으로 구성된 글로벌 전자 기업입니다.\n\n사업별로 보면, Set 사업은 DX(Device eXperience) 부문이 TV를 비롯하여 모니터, 냉장고, 세탁기, 에어컨, 스마트폰, 네트워크시스템, 컴퓨터 등을 생산ㆍ판매하며, 부품 사업은 DS(Device Solutions) 부문에서 DRAM, NAND Flash, 모바일AP 등의 제품을 생산ㆍ판매하고, SDC가 스마트폰용 OLED 패널 등을 생산ㆍ판매하고 있습니다. 또한, Harman에서는 디지털 콕핏(Digital Cockpit), 카오디오 등 전장제품과 포터블 /사운드바 스피커 등 소비자오디오 제품 등을 생산ㆍ판매하고 있습니다.당사는 2021년 12월 조직개편을 통해 기존의 CE 부문과 IM 부문을 DX 부문으로 통합하였으며, 무선사업부의 명칭을 MX",
+        "score": 0.12121704029850662,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20240312000736_annual_2023_12\\20240312000736.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[1]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[1]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ATOC": "Y",
+            "ATOCID": "10",
+            "AASSOCNOTE": "L-0-2-1-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20240312000736_annual_2023_12/20240312000736.xml",
+          "source_line": 3541,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3372,
+        "receipt_no": "20250311001085",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2024.12)",
+        "receipt_date": "2025-03-11",
+        "title": "IV. 이사의 경영진단 및 분석의견",
+        "section_path": "IV. 이사의 경영진단 및 분석의견",
+        "body_snippet": "1. 예측정보에 대한 주의사항 본 자료는 미래에 대한 '예측정보'를 포함하고 있습니다.이는 과거가 아닌 미래의 사건과 관계된 것으로 회사의 향후 예상되는 경영현황 및 재무실적을 의미하고, 표현상으로는 '예상', '전망', '계획', '기대' 등과 같은 단어를 포함합니다.'예측정보'는 그 성격상 불확실한 사건들을 언급하는데, 회사의 향후 경영현황 및 재무실적에 긍정적 또는 부정적으로 영향을 미칠 수 있는 불확실성에는 다음과 같은 것들이 포함됩니다.ㆍ환율, 이자율 등의 변동을 포함한 국내ㆍ외 금융 시장의 동향ㆍ사업의 처분, 매수 등을 포함한 회사의 전략적인 의사결정ㆍDX부문, DS부문, SDC, Harman 등 회사가 영위하는 주요 사업의 예상치 못한 급격한 여건변화ㆍ기타 경영현황 및 재무실적에 영향을 미칠 수 있는 국내ㆍ외적 변화이러한 불확실성으로 인해 회사의 실제 미래실적은 '예측정보'에 명시적 또는 묵시적으로 포함된 내용과 중대한 차이가 있을 수 있음을 양지하시기 바랍니다.당사는 ",
+        "score": 0.12029325691983103,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20250311001085_annual_2024_12\\20250311001085.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[5]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[5]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "IV. Director’s Management Assessment and Analysis Opinion",
+            "ATOC": "Y",
+            "ATOCID": "17",
+            "AASSOCNOTE": "D-0-4-0-0"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20250311001085_annual_2024_12/20250311001085.xml",
+          "source_line": 99232,
+          "source_index": null
+        },
+        "file_role": "main"
+      }
+    ],
+    "failure_reason": "gold section not in top-k",
+    "failure_category": "section_ambiguity_or_ranking"
+  },
+  {
+    "question_id": "pk-011",
+    "query_type": "narrative_description",
+    "expected_section_ids": [
+      3166
+    ],
+    "expected_receipt_nos": [
+      "20240312000736"
+    ],
+    "section_rank": null,
+    "receipt_rank": null,
+    "latency_ms": 60.23049999930663,
+    "results": [],
+    "failure_reason": "gold section not in top-k",
+    "failure_category": "no_result_tokenizer_or_filter"
+  },
+  {
+    "question_id": "pk-012",
+    "query_type": "company_concept",
+    "expected_section_ids": [
+      3176
+    ],
+    "expected_receipt_nos": [
+      "20240312000736"
+    ],
+    "section_rank": null,
+    "receipt_rank": null,
+    "latency_ms": 60.40000000211876,
+    "results": [],
+    "failure_reason": "gold section not in top-k",
+    "failure_category": "no_result_tokenizer_or_filter"
+  },
+  {
+    "question_id": "pk-024",
+    "query_type": "partial_korean_phrase",
+    "expected_section_ids": [
+      3193
+    ],
+    "expected_receipt_nos": [
+      "20240312000736"
+    ],
+    "section_rank": null,
+    "receipt_rank": 1,
+    "latency_ms": 61.05560000287369,
+    "results": [
+      {
+        "section_id": 3165,
+        "receipt_no": "20240312000736",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2023.12)",
+        "receipt_date": "2024-03-12",
+        "title": "5. 위험관리 및 파생거래",
+        "section_path": "II. 사업의 내용 / 5. 위험관리 및 파생거래",
+        "body_snippet": "가. 재무위험관리정책 당사는 영업활동에서 파생되는 시장위험, 신용위험, 유동성위험 등을 최소화하는데 중점을 두고 재무위험을 관리하고 있으며, 이를 위해 각각의 위험요인에 대해 면밀하게 모니터링 및 대응하고 있습니다.\n\n재무위험은 글로벌 재무관리기준을 수립하고 고객과 거래선에 대한 주기적인 재무위험 측정, 환헷지 및 자금수지 점검 등을 통해 관리하고 있습니다.\n\n한편, 해외 주요 권역별로 지역금융센터(미국, 영국, 싱가포르, 중국, 브라질, 러시아)에서 환율변동 모니터링 및 환거래 대행을 통해 환율변동위험을 관리하고 있으며, 권역내 자금을 통합운용하여 유동성위험에 대응하고 있습니다.\n\n당사 재무위험관리의 주요 대상인 자산은 현금및현금성자산, 단기금융상품, 상각후원가금융자산, 매출채권 등으로 구성되어 있으며, 부채는 매입채무, 차입금 등으로 구성되어 있습니다.\n\n나. 주요 재무위험관리 (1) 시장위험\n\n(환율변동위험)\n\n당사는 글로벌 영업활동을 수행함에 따라 기능통화와 다른 통화로도 거",
+        "score": 0.06087057546246797,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20240312000736_annual_2023_12\\20240312000736.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[5]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[5]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ATOC": "Y",
+            "ATOCID": "14",
+            "AASSOCNOTE": "L-0-2-5-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20240312000736_annual_2023_12/20240312000736.xml",
+          "source_line": 5606,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3286,
+        "receipt_no": "20250311001085",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2024.12)",
+        "receipt_date": "2025-03-11",
+        "title": "5. 위험관리 및 파생거래",
+        "section_path": "II. 사업의 내용 / 5. 위험관리 및 파생거래",
+        "body_snippet": "가. 재무위험관리정책당사는 영업활동에서 파생되는 시장위험, 신용위험, 유동성위험 등을 최소화하는데 중점을 두고 재무위험을 관리하고 있으며, 이를 위해 각각의 위험요인에 대해 면밀하게 모니터링 및 대응하고 있습니다.\n\n재무위험은 글로벌 재무관리기준을 수립하고 고객과 거래선에 대한 주기적인 재무위험 측정, 환헷지 및 자금수지 점검 등을 통해 관리하고 있습니다.\n\n한편, 해외 주요 권역별로 지역금융센터(미국, 영국, 싱가포르, 중국, 브라질, 러시아)에서 환율변동 모니터링 및 환거래 대행을 통해 환율변동위험을 관리하고 있으며, 권역내 자금을 통합운용하여 유동성위험에 대응하고 있습니다.\n\n당사의 재무위험관리의 주요 대상인 자산은 현금및현금성자산, 단기금융상품, 상각후원가금융자산, 매출채권 등으로 구성되어 있으며, 부채는 매입채무, 차입금 등으로구성되어 있습니다.\n\n나. 주요 재무위험관리 (1) 시장위험\n\n(환율변동위험)\n\n당사는 글로벌 영업활동을 수행함에 따라 기능통화와 다른 통화로도 거래",
+        "score": 0.06083986654412001,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20250311001085_annual_2024_12\\20250311001085.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[5]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[5]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "5. Risk management and derivatives transactions",
+            "ATOC": "Y",
+            "ATOCID": "192",
+            "AASSOCNOTE": "L-0-2-5-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20250311001085_annual_2024_12/20250311001085.xml",
+          "source_line": 5058,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3408,
+        "receipt_no": "20260310002820",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2025.12)",
+        "receipt_date": "2026-03-10",
+        "title": "5. 위험관리 및 파생거래",
+        "section_path": "II. 사업의 내용 / 5. 위험관리 및 파생거래",
+        "body_snippet": "가. 재무위험관리정책당사는 영업활동에서 파생되는 시장위험, 신용위험, 유동성위험 등을 최소화하는데 중점을 두고 재무위험을 관리하고 있으며, 이를 위해 각각의 위험요인에 대해 면밀하게 모니터링 및 대응하고 있습니다.\n\n재무위험은 글로벌 재무관리기준을 수립하고 고객과 거래선에 대한 주기적인 재무위험 측정, 환헷지 및 자금수지 점검 등을 통해 관리하고 있습니다.\n\n한편, 해외 주요 권역별로 지역금융센터(미국, 영국, 싱가포르, 중국, 브라질, UAE)에서 환율변동 모니터링 및 환거래 대행을 통해 환율변동위험을 관리하고 있으며, 권역내 자금을 통합운용하여 유동성위험에 대응하고 있습니다.\n\n당사의 재무위험관리의 주요 대상인 자산은 현금및현금성자산, 단기금융상품, 상각후원가금융자산, 매출채권 등으로 구성되어 있으며, 부채는 매입채무, 차입금 등으로구성되어 있습니다.\n\n나. 주요 재무위험관리 (1) 시장위험\n\n(환율변동위험)\n\n당사는 글로벌 영업활동을 수행함에 따라 기능통화와 다른 통화로도 거래",
+        "score": 0.060827358858659863,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20260310002820_annual_2025_12\\20260310002820.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[5]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[3]/LIBRARY/SECTION-2[5]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "5. Risk management and derivatives transactions",
+            "ATOC": "Y",
+            "ATOCID": "192",
+            "AASSOCNOTE": "L-0-2-5-L1"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20260310002820_annual_2025_12/20260310002820.xml",
+          "source_line": 6053,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3486,
+        "receipt_no": "20260310002820",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2025.12)",
+        "receipt_date": "2026-03-10",
+        "title": "28. 재무위험관리",
+        "section_path": "III. 재무에 관한 사항 / 28. 재무위험관리",
+        "body_snippet": "[TABLE: 20260310002820:t001503]\n\n[TABLE: 20260310002820:t001504]\n\n[TABLE: 20260310002820:t001505]\n\n[TABLE: 20260310002820:t001506]\n\n[TABLE: 20260310002820:t001507]\n\n[TABLE: 20260310002820:t001508]\n\n[TABLE: 20260310002820:t001509]\n\n[TABLE: 20260310002820:t001510]\n\n[TABLE: 20260310002820:t001511]\n\n[TABLE: 20260310002820:t001512]\n\n[TABLE: 20260310002820:t001513]\n\n[TABLE: 20260310002820:t001514]\n\n[TABLE: 20260310002820:t001515]\n\n[TABLE: 20260310002820:t001516]\n\n[TABLE: 20260310002820:t001517]\n\n[TABL",
+        "score": 0.04559440668672323,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20260310002820_annual_2025_12\\20260310002820.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[4]/LIBRARY/SECTION-2[4]/TABLE-GROUP[28]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[4]/LIBRARY/SECTION-2[4]/TABLE-GROUP[28]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "28. Financial Risk Management",
+            "ATOC": "Y",
+            "ATOCID": "640"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20260310002820_annual_2025_12/20260310002820.xml",
+          "source_line": 54680,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3242,
+        "receipt_no": "20240312000736",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2023.12)",
+        "receipt_date": "2024-03-12",
+        "title": "28. 재무위험관리",
+        "section_path": "III. 재무에 관한 사항 / 28. 재무위험관리",
+        "body_snippet": "[TABLE: 20240312000736:t001321]\n\n[TABLE: 20240312000736:t001322]\n\n[TABLE: 20240312000736:t001323]\n\n[TABLE: 20240312000736:t001324]\n\n[TABLE: 20240312000736:t001325]\n\n[TABLE: 20240312000736:t001326]\n\n[TABLE: 20240312000736:t001327]\n\n[TABLE: 20240312000736:t001328]\n\n[TABLE: 20240312000736:t001329]\n\n[TABLE: 20240312000736:t001330]\n\n[TABLE: 20240312000736:t001331]\n\n[TABLE: 20240312000736:t001332]\n\n[TABLE: 20240312000736:t001333]\n\n[TABLE: 20240312000736:t001334]\n\n[TABLE: 20240312000736:t001335]\n\n[TABL",
+        "score": 0.04326018914580345,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20240312000736_annual_2023_12\\20240312000736.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[4]/LIBRARY/SECTION-2[4]/TABLE-GROUP[28]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[4]/LIBRARY/SECTION-2[4]/TABLE-GROUP[28]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ATOC": "Y",
+            "ATOCID": "283"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20240312000736_annual_2023_12/20240312000736.xml",
+          "source_line": 88784,
+          "source_index": null
+        },
+        "file_role": "main"
+      },
+      {
+        "section_id": 3363,
+        "receipt_no": "20250311001085",
+        "company_name": "삼성전자",
+        "report_name": "사업보고서 (2024.12)",
+        "receipt_date": "2025-03-11",
+        "title": "28. 재무위험관리",
+        "section_path": "III. 재무에 관한 사항 / 28. 재무위험관리",
+        "body_snippet": "[TABLE: 20250311001085:t001469]\n\n[TABLE: 20250311001085:t001470]\n\n[TABLE: 20250311001085:t001471]\n\n[TABLE: 20250311001085:t001472]\n\n[TABLE: 20250311001085:t001473]\n\n[TABLE: 20250311001085:t001474]\n\n[TABLE: 20250311001085:t001475]\n\n[TABLE: 20250311001085:t001476]\n\n[TABLE: 20250311001085:t001477]\n\n[TABLE: 20250311001085:t001478]\n\n[TABLE: 20250311001085:t001479]\n\n[TABLE: 20250311001085:t001480]\n\n[TABLE: 20250311001085:t001481]\n\n[TABLE: 20250311001085:t001482]\n\n[TABLE: 20250311001085:t001483]\n\n[TABL",
+        "score": 0.04144838321954012,
+        "retrieval_method": "combined",
+        "source_file": "3.공시\\corpus\\raw\\periodic\\삼성전자\\20250311001085_annual_2024_12\\20250311001085.xml",
+        "source_locator": "/DOCUMENT/BODY/SECTION-1[4]/LIBRARY/SECTION-2[4]/TABLE-GROUP[28]/TITLE",
+        "provenance": {
+          "tag": "title",
+          "dom_path": "/DOCUMENT/BODY/SECTION-1[4]/LIBRARY/SECTION-2[4]/TABLE-GROUP[28]/TITLE",
+          "file_role": "main",
+          "attributes": {
+            "ENG": "28. Financial Risk Management",
+            "ATOC": "Y",
+            "ATOCID": "555"
+          },
+          "page_number": null,
+          "source_file": "periodic/삼성전자/20250311001085_annual_2024_12/20250311001085.xml",
+          "source_line": 82153,
+          "source_index": null
+        },
+        "file_role": "main"
+      }
+    ],
+    "failure_reason": "gold section not in top-k",
+    "failure_category": "section_ambiguity_or_ranking"
+  }
+]
