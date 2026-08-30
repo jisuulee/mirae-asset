@@ -1,5 +1,28 @@
 # Retrieval Architecture V1
 
+## Frozen default — 2026-08-31
+
+Retrieval V1의 자연어 RAG 경로는 다음으로 고정한다.
+
+```text
+Question
+→ shared metadata routing/filter
+→ FTS20 + Exact Vector20 + Title/Path20
+→ unweighted RRF (k=60)
+→ Top10
+→ deterministic reranker
+→ evidence with stable provenance
+```
+
+- FTS는 기존 body/title/path keyword ranking을 변경하지 않는다.
+- Vector는 CLOVA Studio Embedding v2 / bge-m3, 1,024차원, exact cosine을 사용한다.
+- Title/Path 채널은 original query로 heading hierarchy만 검색하며 body를 사용하지 않는다.
+- metadata filter의 company, receipt, date/year, report type, loader namespace 의미는 세 채널에서 동일하다.
+- Hybrid RAG는 structured SQL retrieval이나 correction-chain retrieval을 대체하지 않는다.
+- production interface는 `src.retrieval.search_default_sections()`이다.
+
+Structured 질문은 contract/금액/날짜 등 authoritative column을 SQL로 조회한다. Correction 질문은 explicit/high-confidence `correction_links`만 따라 observation chain을 조회한다. 자연어 section evidence가 필요한 경우에만 위 RAG 경로를 사용한다. Freeze 세부 정책과 미채택 실험은 [Retrieval V1 freeze policy](retrieval_v1_freeze.md)를 따른다.
+
 ## 범위와 근거
 
 V1은 `analysis_results/phase2`를 우선 근거로 한 DB/검색 계약이다. 분석 단위는 XML 4,616개, 접수번호 4,201개이며 한 접수 아래 XML 1~3개가 존재한다. `receipt_no`는 문서 파일 ID가 아니라 제출 이벤트 ID다. exchange의 단일판매·공급계약 계열 1,106건(일반 1,040 + 자율 66)을 첫 구현 범위로 삼는다. 원본 `data`는 불변 source of record다.

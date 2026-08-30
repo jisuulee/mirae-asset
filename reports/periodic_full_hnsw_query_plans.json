@@ -1,0 +1,62 @@
+{
+  "namespace": {
+    "planning_ms": 0.476,
+    "execution_ms": 19.528,
+    "nodes": [
+      {
+        "Node Type": "Limit",
+        "Actual Rows": 100
+      },
+      {
+        "Node Type": "Index Scan",
+        "Index Name": "section_vector_hnsw_cosine_idx",
+        "Actual Rows": 100
+      }
+    ]
+  },
+  "company": {
+    "planning_ms": 0.141,
+    "execution_ms": 121.899,
+    "nodes": [
+      {
+        "Node Type": "Limit",
+        "Actual Rows": 100
+      },
+      {
+        "Node Type": "Index Scan",
+        "Index Name": "section_vector_hnsw_cosine_idx",
+        "Actual Rows": 100
+      }
+    ]
+  },
+  "receipt": {
+    "planning_ms": 0.176,
+    "execution_ms": 155.395,
+    "nodes": [
+      {
+        "Node Type": "Limit",
+        "Actual Rows": 35
+      },
+      {
+        "Node Type": "Index Scan",
+        "Index Name": "section_vector_hnsw_cosine_idx",
+        "Actual Rows": 35
+      }
+    ]
+  },
+  "year_report": {
+    "planning_ms": 0.254,
+    "execution_ms": 10.623,
+    "nodes": [
+      {
+        "Node Type": "Limit",
+        "Actual Rows": 100
+      },
+      {
+        "Node Type": "Index Scan",
+        "Index Name": "section_vector_hnsw_cosine_idx",
+        "Actual Rows": 100
+      }
+    ]
+  }
+}

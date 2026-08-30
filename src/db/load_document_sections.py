@@ -17,7 +17,8 @@ MIGRATION = ROOT / "src" / "db" / "migrations" / "002_periodic_retrieval_tables.
 TABLE_MARKER = re.compile(r"\[TABLE:\s*[^\]]+\]")
 KEYWORD_MIGRATION = ROOT / "src" / "db" / "migrations" / "003_keyword_search.sql"
 FULL_INDEX_MIGRATION = ROOT / "src" / "db" / "migrations" / "004_full_keyword_indexes.sql"
-PERIODIC_MIGRATIONS = (MIGRATION, KEYWORD_MIGRATION, FULL_INDEX_MIGRATION)
+TITLE_PATH_MIGRATION = ROOT / "src" / "db" / "migrations" / "007_title_path_search.sql"
+PERIODIC_MIGRATIONS = (MIGRATION, KEYWORD_MIGRATION, FULL_INDEX_MIGRATION, TITLE_PATH_MIGRATION)
 
 
 def _json(value: Any) -> str:

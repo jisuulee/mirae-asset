@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from datetime import date
 from typing import Any, Iterable
 
-from .embeddings import EmbeddingProvider, embedding_content_hash, validate_embedding
+from .embeddings import EmbeddingProvider, EmbeddingResult, EmbeddingSpec, embedding_content_hash, validate_embedding
 from .sections import _rows
 from .text_normalization import canonical_report_type, normalize_company_query, normalize_search_text
 
@@ -220,9 +220,33 @@ def search_vector_sections(
         return []
     embedded = provider.embed([normalized])[0]
     validate_embedding(embedded, provider.spec)
+    return search_vector_sections_from_embedding(
+        connection, embedded, provider.spec, top_k=top_k, company=company,
+        date_from=date_from, date_to=date_to, report_type=report_type,
+        receipt_no=receipt_no, corpus_namespace=corpus_namespace,
+    )
+
+
+def search_vector_sections_from_embedding(
+    connection: Any,
+    embedded: EmbeddingResult,
+    spec: EmbeddingSpec,
+    *,
+    top_k: int = 5,
+    company: str | None = None,
+    date_from: date | None = None,
+    date_to: date | None = None,
+    report_type: str | None = None,
+    receipt_no: str | None = None,
+    corpus_namespace: str = "periodic-full-v1",
+) -> list[dict[str, Any]]:
+    """Run the unchanged exact-cosine SQL for an already embedded query."""
+    if not 1 <= top_k <= 100:
+        raise ValueError("top_k must be 1..100")
+    validate_embedding(embedded, spec)
     clauses = ["c.loader_namespace=%s", "e.embedding_model=%s", "e.embedding_version=%s",
                "e.embedding_dimension=%s"]
-    params: list[Any] = [corpus_namespace, provider.spec.model, provider.spec.version, provider.spec.dimension]
+    params: list[Any] = [corpus_namespace, spec.model, spec.version, spec.dimension]
     if company:
         clauses.append("co.company_name_normalized=%s")
         params.append(normalize_company_query(company))

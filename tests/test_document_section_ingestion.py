@@ -37,7 +37,7 @@ class SectionPolicyTest(unittest.TestCase):
         self.assertIn("document_sections_search_idx", sql)
         self.assertIn("document_sections_loader_namespace_idx", sql)
         self.assertEqual(
-            ["002_periodic_retrieval_tables.sql", "003_keyword_search.sql", "004_full_keyword_indexes.sql"],
+            ["002_periodic_retrieval_tables.sql", "003_keyword_search.sql", "004_full_keyword_indexes.sql", "007_title_path_search.sql"],
             [migration.name for migration in PERIODIC_MIGRATIONS],
         )
 
