@@ -181,8 +181,9 @@ def evaluate(gold: list[dict[str, Any]], predictions: list[dict[str, Any]]) -> d
         expected_sections = set(item["gold_section_ids"])
         expected_tables = set(item["gold_table_ids"])
         expected_receipts = set(item["gold_receipt_nos"])
-        section_eligible = item["retrieval_target"] in {"section", "pdf_page", "either"} and bool(expected_sections)
-        table_eligible = item["retrieval_target"] in {"table", "either"} and bool(expected_tables)
+        excluded = prediction.get("error") == "excluded_table_only_target"
+        section_eligible = not excluded and item["retrieval_target"] in {"section", "pdf_page", "either"} and bool(expected_sections)
+        table_eligible = not excluded and item["retrieval_target"] in {"table", "either"} and bool(expected_tables)
         row = {
             "question_id": item["question_id"],
             "category": item["category"],
@@ -204,8 +205,8 @@ def evaluate(gold: list[dict[str, Any]], predictions: list[dict[str, Any]]) -> d
             "table_coverage_at_10": _coverage(table_ids, expected_tables),
             "table_ap_at_10": _average_precision(table_ids, expected_tables),
             "table_ndcg_at_10": _ndcg(table_ids, expected_tables),
-            "receipt_eligible": bool(expected_receipts),
-            "receipt_rank": _rank(receipts, expected_receipts),
+            "receipt_eligible": not excluded and bool(expected_receipts),
+            "receipt_rank": _rank(receipts, expected_receipts) if not excluded else None,
             "receipt_coverage_at_10": _coverage(receipts, expected_receipts),
             "receipt_ap_at_10": _average_precision(receipts, expected_receipts),
             "receipt_ndcg_at_10": _ndcg(receipts, expected_receipts),
@@ -215,7 +216,7 @@ def evaluate(gold: list[dict[str, Any]], predictions: list[dict[str, Any]]) -> d
         }
         scored.append(row)
         primary_rank = row["table_rank"] if item["retrieval_target"] == "table" else row["section_rank"]
-        if primary_rank is None:
+        if primary_rank is None and not excluded:
             failures.append({
                 **row,
                 "expected_receipt_nos": item["gold_receipt_nos"],
