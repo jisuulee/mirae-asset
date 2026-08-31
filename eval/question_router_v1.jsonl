@@ -1,0 +1,43 @@
+{"question_id":"router-sql-001","question":"삼성전자의 2025년 계약금액이 얼마야?","expected_route":"sql","expected_intent":"contract_amount","expected_company":"삼성전자","expected_year":2025,"expected_clarification":false}
+{"question_id":"router-sql-002","question":"현대건설 계약 상대방을 알려줘","expected_route":"sql","expected_intent":"counterparty","expected_company":"현대건설","expected_clarification":false}
+{"question_id":"router-sql-003","question":"삼성물산 계약기간은 언제부터 언제까지야?","expected_route":"sql","expected_intent":"contract_period","expected_company":"삼성물산","expected_clarification":false}
+{"question_id":"router-sql-004","question":"LG에너지솔루션 계약의 매출액 대비 비율은?","expected_route":"sql","expected_intent":"sales_ratio","expected_company":"LG에너지솔루션","expected_clarification":false}
+{"question_id":"router-sql-005","question":"접수번호 20240102000001 계약을 조회해줘","expected_route":"sql","expected_intent":"receipt_lookup","expected_receipt_no":"20240102000001","expected_clarification":false}
+{"question_id":"router-sql-006","question":"SK하이닉스의 2024년 계약 공시 날짜가 언제야?","expected_route":"sql","expected_company":"SK하이닉스","expected_year":2024,"expected_clarification":false}
+{"question_id":"router-sql-007","question":"현대건설의 가장 큰 계약금액을 찾아줘","expected_route":"sql","expected_company":"현대건설","expected_clarification":false}
+{"question_id":"router-sql-008","question":"20240203000002 접수 건의 계약 정보를 보여줘","expected_route":"sql","expected_receipt_no":"20240203000002","expected_clarification":false}
+{"question_id":"router-sql-009","question":"삼성물산이 2023년에 공시한 계약액은?","expected_route":"sql","expected_company":"삼성물산","expected_year":2023,"expected_clarification":false}
+{"question_id":"router-sql-010","question":"포스코인터내셔널 계약 시작 날짜를 알려줘","expected_route":"sql","expected_company":"포스코인터내셔널","expected_clarification":false}
+{"question_id":"router-sql-011","question":"두산에너빌리티 계약 종료일은 언제야?","expected_route":"sql","expected_company":"두산에너빌리티","expected_clarification":false}
+{"question_id":"router-sql-012","question":"한화오션 수주 계약의 발주처는 어디야?","expected_route":"sql","expected_company":"한화오션","expected_clarification":false}
+{"question_id":"router-rag-001","question":"삼성전자의 주요 사업 내용을 설명해줘","expected_route":"rag","expected_company":"삼성전자","expected_clarification":false}
+{"question_id":"router-rag-002","question":"SK하이닉스가 어떤 연구개발 분야에 집중하는지 찾아줘","expected_route":"rag","expected_company":"SK하이닉스","expected_clarification":false}
+{"question_id":"router-rag-003","question":"현대자동차 사업보고서의 위험요인을 설명해줘","expected_route":"rag","expected_company":"현대자동차","expected_report_type":"annual","expected_clarification":false}
+{"question_id":"router-rag-004","question":"LG화학의 장기 사업 전략은 무엇이야?","expected_route":"rag","expected_company":"LG화학","expected_clarification":false}
+{"question_id":"router-rag-005","question":"네이버는 어떤 회사인지 본문 근거로 설명해줘","expected_route":"rag","expected_company":"네이버","expected_clarification":false}
+{"question_id":"router-rag-006","question":"카카오의 주요 사업과 서비스를 찾아줘","expected_route":"rag","expected_company":"카카오","expected_clarification":false}
+{"question_id":"router-rag-007","question":"삼성SDI의 R&D 활동을 요약해줘","expected_route":"rag","expected_company":"삼성SDI","expected_clarification":false}
+{"question_id":"router-rag-008","question":"셀트리온이 설명한 사업상 리스크를 찾아줘","expected_route":"rag","expected_company":"셀트리온","expected_clarification":false}
+{"question_id":"router-rag-009","question":"포스코퓨처엠의 기술 분야를 설명하는 부분을 찾아줘","expected_route":"rag","expected_company":"포스코퓨처엠","expected_clarification":false}
+{"question_id":"router-rag-010","question":"현대모비스의 회사 설명과 주요 사업을 보여줘","expected_route":"rag","expected_company":"현대모비스","expected_clarification":false}
+{"question_id":"router-rag-011","question":"기업이 공시한 연구개발 조직의 역할을 설명해줘","expected_route":"rag","expected_clarification":false}
+{"question_id":"router-rag-012","question":"사업보고서 본문에서 공급망 위험 요인을 찾아줘","expected_route":"rag","expected_report_type":"annual","expected_clarification":false}
+{"question_id":"router-cor-001","question":"접수번호 20240102000001 공시의 정정 이력을 보여줘","expected_route":"correction","expected_receipt_no":"20240102000001","expected_clarification":false}
+{"question_id":"router-cor-002","question":"20240203000002에서 최신 정정 공시는 무엇이야?","expected_route":"correction","expected_receipt_no":"20240203000002","expected_clarification":false}
+{"question_id":"router-cor-003","question":"20240304000003의 최초 공시부터 변경 이력을 알려줘","expected_route":"correction","expected_receipt_no":"20240304000003","expected_clarification":false}
+{"question_id":"router-cor-004","question":"20240405000004 이전 공시와 정정 공시 순서를 보여줘","expected_route":"correction","expected_receipt_no":"20240405000004","expected_clarification":false}
+{"question_id":"router-cor-005","question":"20240506000005 공시가 정정됐는지 확인해줘","expected_route":"correction","expected_receipt_no":"20240506000005","expected_clarification":false}
+{"question_id":"router-cor-006","question":"20240607000006의 원래 공시와 최신 수정 공시를 알려줘","expected_route":"correction","expected_receipt_no":"20240607000006","expected_clarification":false}
+{"question_id":"router-cor-007","question":"삼성전자 공시가 정정됐는지 알려줘","expected_route":"correction","expected_company":"삼성전자","expected_clarification":true}
+{"question_id":"router-cor-008","question":"현대건설의 변경 이력을 확인해줘","expected_route":"correction","expected_company":"현대건설","expected_clarification":true}
+{"question_id":"router-mix-001","question":"20240102000001의 계약금액과 정정된 내용을 함께 알려줘","expected_route":"composite","expected_routes":["sql","correction"],"expected_receipt_no":"20240102000001","expected_clarification":false}
+{"question_id":"router-mix-002","question":"20240203000002 계약 상대방이 이전 공시에서 어떻게 변경됐어?","expected_route":"composite","expected_routes":["sql","correction"],"expected_receipt_no":"20240203000002","expected_clarification":false}
+{"question_id":"router-mix-003","question":"20240304000003 계약기간과 최신 정정을 비교해줘","expected_route":"composite","expected_routes":["sql","correction"],"expected_receipt_no":"20240304000003","expected_clarification":false}
+{"question_id":"router-mix-004","question":"삼성전자의 계약금액과 주요 사업 내용을 같이 찾아줘","expected_route":"composite","expected_routes":["sql","rag"],"expected_company":"삼성전자","expected_clarification":false}
+{"question_id":"router-mix-005","question":"20240405000004 정정 이력과 사업 내용을 함께 설명해줘","expected_route":"composite","expected_routes":["correction","rag"],"expected_receipt_no":"20240405000004","expected_clarification":false}
+{"question_id":"router-amb-001","question":"그 회사 계약 알려줘","expected_route":"rag","expected_clarification":true}
+{"question_id":"router-amb-002","question":"그 회사 계약금액 알려줘","expected_route":"sql","expected_clarification":true}
+{"question_id":"router-amb-003","question":"","expected_route":"rag","expected_clarification":true}
+{"question_id":"router-amb-004","question":"해당 회사 상대방은 누구야?","expected_route":"sql","expected_clarification":true}
+{"question_id":"router-amb-005","question":"이 회사의 위험요인을 알려줘","expected_route":"rag","expected_clarification":false}
+{"question_id":"router-amb-006","question":"공시 내용을 찾아줘","expected_route":"rag","expected_clarification":false}
