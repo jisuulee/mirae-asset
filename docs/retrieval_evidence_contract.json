@@ -1,0 +1,108 @@
+{
+  "document_kind": "current_output_contract_reference",
+  "not_a_new_production_schema": true,
+  "source_commit": "a2d7b19cca764d6b53b15cd6f30d7945222be7b4",
+  "recommended_entrypoint": {
+    "import": "from src.retrieval import retrieve",
+    "function": "retrieve",
+    "returns": "RoutedSearchResult"
+  },
+  "routed_search_result": {
+    "fields": {
+      "router": "RouteDecision.to_dict()",
+      "evidence": "list[Evidence.to_dict()]",
+      "errors": "list[str]"
+    }
+  },
+  "route_decision_fields": [
+    "route",
+    "routes",
+    "intent",
+    "company",
+    "year",
+    "report_type",
+    "receipt_no",
+    "structured_fields",
+    "filters",
+    "confidence",
+    "reason",
+    "needs_clarification",
+    "clarification_reason",
+    "router_version"
+  ],
+  "route_filter_fields": [
+    "date_from",
+    "date_to",
+    "report_type",
+    "company",
+    "receipt_no"
+  ],
+  "unified_evidence_fields": [
+    "route",
+    "evidence_type",
+    "receipt_no",
+    "company",
+    "report_name",
+    "receipt_date",
+    "evidence_text",
+    "evidence_value",
+    "provenance",
+    "source_file",
+    "source_locator",
+    "rank",
+    "score",
+    "retrieval_sources"
+  ],
+  "route_values": {
+    "sql": {
+      "evidence_type": "structured_contract",
+      "evidence_value_fields": [
+        "contract_name",
+        "contract_amount",
+        "contract_currency",
+        "counterparty",
+        "contract_start_date",
+        "contract_end_date",
+        "sales_ratio"
+      ],
+      "provenance": "contracts.field_provenance",
+      "retrieval_sources": ["structured_sql"]
+    },
+    "rag": {
+      "evidence_type": "document_section",
+      "evidence_value": null,
+      "provenance": "section provenance and, when selected from Vector, chunk provenance",
+      "retrieval_sources_subset_of": ["fts", "vector", "title_path"]
+    },
+    "correction": {
+      "evidence_type": "correction_observation",
+      "evidence_value_fields": ["is_correction_name", "is_correction_rm"],
+      "provenance_fields": ["explicit_chain", "observation_order"],
+      "retrieval_sources": ["correction_chain"]
+    }
+  },
+  "json_conversion": {
+    "date": "ISO-8601 string",
+    "decimal": "string",
+    "tuple": "array"
+  },
+  "rag_direct_result_note": {
+    "function": "search_default_sections",
+    "additional_fields_may_include": [
+      "section_id",
+      "title",
+      "section_path",
+      "rrf_score",
+      "reranker_score",
+      "channel_ranks",
+      "channel_scores",
+      "channel_provenance",
+      "fts_rank",
+      "vector_rank",
+      "title_path_rank",
+      "vector_chunk_id",
+      "chunk_order"
+    ],
+    "warning": "These are not top-level fields of unified Evidence. Vector chunk fields are normally nested in channel_provenance when present."
+  }
+}
