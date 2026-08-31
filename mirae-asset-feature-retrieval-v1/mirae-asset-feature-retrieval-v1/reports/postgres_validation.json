@@ -1,0 +1,73 @@
+{
+  "counts": {
+    "companies": 70,
+    "disclosures": 4204,
+    "disclosure_files": 4616,
+    "contracts": 1106,
+    "correction_links": 461
+  },
+  "duplicate_receipt_no": 0,
+  "orphan_foreign_keys": {
+    "disclosures_company": 0,
+    "files_disclosure": 0,
+    "contracts_disclosure": 0,
+    "contracts_file": 0,
+    "correction_predecessor": 0,
+    "correction_successor": 0
+  },
+  "field_quality": {
+    "contract_amount": {
+      "normalized_null_count": 89,
+      "normalized_null_rate": 0.08047,
+      "raw_null_count": 0,
+      "raw_null_rate": 0.0
+    },
+    "counterparty": {
+      "normalized_null_count": 34,
+      "normalized_null_rate": 0.030741,
+      "raw_null_count": 0,
+      "raw_null_rate": 0.0
+    },
+    "contract_start_date": {
+      "normalized_null_count": 119,
+      "normalized_null_rate": 0.107595,
+      "raw_null_count": 0,
+      "raw_null_rate": 0.0
+    },
+    "contract_end_date": {
+      "normalized_null_count": 203,
+      "normalized_null_rate": 0.183544,
+      "raw_null_count": 0,
+      "raw_null_rate": 0.0
+    },
+    "sales_ratio": {
+      "normalized_null_count": 65,
+      "normalized_null_rate": 0.05877,
+      "raw_null_count": 0,
+      "raw_null_rate": 0.0
+    }
+  },
+  "provenance_missing": 0,
+  "correction_validation": {
+    "non_explicit_or_non_high": 0,
+    "similarity_candidates": 0,
+    "multiple_predecessors": 0,
+    "cycles": 0
+  },
+  "schema_validation": {
+    "pg_trgm": true,
+    "tables": [
+      "companies",
+      "contracts",
+      "correction_links",
+      "disclosure_files",
+      "disclosures",
+      "document_sections"
+    ],
+    "foreign_keys": 9,
+    "unique_constraints": 11,
+    "check_constraints": 13,
+    "indexes": 25
+  },
+  "passed": true
+}

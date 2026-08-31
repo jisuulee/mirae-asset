@@ -1,0 +1,156 @@
+{
+  "benchmark": "C:\\Project\\disclosure-agent\\eval\\retrieval_questions.jsonl",
+  "cold_definition": "first ordered pass after container restart and new DB connection; OS/Docker cache cannot be fully controlled",
+  "warm_definition": "one unmeasured full pass, then mean of 5 repetitions per query",
+  "connection_latency_ms": 443.53920000139624,
+  "cold": {
+    "question_count": 42,
+    "prediction_count": 42,
+    "top_1_accuracy": 1.0,
+    "recall_at_3": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "average_latency_ms": 4.429195238203864,
+    "p50_latency_ms": 3.9755000034347177,
+    "p95_latency_ms": 7.596899995405693,
+    "max_latency_ms": 18.618800000695046,
+    "latency_sample_count": 42,
+    "missing_prediction_ids": [],
+    "by_query_type": {
+      "amount": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 5.628749999838571
+      },
+      "company_period": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 6.357783335261047
+      },
+      "correction": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 3.8038333332224283
+      },
+      "counterparty": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 3.5913666664176467
+      },
+      "date_range": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 4.391599999507889
+      },
+      "receipt_lookup": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 2.11956666559369
+      },
+      "sales_ratio": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 5.111466667585773
+      }
+    },
+    "failures": []
+  },
+  "warm": {
+    "question_count": 42,
+    "prediction_count": 42,
+    "top_1_accuracy": 1.0,
+    "recall_at_3": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "average_latency_ms": 3.393234761842039,
+    "p50_latency_ms": 3.117019997444004,
+    "p95_latency_ms": 6.867899997450877,
+    "max_latency_ms": 7.371419999981299,
+    "latency_sample_count": 42,
+    "missing_prediction_ids": [],
+    "by_query_type": {
+      "amount": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 4.910343332934038
+      },
+      "company_period": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 2.4812266669565965
+      },
+      "correction": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 3.6600700002357676
+      },
+      "counterparty": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 2.493436667282367
+      },
+      "date_range": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 3.9281399995767665
+      },
+      "receipt_lookup": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 1.5009399998234585
+      },
+      "sales_ratio": {
+        "question_count": 6,
+        "top_1_accuracy": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "average_latency_ms": 4.778486666085276
+      }
+    },
+    "failures": []
+  },
+  "prediction_files": {
+    "cold": "reports\\retrieval_predictions_cold.jsonl",
+    "warm": "reports\\retrieval_predictions_warm.jsonl"
+  }
+}
