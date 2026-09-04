@@ -8,3 +8,4 @@ role2_final*
 mirae-asset-feature-retrieval-v1/
 sections_full.jsonl
 *.txt
+!requirements.txt
