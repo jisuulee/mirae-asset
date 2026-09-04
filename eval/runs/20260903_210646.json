@@ -1,0 +1,126 @@
+{
+ "stamp": "20260903_210646",
+ "prompt_version": "v4-full",
+ "pass": 0,
+ "total": 3,
+ "rows": [
+  {
+   "id": "E-001",
+   "type": "단순조회",
+   "difficulty": "하",
+   "mode": "closed",
+   "traps": [
+    "unit_trap"
+   ],
+   "passed": false,
+   "dims": {
+    "accuracy": false,
+    "citation": true,
+    "grounding": false
+   },
+   "checks": [
+    {
+     "dim": "accuracy",
+     "name": "금액=333,605,900,000,000",
+     "ok": false,
+     "note": "답변 금액들: [333605938000000]"
+    },
+    {
+     "dim": "accuracy",
+     "name": "포함:'2025.12'",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "dim": "citation",
+     "name": "접수번호 20260310002820",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "dim": "grounding",
+     "name": "근거에 '333,605,900'",
+     "ok": false,
+     "note": ""
+    }
+   ],
+   "answer": "2025년 삼성전자의 연결 기준 매출액은 **333조 6,059억 3,800만원**입니다.  \n(근거: 사업보고서 (2025.12), 접수번호 20260310002820, 섹션 III. 재무에 관한 사항 > 2-2. 연결 손익계산서)",
+   "elapsed_s": 17.9
+  },
+  {
+   "id": "E-002",
+   "type": "단순조회",
+   "difficulty": "하",
+   "mode": "closed",
+   "traps": [
+    "unit_trap"
+   ],
+   "passed": false,
+   "dims": {
+    "accuracy": false,
+    "citation": true,
+    "grounding": false
+   },
+   "checks": [
+    {
+     "dim": "accuracy",
+     "name": "금액=41,210,500,000,000",
+     "ok": false,
+     "note": "답변 금액들: []"
+    },
+    {
+     "dim": "citation",
+     "name": "접수번호 20260310002820",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "dim": "grounding",
+     "name": "근거에 '41,210,500'",
+     "ok": false,
+     "note": ""
+    }
+   ],
+   "answer": "제공된 공시 데이터에 따르면 삼성전자의 2025년 영업이익은 23,603,619백만 원입니다.\n\n(근거: 사업보고서 (2025.12), 접수번호 20260310002820, 섹션 III. 재무에 관한 사항 > 4-2. 손익계산서)",
+   "elapsed_s": 55.7
+  },
+  {
+   "id": "E-003",
+   "type": "비교연산",
+   "difficulty": "중",
+   "mode": "closed",
+   "traps": [
+    "unit_trap",
+    "calc_required"
+   ],
+   "passed": false,
+   "dims": {
+    "accuracy": false,
+    "citation": true,
+    "grounding": true
+   },
+   "checks": [
+    {
+     "dim": "accuracy",
+     "name": "택일:['10.88', '10.9']",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "dim": "citation",
+     "name": "접수번호 20260310002820",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "dim": "grounding",
+     "name": "근거에 '300,870,903'",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "answer": "삼성전자의 2024년 대비 2025년 매출액 증가율은 **-9.81%** 입니다.\n\n(근거: 사업보고서 (2024.12), 접수번호 20250311001085, 섹션 III. 재무에 관한 사항 > 2-2. 연결 손익계산서; 사업보고서 (2025.12), 접수번호 20260310002820, 섹션 III. 재무에 관한 사항 > 2-2. 연결 손익계산서)",
+   "elapsed_s": 59.6
+  }
+ ]
+}

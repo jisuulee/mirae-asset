@@ -174,7 +174,7 @@ class NativeHCX:
 
     def _post(self, url: str, payload: dict[str, Any]) -> dict[str, Any]:
         last_err: Exception | None = None
-        for attempt in range(self.max_retries):
+        for attempt in range(4):
             started = time.perf_counter()
             try:
                 r = self.session.post(
@@ -189,9 +189,13 @@ class NativeHCX:
                 return data
             except Exception as exc:  # noqa: BLE001
                 last_err = exc
-                if "HTTP 4" in str(exc):
-                    break
-                time.sleep(1.5 * (2**attempt))
+                msg = str(exc)
+                if "HTTP 4" in msg and "429" not in msg:
+                    break                       # 4xx(429 제외)는 재시도 무의미
+                if "429" in msg:
+                    time.sleep(12.0 * (attempt + 1))   # 분당 한도: 12/24/36초 대기
+                else:
+                    time.sleep(1.5 * (2**attempt))
         raise HCXError(f"요청 실패: {last_err}")
 
 

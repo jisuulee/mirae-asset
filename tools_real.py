@@ -20,6 +20,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import unicodedata
 from typing import Any
 
 import psycopg2
@@ -63,6 +64,7 @@ def _err(code: str, message: str, **extra: Any) -> dict[str, Any]:
 
 
 def _norm(s: str) -> str:
+    s = unicodedata.normalize("NFC", s or "")   # DB/입력의 NFD·NFC 혼재 방어
     return re.sub(r"[\s\.\(\)주식회사㈜]+", "", s).lower()
 
 

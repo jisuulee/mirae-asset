@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+harness_v*.txt
+gt20*.txt
+dump.sql
+sections_full.jsonl
+logs/
+*.png

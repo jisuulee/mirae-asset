@@ -13,6 +13,7 @@ mock 툴 — tool_contract_v0.md 스키마 그대로 구현한 가짜 툴.
 from __future__ import annotations
 
 import json
+import re
 from typing import Any
 
 # ----------------------------------------------------------------- 유니버스
@@ -361,11 +362,33 @@ def calc(op: str, items: list[dict[str, Any]]) -> dict[str, Any]:
         return _ok({"result": {"diff": d},
                     "steps": f"{vals[0][1]:,.0f} - {vals[1][1]:,.0f} = {d:,.0f}"})
     if op == "growth_rate":
-        if len(vals) != 2 or vals[1][1] == 0:
-            return _err("INVALID_ARG", "growth_rate 는 [현재, 기준] 2개 필요, 기준≠0.")
-        g = (vals[0][1] - vals[1][1]) / vals[1][1] * 100
-        return _ok({"result": {"growth_pct": round(g, 2)},
-                    "steps": f"({vals[0][1]:,.0f} - {vals[1][1]:,.0f}) / {vals[1][1]:,.0f} = {g:.2f}%"})
+        if len(vals) != 2:
+            return _err("INVALID_ARG", "growth_rate 는 items 2개가 필요합니다.")
+        # 순서에 의존하지 않는다: role/base 키 → label 내 연도 → 마지막 항목을 현재로
+        cur = base = None
+        for it in items:
+            role = str(it.get("role", "")).lower()
+            if role in ("current", "현재", "new"):
+                cur = (it["label"], float(it["value"]))
+            elif role in ("base", "기준", "old", "previous"):
+                base = (it["label"], float(it["value"]))
+        if cur is None or base is None:
+            years = []
+            for lb, v in vals:
+                m = re.search(r"(19|20)\d{2}", lb or "")
+                years.append(int(m.group()) if m else None)
+            if years[0] is not None and years[1] is not None and years[0] != years[1]:
+                order = [0, 1] if years[0] > years[1] else [1, 0]
+                cur, base = vals[order[0]], vals[order[1]]
+            else:
+                cur, base = vals[1], vals[0]   # 관례: 뒤가 현재
+        if base[1] == 0:
+            return _err("INVALID_ARG", "기준값이 0 입니다.")
+        g = (cur[1] - base[1]) / base[1] * 100
+        return _ok({"result": {"growth_pct": round(g, 2),
+                               "current": cur[0], "base": base[0]},
+                    "steps": (f"({cur[0]} {cur[1]:,.0f} - {base[0]} {base[1]:,.0f})"
+                              f" / {base[1]:,.0f} = {g:.2f}%")})
     if op == "rank":
         ranked = sorted(vals, key=lambda x: -x[1])
         return _ok({"result": {"ranking": [l for l, _ in ranked]},

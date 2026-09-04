@@ -24,8 +24,10 @@ from typing import Any
 
 from hcx_client import MODEL_LIGHT, MODEL_MAIN, NativeHCX, OpenAICompatHCX, Usage
 
+TOOLS_BACKEND = os.environ.get("TOOLS_BACKEND", "mock").lower()
+
 # 툴 백엔드 전환: TOOLS_BACKEND=real 이면 실 DB 어댑터, 기본은 mock
-if os.environ.get("TOOLS_BACKEND", "mock").lower() == "real":
+if TOOLS_BACKEND == "real":
     from tools_real import ALIASES, AMBIGUOUS, UNIVERSE, dispatch
     from tools_real import _load_universe as _init_backend
 else:
@@ -67,6 +69,16 @@ SYSTEM_PROMPT = """너는 한국 상장기업 공시 데이터 기반 질의응�
    - 정기공시 근거: (근거: 사업보고서 2025.12, 접수번호 XXXXXXXXXXXXXX, 섹션 path)
    - 이벤트/정정 근거: (근거: 공시 제목, 접수번호 XXXXXXXXXXXXXX)
    - 확인 불가: (근거: 조회 범위 — 기업/기간/문서유형을 명시). "N/A" 표기 금지.
+
+[재무 수치 조회 규칙]
+- 별도 언급이 없으면 연결(consolidated) 기준을 사용한다. 섹션 선택 시
+  "연결 손익계산서", "연결 재무상태표", "요약재무정보"를 우선하고,
+  "손익계산서"(별도), "재무제표"(별도)는 질의가 '별도 기준'을 명시할 때만 쓴다.
+- 요약 지표(매출액·영업이익·당기순이익)는 "III. 재무에 관한 사항 > 1. 요약재무정보"
+  를 먼저 확인하고, 없거나 불충분할 때 연결 손익계산서를 본다.
+- 답변에 연결/별도 중 무엇을 근거로 했는지 명시한다.
+- 증감률·비교 시 calc 의 items 각 항목에 role 을 반드시 지정한다
+  (비교 기준=role:"base", 비교 대상=role:"current"). 증가율은 부호와 % 를 함께 쓴다.
 
 [도구 사용 순서 지침]
 - 기업명이 나오면 항상 resolve_company 부터.
@@ -154,6 +166,9 @@ TOOL_SPECS: list[dict[str, Any]] = [
                    "enum": ["compare", "sum", "diff", "growth_rate", "rank", "krw_format"]},
             "items": {"type": "array", "items": {"type": "object", "properties": {
                 "label": {"type": "string"}, "value": {"type": "number"},
+                "role": {"type": "string", "enum": ["current", "base"],
+                         "description": ("growth_rate 필수: 비교 대상=current, "
+                                         "비교 기준=base")},
                 "unit": {"type": "string",
                          "description": "krw_format 전용: 원|천원|만원|백만원|억원|조원"}},
                 "required": ["label", "value"]}}},
@@ -214,26 +229,44 @@ GUARD_ANSWERS = {
 }
 
 # ------------------------------------------------------------- 결정론 resolve
+def _nrm(s: str) -> str:
+    import unicodedata
+    return unicodedata.normalize("NFC", s or "").strip().lower().replace(" ", "")
+
+
 def resolve_deterministic(companies: list[str]) -> list[dict[str, Any]]:
-    """LLM 이전에 별칭 사전으로 기업 확정. 결과는 FC 루프에 컨텍스트로 주입."""
+    """LLM 이전에 기업 확정: 사전 → 정규화 exact → 백엔드 resolve_company 폴백.
+    폴백까지 실패해야만 unknown (조기 abstain 오판 방지)."""
     out = []
     for name in companies:
-        key = name.strip().lower().replace(" ", "")
+        key = _nrm(name)
         if key in AMBIGUOUS:
             out.append({"input": name, "status": "ambiguous",
                         "candidates": [UNIVERSE[c]["corp_name"] for c in AMBIGUOUS[key]]})
-        elif key in ALIASES:
+            continue
+        if key in ALIASES:
             code = ALIASES[key]
             out.append({"input": name, "status": "resolved",
                         "corp_code": code, "corp_name": UNIVERSE[code]["corp_name"]})
+            continue
+        hit = next((c for c, i in UNIVERSE.items()
+                    if _nrm(i["corp_name"]) == key), None)
+        if hit:
+            out.append({"input": name, "status": "resolved",
+                        "corp_code": hit, "corp_name": UNIVERSE[hit]["corp_name"]})
+            continue
+        # 백엔드 폴백: real 이면 트라이그램 유사도까지 동원됨
+        r = dispatch("resolve_company", {"name": name})
+        if r.get("ok"):
+            d = r["data"]
+            out.append({"input": name, "status": "resolved",
+                        "corp_code": d["corp_code"], "corp_name": d["corp_name"],
+                        "matched_by": d.get("matched_by", "backend")})
+        elif (r.get("error") or {}).get("code") == "AMBIGUOUS_COMPANY":
+            out.append({"input": name, "status": "ambiguous",
+                        "candidates": [c["corp_name"] for c in r.get("candidates", [])]})
         else:
-            hit = next((c for c, i in UNIVERSE.items()
-                        if i["corp_name"].lower() == key), None)
-            if hit:
-                out.append({"input": name, "status": "resolved",
-                            "corp_code": hit, "corp_name": UNIVERSE[hit]["corp_name"]})
-            else:
-                out.append({"input": name, "status": "unknown"})
+            out.append({"input": name, "status": "unknown"})
     return out
 
 
@@ -292,6 +325,9 @@ class Trace:
 class DisclosureAgent:
     def __init__(self) -> None:
         _init_backend()                   # real 백엔드면 DB 에서 유니버스/별칭 로드
+        print(f"  [backend] {TOOLS_BACKEND.upper()} · 기업 {len(UNIVERSE)}개")
+        if TOOLS_BACKEND != "real":
+            print("  [경고] mock 백엔드입니다. 실 DB 평가는 TOOLS_BACKEND=real 필요")
         self.light = NativeHCX()          # DASH 라우팅용 (네이티브)
         self.fc = OpenAICompatHCX()       # FC 루프용 (호환)
         self.usage = Usage()
@@ -344,8 +380,15 @@ class DisclosureAgent:
              "근거가 충분하면 도구 호출을 멈춰라."},
         ]
         for step in range(1, MAX_STEPS + 1):
-            r = self.fc.chat(messages, model=MODEL_MAIN, tools=TOOL_SPECS,
-                             max_tokens=2048)
+            try:
+                r = self.fc.chat(messages, model=MODEL_MAIN, tools=TOOL_SPECS,
+                                 max_tokens=2048)
+            except Exception as exc:  # noqa: BLE001
+                # API 오류(429/400 등)로 루프가 죽으면 문항 전체를 잃는다.
+                # 수집된 근거가 있으면 그것으로 생성 단계로 강등한다.
+                trace.add(f"[FC {step}] 호출 실패({type(exc).__name__}: {str(exc)[:80]}) "
+                          f"→ 수집된 근거 {len(evidence)}건으로 생성 진행")
+                break
             self.usage.add(r.usage)
             if not r.tool_calls:
                 trace.add(f"[FC {step}] 도구 호출 종료")
@@ -471,18 +514,28 @@ class DisclosureAgent:
                         "한계를 고지하라]\n"
                         + "\n".join(f"- {m}" for m in missing_docs))
 
-        # 5. 생성
-        answer = self.synthesize(question, context, task_type, trace)
+        # 5. 생성 (API 오류 시에도 문항을 잃지 않는다)
+        try:
+            answer = self.synthesize(question, context, task_type, trace)
+        except Exception as exc:  # noqa: BLE001
+            trace.add(f"[생성] 실패({type(exc).__name__}) → 한계 고지로 강등")
+            answer = (f"{ABSTAIN_PHRASE}. 답변 생성 중 일시적 오류가 발생했습니다. "
+                      + (f"수집된 근거 접수번호: "
+                         f"{', '.join(sorted(set(re.findall(r'\\d{14}', context))))}"
+                         if context else ""))
 
         # 6. 검증
         missing = verify_numbers(answer, context, question)
         if missing:
             trace.add(f"[검증] 근거 미확인 수치 {missing} → 재생성 1회")
-            answer = self.synthesize(
-                question,
-                context + f"\n\n[경고] 이전 답변의 수치 {missing} 는 근거에 없다. "
-                          "근거에 있는 수치만 사용하거나 한계를 고지하라.",
-                task_type, trace)
+            try:
+                answer = self.synthesize(
+                    question,
+                    context + f"\n\n[경고] 이전 답변의 수치 {missing} 는 근거에 없다. "
+                              "근거에 있는 수치만 사용하거나 한계를 고지하라.",
+                    task_type, trace)
+            except Exception as exc:  # noqa: BLE001
+                trace.add(f"[검증] 재생성 실패({type(exc).__name__}) → 1차 답변 유지")
             still = verify_numbers(answer, context, question)
             trace.add(f"[검증] 재검증 {'통과' if not still else f'실패 {still}'}")
         else:

@@ -1,0 +1,126 @@
+{
+ "stamp": "20260903_161056",
+ "prompt_version": "v3-real",
+ "pass": 0,
+ "total": 3,
+ "rows": [
+  {
+   "id": "E-001",
+   "type": "단순조회",
+   "difficulty": "하",
+   "mode": "closed",
+   "traps": [
+    "unit_trap"
+   ],
+   "passed": false,
+   "dims": {
+    "accuracy": false,
+    "citation": false,
+    "grounding": false
+   },
+   "checks": [
+    {
+     "dim": "accuracy",
+     "name": "금액=333,605,900,000,000",
+     "ok": false,
+     "note": "답변 금액들: []"
+    },
+    {
+     "dim": "accuracy",
+     "name": "포함:'2025.12'",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "dim": "citation",
+     "name": "접수번호 20260310002820",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "dim": "grounding",
+     "name": "근거에 '333,605,900'",
+     "ok": false,
+     "note": ""
+    }
+   ],
+   "answer": "제공된 공시 데이터에서 확인할 수 없습니다. (근거: 검색 결과 없음)\n\n[추가 정보] \n삼성전자의 2025년 연결 기준 매출액을 확인하기 위해서는 관련 공시를 참조해야 합니다. 현재 제공된 도구로는 해당 정보가 검색되지 않았습니다. 추가적인 데이터를 제공해주시면 다시 확인해드릴 수 있습니다. \n\n마지막 답변에는 다음과 같은 형식을 따르겠습니다:\n\n(근거: 검색 결과 없음)",
+   "elapsed_s": 13.4
+  },
+  {
+   "id": "E-002",
+   "type": "단순조회",
+   "difficulty": "하",
+   "mode": "closed",
+   "traps": [
+    "unit_trap"
+   ],
+   "passed": false,
+   "dims": {
+    "accuracy": false,
+    "citation": true,
+    "grounding": false
+   },
+   "checks": [
+    {
+     "dim": "accuracy",
+     "name": "금액=41,210,500,000,000",
+     "ok": false,
+     "note": "답변 금액들: []"
+    },
+    {
+     "dim": "citation",
+     "name": "접수번호 20260310002820",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "dim": "grounding",
+     "name": "근거에 '41,210,500'",
+     "ok": false,
+     "note": ""
+    }
+   ],
+   "answer": "제공된 공시 데이터에서 삼성전자의 2025년 영업이익 정보는 확인할 수 없습니다. \n\n(근거: 사업보고서 2025.03, 접수번호 20260310002820, 섹션 N/A)",
+   "elapsed_s": 11.3
+  },
+  {
+   "id": "E-003",
+   "type": "비교연산",
+   "difficulty": "중",
+   "mode": "closed",
+   "traps": [
+    "unit_trap",
+    "calc_required"
+   ],
+   "passed": false,
+   "dims": {
+    "accuracy": false,
+    "citation": false,
+    "grounding": false
+   },
+   "checks": [
+    {
+     "dim": "accuracy",
+     "name": "택일:['10.88', '10.9']",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "dim": "citation",
+     "name": "접수번호 20260310002820",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "dim": "grounding",
+     "name": "근거에 '300,870,903'",
+     "ok": false,
+     "note": ""
+    }
+   ],
+   "answer": "제공된 공시 데이터에서 삼성전자의 2024년과 2025년의 매출액은 확인할 수 없습니다. 따라서 두 해 간의 매출액 증가율을 산출할 수 없습니다. \n\n(근거: 조회 범위 — 삼성전자의 2024년 및 2025년 사업보고서 내 매출액 관련 정보 N/A)",
+   "elapsed_s": 16.1
+  }
+ ]
+}
