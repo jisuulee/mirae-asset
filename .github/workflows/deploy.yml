@@ -1,1 +1,134 @@
+name: Deploy to NCP
 
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - .github/workflows/deploy.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Validate Docker image
+        run: docker build -t disclosure-agent:ci .
+
+      - name: Install SSH client helper
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+
+      - name: Register NCP host key
+        env:
+          NCP_HOST: ${{ secrets.NCP_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H "$NCP_HOST" >> ~/.ssh/known_hosts
+
+      - name: Upload source to NCP VM
+        env:
+          SSHPASS: ${{ secrets.NCP_PASSWORD }}
+          NCP_HOST: ${{ secrets.NCP_HOST }}
+          NCP_USERNAME: ${{ secrets.NCP_USERNAME }}
+        run: |
+          tar \
+            --exclude=.git \
+            --exclude=.github \
+            --exclude=.env \
+            --exclude=logs \
+            -czf - . \
+          | sshpass -e ssh "$NCP_USERNAME@$NCP_HOST" \
+              'mkdir -p /opt/mirae-asset && tar -xzf - -C /opt/mirae-asset'
+
+      - name: Deploy containers and verify health
+        env:
+          SSHPASS: ${{ secrets.NCP_PASSWORD }}
+          NCP_HOST: ${{ secrets.NCP_HOST }}
+          NCP_USERNAME: ${{ secrets.NCP_USERNAME }}
+          DEPLOY_SHA: ${{ github.sha }}
+        run: |
+          sshpass -e ssh "$NCP_USERNAME@$NCP_HOST" \
+            "DEPLOY_SHA=$DEPLOY_SHA bash -s" <<'REMOTE'
+          set -Eeuo pipefail
+
+          APP_DIR=/opt/mirae-asset
+          APP_NAME=disclosure-agent
+          NEW_IMAGE="$APP_NAME:$DEPLOY_SHA"
+          DB_COMPOSE="$APP_DIR/mirae-asset-feature-retrieval-v1/mirae-asset-feature-retrieval-v1/docker-compose.yml"
+
+          cd "$APP_DIR"
+          test -s .env || { echo "Missing $APP_DIR/.env"; exit 1; }
+          test -f "$DB_COMPOSE" || { echo "Missing database compose file"; exit 1; }
+
+          mkdir -p logs
+
+          docker compose --env-file .env -f "$DB_COMPOSE" up -d postgres
+          docker build -t "$NEW_IMAGE" .
+
+          HAD_PREVIOUS=false
+          if docker container inspect "$APP_NAME" >/dev/null 2>&1; then
+            docker rm -f "${APP_NAME}-previous" >/dev/null 2>&1 || true
+            docker stop "$APP_NAME"
+            docker rename "$APP_NAME" "${APP_NAME}-previous"
+            HAD_PREVIOUS=true
+          fi
+
+          rollback() {
+            echo "Deployment failed; restoring the previous container."
+            docker logs "$APP_NAME" --tail 100 || true
+            docker rm -f "$APP_NAME" >/dev/null 2>&1 || true
+            if [ "$HAD_PREVIOUS" = true ]; then
+              docker rename "${APP_NAME}-previous" "$APP_NAME"
+              docker start "$APP_NAME"
+            fi
+          }
+
+          if ! docker run -d \
+            --name "$APP_NAME" \
+            --restart unless-stopped \
+            --env-file .env \
+            --network host \
+            --volume "$APP_DIR/logs:/app/logs" \
+            "$NEW_IMAGE"; then
+            rollback
+            exit 1
+          fi
+
+          HEALTHY=false
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1/health >/dev/null; then
+              HEALTHY=true
+              break
+            fi
+            echo "Waiting for /health ($attempt/30)"
+            sleep 2
+          done
+
+          if [ "$HEALTHY" != true ]; then
+            rollback
+            exit 1
+          fi
+
+          if [ "$HAD_PREVIOUS" = true ]; then
+            OLD_IMAGE=$(docker inspect --format '{{.Config.Image}}' "${APP_NAME}-previous")
+            docker image tag "$OLD_IMAGE" "${APP_NAME}:rollback"
+            docker rm "${APP_NAME}-previous"
+            [ "$OLD_IMAGE" = "$NEW_IMAGE" ] || docker image rm "$OLD_IMAGE" || true
+          fi
+
+          docker image prune -f
+          curl -fsS http://127.0.0.1/health
+          REMOTE
