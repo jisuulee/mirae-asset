@@ -250,3 +250,24 @@ Thumbs.db
 *.temp
 *.bak
 *~
+
+# Role 1 local corpus archives and private credentials
+*.zip
+*.7z
+*.tar
+*.tar.gz
+.env.*
+!.env.example
+*.pem
+*.key
+parsed_disclosures.jsonl
+raw/
+metadata_normalized.jsonl
+correction_lineage.jsonl
+correction_chains.jsonl
+document_index.jsonl
+sample_disclosures.jsonl
+parse_warnings.jsonl
+parse_failures.jsonl
+handoff/
+*.partial
