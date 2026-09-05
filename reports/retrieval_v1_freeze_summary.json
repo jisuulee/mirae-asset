@@ -1,0 +1,155 @@
+{
+  "status": "retrieval_v1_frozen",
+  "date": "2026-08-31",
+  "default_pipeline": {
+    "fts_depth": 20,
+    "vector_depth": 20,
+    "title_path_depth": 20,
+    "title_subchannel_depth": 100,
+    "rrf_k": 60,
+    "fusion_depth": 10,
+    "reranker": "deterministic-feature-reranker-v1"
+  },
+  "corpus": {
+    "loader_namespace": "periodic-full-v1",
+    "periodic_disclosures": 1054,
+    "document_sections": 82862,
+    "retrieval_tables": 1401752,
+    "vector_chunks": 38971,
+    "unique_embeddings": 34084
+  },
+  "embedding": {
+    "model": "clova-studio/bge-m3",
+    "version": "embedding-v2",
+    "dimension": 1024,
+    "search": "exact cosine"
+  },
+  "candidate_120": {
+    "question_count": 120,
+    "section": {
+      "question_count": 113,
+      "top1": 0.1415929203539823,
+      "recall_at_3": 0.34513274336283184,
+      "recall_at_5": 0.3805309734513274,
+      "recall_at_10": 0.5309734513274337,
+      "mrr": 0.2586739710633516,
+      "relevant_set_coverage_at_10": 0.5309734513274337,
+      "map_at_10": 0.260978543334738,
+      "ndcg_at_10": 0.3253385519226862
+    },
+    "receipt": {
+      "question_count": 113,
+      "top1": 0.21238938053097345,
+      "recall_at_3": 0.4336283185840708,
+      "recall_at_5": 0.49557522123893805,
+      "recall_at_10": 0.7433628318584071,
+      "mrr": 0.35723065037224333,
+      "relevant_set_coverage_at_10": 0.7418879056047197,
+      "map_at_10": 0.35812380015919837,
+      "ndcg_at_10": 0.44956148392955936
+    },
+    "table": {
+      "question_count": 2,
+      "top1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "relevant_set_coverage_at_10": 0.0,
+      "map_at_10": 0.0,
+      "ndcg_at_10": 0.0
+    },
+    "latency": {
+      "sample_count": 113,
+      "average_ms": 179.03278495491054,
+      "p50_ms": 154.1875999828335,
+      "p95_ms": 257.49160000123084,
+      "max_ms": 1877.9728999943472
+    }
+  },
+  "reviewed_36": {
+    "question_count": 36,
+    "section": {
+      "question_count": 36,
+      "top1": 0.25,
+      "recall_at_3": 0.5555555555555556,
+      "recall_at_5": 0.5833333333333334,
+      "recall_at_10": 0.7777777777777778,
+      "mrr": 0.4211750440917108,
+      "relevant_set_coverage_at_10": 0.7777777777777778,
+      "map_at_10": 0.4211750440917108,
+      "ndcg_at_10": 0.506069078313331
+    },
+    "receipt": {
+      "question_count": 36,
+      "top1": 0.3055555555555556,
+      "recall_at_3": 0.5833333333333334,
+      "recall_at_5": 0.6666666666666666,
+      "recall_at_10": 0.9166666666666666,
+      "mrr": 0.487147266313933,
+      "relevant_set_coverage_at_10": 0.9166666666666666,
+      "map_at_10": 0.487147266313933,
+      "ndcg_at_10": 0.588283521041589
+    },
+    "table": {
+      "question_count": 2,
+      "top1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "relevant_set_coverage_at_10": 0.0,
+      "map_at_10": 0.0,
+      "ndcg_at_10": 0.0
+    },
+    "latency": {
+      "sample_count": 36,
+      "average_ms": 218.6859861127838,
+      "p50_ms": 138.86060001095757,
+      "p95_ms": 612.2726000030525,
+      "max_ms": 1877.9728999943472
+    }
+  },
+  "production_regression_cache": {
+    "embedding": {
+      "hits": 113,
+      "misses": 0
+    },
+    "reranker": {
+      "hits": 1130,
+      "misses": 0
+    }
+  },
+  "adopted": [
+    "FTS",
+    "Exact Vector",
+    "Title/Path FTS+trigram",
+    "unweighted RRF",
+    "deterministic reranker"
+  ],
+  "rejected": {
+    "HNSW": "filtered recall/latency trade-off",
+    "Depth50/100": "candidate gain did not justify final cost/ranking",
+    "Parent aggregation": "no Top5/Top1 split improvement",
+    "Deterministic query expansion": "easy/exact/title drift",
+    "Spacing-only expansion": "no Top100 ceiling improvement"
+  },
+  "known_limitations": [
+    "no_candidate_any_channel=19",
+    "semantic mismatch remains",
+    "84 candidate questions lack independent review",
+    "deterministic reranker is not neural/LLM",
+    "query embedding latency outliers"
+  ],
+  "benchmark_policy": {
+    "reviewed_regression": 36,
+    "internal_candidate": 120,
+    "official_candidate": false
+  },
+  "damage_guard": {
+    "top1_damaged": 0,
+    "top3_damaged": 0,
+    "top5_damaged": 0,
+    "top10_damaged": 0
+  }
+}

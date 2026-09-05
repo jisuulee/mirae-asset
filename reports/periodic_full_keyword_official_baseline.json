@@ -1,0 +1,4381 @@
+{
+  "benchmark_version": "periodic-full-v1.0",
+  "corpus_snapshot": "periodic-full-v1:receipts=1054:sections=82862:tables=1401752",
+  "loader_namespace": "periodic-full-v1",
+  "status": "candidate_pending_human_review",
+  "question_count": 120,
+  "reused_regression_count": 36,
+  "new_question_count": 84,
+  "distributions": {
+    "category": {
+      "ambiguous_similar_sections": 10,
+      "company_concept": 15,
+      "company_section_title": 15,
+      "difficult_or_ambiguous": 5,
+      "exact_phrase": 10,
+      "narrative_description": 20,
+      "partial_korean_phrase": 10,
+      "pdf_fallback": 5,
+      "spacing_or_expression_variation": 10,
+      "table_related": 10,
+      "year_report_filtered": 10
+    },
+    "difficulty": {
+      "easy": 25,
+      "hard": 20,
+      "medium": 75
+    },
+    "retrieval_target": {
+      "either": 3,
+      "pdf_page": 5,
+      "section": 105,
+      "table": 7
+    },
+    "review_status": {
+      "ambiguous": 10,
+      "needs_review": 74,
+      "reviewed": 36
+    },
+    "split": {
+      "development": 56,
+      "held_out": 28,
+      "regression": 36
+    },
+    "source_type": {
+      "pdf": 5,
+      "xml": 115
+    },
+    "gold_company": {
+      "CJ제일제당": 2,
+      "HD현대일렉트릭": 1,
+      "HD현대중공업": 1,
+      "HMM": 1,
+      "JYP Ent": 1,
+      "KB금융": 5,
+      "LG생활건강": 1,
+      "LG씨엔에스": 1,
+      "LG에너지솔루션": 1,
+      "LG유플러스": 1,
+      "LG이노텍": 2,
+      "LIG디펜스앤에어로스페이스": 1,
+      "NAVER": 1,
+      "NC": 1,
+      "OCI홀딩스": 1,
+      "POSCO홀딩스": 3,
+      "SK텔레콤": 1,
+      "SK하이닉스": 2,
+      "고려아연": 1,
+      "기아": 1,
+      "대우건설": 2,
+      "두산로보틱스": 1,
+      "두산에너빌리티": 2,
+      "두산퓨얼셀": 1,
+      "디앤디파마텍": 1,
+      "레인보우로보틱스": 1,
+      "메리츠금융지주": 1,
+      "미래에셋증권": 1,
+      "삼성E&A": 1,
+      "삼성SDI": 1,
+      "삼성바이오로직스": 1,
+      "삼성생명": 2,
+      "삼성전기": 1,
+      "삼성전자": 29,
+      "삼성중공업": 1,
+      "삼성화재해상보험": 1,
+      "세아베스틸지주": 2,
+      "셀트리온": 1,
+      "시프트업": 2,
+      "신한지주": 1,
+      "아모레퍼시픽": 1,
+      "알테오젠": 1,
+      "에스엠": 2,
+      "에코프로비엠": 1,
+      "엘에스일렉트릭": 1,
+      "와이지엔터테인먼트": 1,
+      "우리금융지주": 1,
+      "이마트": 1,
+      "카카오": 2,
+      "케이티": 2,
+      "하나금융지주": 1,
+      "하이브": 1,
+      "한국항공우주": 1,
+      "한미반도체": 1,
+      "한미약품": 1,
+      "한전기술": 1,
+      "한화솔루션": 3,
+      "한화에어로스페이스": 3,
+      "한화오션": 4,
+      "현대건설": 1,
+      "현대로템": 1,
+      "현대모비스": 2,
+      "현대오토에버": 1,
+      "현대자동차": 1,
+      "현대제철": 1,
+      "효성중공업": 2
+    },
+    "gold_year": {
+      "2023": 12,
+      "2024": 64,
+      "2025": 32,
+      "2026": 18
+    },
+    "gold_report_type": {
+      "annual": 66,
+      "half": 14,
+      "quarter": 44
+    }
+  },
+  "distinct_companies": 66,
+  "provenance_validation": {
+    "sections_checked": 153,
+    "tables_checked": 11,
+    "mismatch_count": 0
+  },
+  "condition": "cold (application-level single pass; OS/PostgreSQL cache not forcibly flushed)",
+  "modes": {
+    "fts": {
+      "benchmark_version": "periodic-full-v1.0",
+      "question_count": 120,
+      "prediction_count": 120,
+      "overall": {
+        "question_count": 120,
+        "section": {
+          "question_count": 113,
+          "top1": 0.1592920353982301,
+          "recall_at_3": 0.17699115044247787,
+          "recall_at_5": 0.17699115044247787,
+          "recall_at_10": 0.18584070796460178,
+          "mrr": 0.16617502458210423,
+          "relevant_set_coverage_at_10": 0.18584070796460178,
+          "map_at_10": 0.16617502458210423,
+          "ndcg_at_10": 0.1708055751828671
+        },
+        "receipt": {
+          "question_count": 120,
+          "top1": 0.16666666666666666,
+          "recall_at_3": 0.20833333333333334,
+          "recall_at_5": 0.23333333333333334,
+          "recall_at_10": 0.25,
+          "mrr": 0.19189814814814815,
+          "relevant_set_coverage_at_10": 0.25,
+          "map_at_10": 0.19189814814814815,
+          "ndcg_at_10": 0.205727218793656
+        },
+        "table": {
+          "question_count": 9,
+          "top1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "relevant_set_coverage_at_10": 0.0,
+          "map_at_10": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        "latency": {
+          "sample_count": 120,
+          "average_ms": 12.890471666469239,
+          "p50_ms": 3.796299992245622,
+          "p95_ms": 50.70920000434853,
+          "max_ms": 391.80270000360906
+        }
+      },
+      "reviewed_only": {
+        "question_count": 36,
+        "section": {
+          "question_count": 36,
+          "top1": 0.5,
+          "recall_at_3": 0.5555555555555556,
+          "recall_at_5": 0.5555555555555556,
+          "recall_at_10": 0.5833333333333334,
+          "mrr": 0.5216049382716049,
+          "relevant_set_coverage_at_10": 0.5833333333333334,
+          "map_at_10": 0.5216049382716049,
+          "ndcg_at_10": 0.5361397221017773
+        },
+        "receipt": {
+          "question_count": 36,
+          "top1": 0.5555555555555556,
+          "recall_at_3": 0.6944444444444444,
+          "recall_at_5": 0.7777777777777778,
+          "recall_at_10": 0.8333333333333334,
+          "mrr": 0.6396604938271605,
+          "relevant_set_coverage_at_10": 0.8333333333333334,
+          "map_at_10": 0.6396604938271605,
+          "ndcg_at_10": 0.6857573959788533
+        },
+        "table": {
+          "question_count": 2,
+          "top1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "relevant_set_coverage_at_10": 0.0,
+          "map_at_10": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        "latency": {
+          "sample_count": 36,
+          "average_ms": 34.25360277752689,
+          "p50_ms": 15.464500000234693,
+          "p95_ms": 101.24180000275373,
+          "max_ms": 391.80270000360906
+        }
+      },
+      "by_category": {
+        "ambiguous_similar_sections": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 4.176590000861324,
+            "p50_ms": 3.9586000057170168,
+            "p95_ms": 6.0545000014826655,
+            "max_ms": 6.0545000014826655
+          }
+        },
+        "company_concept": {
+          "question_count": 15,
+          "section": {
+            "question_count": 15,
+            "top1": 0.13333333333333333,
+            "recall_at_3": 0.13333333333333333,
+            "recall_at_5": 0.13333333333333333,
+            "recall_at_10": 0.13333333333333333,
+            "mrr": 0.13333333333333333,
+            "relevant_set_coverage_at_10": 0.13333333333333333,
+            "map_at_10": 0.13333333333333333,
+            "ndcg_at_10": 0.13333333333333333
+          },
+          "receipt": {
+            "question_count": 15,
+            "top1": 0.13333333333333333,
+            "recall_at_3": 0.13333333333333333,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.15,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.15,
+            "ndcg_at_10": 0.16204510387155951
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 15,
+            "average_ms": 5.766626668628305,
+            "p50_ms": 4.0526999946450815,
+            "p95_ms": 16.02870000351686,
+            "max_ms": 16.02870000351686
+          }
+        },
+        "company_section_title": {
+          "question_count": 15,
+          "section": {
+            "question_count": 15,
+            "top1": 0.26666666666666666,
+            "recall_at_3": 0.26666666666666666,
+            "recall_at_5": 0.26666666666666666,
+            "recall_at_10": 0.3333333333333333,
+            "mrr": 0.274074074074074,
+            "relevant_set_coverage_at_10": 0.3333333333333333,
+            "map_at_10": 0.274074074074074,
+            "ndcg_at_10": 0.2867353330442654
+          },
+          "receipt": {
+            "question_count": 15,
+            "top1": 0.26666666666666666,
+            "recall_at_3": 0.3333333333333333,
+            "recall_at_5": 0.3333333333333333,
+            "recall_at_10": 0.4666666666666667,
+            "mrr": 0.31407407407407406,
+            "relevant_set_coverage_at_10": 0.4666666666666667,
+            "map_at_10": 0.31407407407407406,
+            "ndcg_at_10": 0.34806830503688846
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 15,
+            "average_ms": 27.039119999972172,
+            "p50_ms": 21.34640001168009,
+            "p95_ms": 78.558899986092,
+            "max_ms": 78.558899986092
+          }
+        },
+        "difficult_or_ambiguous": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 3.6246999981813133,
+            "p50_ms": 3.5607000027084723,
+            "p95_ms": 4.423199992743321,
+            "max_ms": 4.423199992743321
+          }
+        },
+        "exact_phrase": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.4,
+            "recall_at_3": 0.4,
+            "recall_at_5": 0.4,
+            "recall_at_10": 0.4,
+            "mrr": 0.4,
+            "relevant_set_coverage_at_10": 0.4,
+            "map_at_10": 0.4,
+            "ndcg_at_10": 0.4
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.4,
+            "recall_at_3": 0.4,
+            "recall_at_5": 0.4,
+            "recall_at_10": 0.4,
+            "mrr": 0.4,
+            "relevant_set_coverage_at_10": 0.4,
+            "map_at_10": 0.4,
+            "ndcg_at_10": 0.4
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 16.292370000155643,
+            "p50_ms": 4.0422000020043924,
+            "p95_ms": 101.24180000275373,
+            "max_ms": 101.24180000275373
+          }
+        },
+        "narrative_description": {
+          "question_count": 20,
+          "section": {
+            "question_count": 20,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "receipt": {
+            "question_count": 20,
+            "top1": 0.1,
+            "recall_at_3": 0.15,
+            "recall_at_5": 0.15,
+            "recall_at_10": 0.15,
+            "mrr": 0.125,
+            "relevant_set_coverage_at_10": 0.15,
+            "map_at_10": 0.125,
+            "ndcg_at_10": 0.13154648767857288
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 20,
+            "average_ms": 4.636739997658879,
+            "p50_ms": 3.3860999974422157,
+            "p95_ms": 11.168900004122406,
+            "max_ms": 12.29060000332538
+          }
+        },
+        "partial_korean_phrase": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.3,
+            "recall_at_5": 0.3,
+            "recall_at_10": 0.3,
+            "mrr": 0.18333333333333332,
+            "relevant_set_coverage_at_10": 0.3,
+            "map_at_10": 0.18333333333333332,
+            "ndcg_at_10": 0.21309297535714578
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 6.729420000920072,
+            "p50_ms": 2.801399998134002,
+            "p95_ms": 23.70570000493899,
+            "max_ms": 23.70570000493899
+          }
+        },
+        "pdf_fallback": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 4.385740001453087,
+            "p50_ms": 2.469099999871105,
+            "p95_ms": 12.61279999744147,
+            "max_ms": 12.61279999744147
+          }
+        },
+        "spacing_or_expression_variation": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.3,
+            "recall_at_10": 0.3,
+            "mrr": 0.13999999999999999,
+            "relevant_set_coverage_at_10": 0.3,
+            "map_at_10": 0.13999999999999999,
+            "ndcg_at_10": 0.17737056144690833
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 7.508370000869036,
+            "p50_ms": 3.198200007318519,
+            "p95_ms": 24.243899999419227,
+            "max_ms": 24.243899999419227
+          }
+        },
+        "table_related": {
+          "question_count": 10,
+          "section": {
+            "question_count": 3,
+            "top1": 0.6666666666666666,
+            "recall_at_3": 0.6666666666666666,
+            "recall_at_5": 0.6666666666666666,
+            "recall_at_10": 0.6666666666666666,
+            "mrr": 0.6666666666666666,
+            "relevant_set_coverage_at_10": 0.6666666666666666,
+            "map_at_10": 0.6666666666666666,
+            "ndcg_at_10": 0.6666666666666666
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.3,
+            "recall_at_3": 0.3,
+            "recall_at_5": 0.3,
+            "recall_at_10": 0.3,
+            "mrr": 0.3,
+            "relevant_set_coverage_at_10": 0.3,
+            "map_at_10": 0.3,
+            "ndcg_at_10": 0.3
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 52.57082000025548,
+            "p50_ms": 7.889200001955032,
+            "p95_ms": 391.80270000360906,
+            "max_ms": 391.80270000360906
+          }
+        },
+        "year_report_filtered": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.3,
+            "recall_at_5": 0.3,
+            "recall_at_10": 0.3,
+            "mrr": 0.16666666666666666,
+            "relevant_set_coverage_at_10": 0.3,
+            "map_at_10": 0.16666666666666666,
+            "ndcg_at_10": 0.2
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.2,
+            "recall_at_3": 0.3,
+            "recall_at_5": 0.3,
+            "recall_at_10": 0.3,
+            "mrr": 0.23333333333333334,
+            "relevant_set_coverage_at_10": 0.3,
+            "map_at_10": 0.23333333333333334,
+            "ndcg_at_10": 0.25
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 4.920769996533636,
+            "p50_ms": 3.125000002910383,
+            "p95_ms": 15.464500000234693,
+            "max_ms": 15.464500000234693
+          }
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "question_count": 25,
+          "section": {
+            "question_count": 25,
+            "top1": 0.32,
+            "recall_at_3": 0.32,
+            "recall_at_5": 0.32,
+            "recall_at_10": 0.36,
+            "mrr": 0.3244444444444444,
+            "relevant_set_coverage_at_10": 0.36,
+            "map_at_10": 0.3244444444444444,
+            "ndcg_at_10": 0.3320411998265593
+          },
+          "receipt": {
+            "question_count": 25,
+            "top1": 0.32,
+            "recall_at_3": 0.36,
+            "recall_at_5": 0.36,
+            "recall_at_10": 0.44,
+            "mrr": 0.3484444444444444,
+            "relevant_set_coverage_at_10": 0.44,
+            "map_at_10": 0.3484444444444444,
+            "ndcg_at_10": 0.36884098302213303
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 25,
+            "average_ms": 22.74042000004556,
+            "p50_ms": 11.255899997195229,
+            "p95_ms": 78.558899986092,
+            "max_ms": 101.24180000275373
+          }
+        },
+        "hard": {
+          "question_count": 20,
+          "section": {
+            "question_count": 20,
+            "top1": 0.05,
+            "recall_at_3": 0.05,
+            "recall_at_5": 0.05,
+            "recall_at_10": 0.05,
+            "mrr": 0.05,
+            "relevant_set_coverage_at_10": 0.05,
+            "map_at_10": 0.05,
+            "ndcg_at_10": 0.05
+          },
+          "receipt": {
+            "question_count": 20,
+            "top1": 0.05,
+            "recall_at_3": 0.05,
+            "recall_at_5": 0.05,
+            "recall_at_10": 0.05,
+            "mrr": 0.05,
+            "relevant_set_coverage_at_10": 0.05,
+            "map_at_10": 0.05,
+            "ndcg_at_10": 0.05
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 20,
+            "average_ms": 4.090905000339262,
+            "p50_ms": 3.5607000027084723,
+            "p95_ms": 6.0545000014826655,
+            "max_ms": 12.61279999744147
+          }
+        },
+        "medium": {
+          "question_count": 75,
+          "section": {
+            "question_count": 68,
+            "top1": 0.1323529411764706,
+            "recall_at_3": 0.16176470588235295,
+            "recall_at_5": 0.16176470588235295,
+            "recall_at_10": 0.16176470588235295,
+            "mrr": 0.14215686274509803,
+            "relevant_set_coverage_at_10": 0.16176470588235295,
+            "map_at_10": 0.14215686274509803,
+            "ndcg_at_10": 0.14705882352941177
+          },
+          "receipt": {
+            "question_count": 75,
+            "top1": 0.14666666666666667,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.24,
+            "recall_at_10": 0.24,
+            "mrr": 0.17755555555555555,
+            "relevant_set_coverage_at_10": 0.24,
+            "map_at_10": 0.17755555555555555,
+            "ndcg_at_10": 0.19288322239580521
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 75,
+            "average_ms": 11.953706666245125,
+            "p50_ms": 3.7041000032331795,
+            "p95_ms": 23.70570000493899,
+            "max_ms": 391.80270000360906
+          }
+        }
+      },
+      "by_retrieval_target": {
+        "either": {
+          "question_count": 3,
+          "section": {
+            "question_count": 3,
+            "top1": 0.6666666666666666,
+            "recall_at_3": 0.6666666666666666,
+            "recall_at_5": 0.6666666666666666,
+            "recall_at_10": 0.6666666666666666,
+            "mrr": 0.6666666666666666,
+            "relevant_set_coverage_at_10": 0.6666666666666666,
+            "map_at_10": 0.6666666666666666,
+            "ndcg_at_10": 0.6666666666666666
+          },
+          "receipt": {
+            "question_count": 3,
+            "top1": 1.0,
+            "recall_at_3": 1.0,
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0,
+            "mrr": 1.0,
+            "relevant_set_coverage_at_10": 1.0,
+            "map_at_10": 1.0,
+            "ndcg_at_10": 1.0
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 3,
+            "average_ms": 158.29910000320524,
+            "p50_ms": 64.31659999361727,
+            "p95_ms": 391.80270000360906,
+            "max_ms": 391.80270000360906
+          }
+        },
+        "pdf_page": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 4.385740001453087,
+            "p50_ms": 2.469099999871105,
+            "p95_ms": 12.61279999744147,
+            "max_ms": 12.61279999744147
+          }
+        },
+        "section": {
+          "question_count": 105,
+          "section": {
+            "question_count": 105,
+            "top1": 0.14285714285714285,
+            "recall_at_3": 0.1619047619047619,
+            "recall_at_5": 0.1619047619047619,
+            "recall_at_10": 0.17142857142857143,
+            "mrr": 0.15026455026455027,
+            "relevant_set_coverage_at_10": 0.17142857142857143,
+            "map_at_10": 0.15026455026455027,
+            "ndcg_at_10": 0.15524790472060934
+          },
+          "receipt": {
+            "question_count": 105,
+            "top1": 0.1523809523809524,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.22857142857142856,
+            "recall_at_10": 0.24761904761904763,
+            "mrr": 0.18121693121693122,
+            "relevant_set_coverage_at_10": 0.24761904761904763,
+            "map_at_10": 0.18121693121693122,
+            "ndcg_at_10": 0.1970215833832259
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 105,
+            "average_ms": 9.516378094918938,
+            "p50_ms": 3.711099998326972,
+            "p95_ms": 25.443899998208508,
+            "max_ms": 101.24180000275373
+          }
+        },
+        "table": {
+          "question_count": 7,
+          "section": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "receipt": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 7,
+            "average_ms": 7.258699998991298,
+            "p50_ms": 7.795800003805198,
+            "p95_ms": 13.336999996681698,
+            "max_ms": 13.336999996681698
+          }
+        }
+      },
+      "by_report_type": {
+        "annual": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.4,
+            "recall_at_5": 0.4,
+            "recall_at_10": 0.4,
+            "mrr": 0.26666666666666666,
+            "relevant_set_coverage_at_10": 0.4,
+            "map_at_10": 0.26666666666666666,
+            "ndcg_at_10": 0.3
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.4,
+            "recall_at_3": 0.4,
+            "recall_at_5": 0.4,
+            "recall_at_10": 0.4,
+            "mrr": 0.4,
+            "relevant_set_coverage_at_10": 0.4,
+            "map_at_10": 0.4,
+            "ndcg_at_10": 0.4
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 4.469879996031523,
+            "p50_ms": 3.600600000936538,
+            "p95_ms": 8.153299990226515,
+            "max_ms": 8.153299990226515
+          }
+        },
+        "half": {
+          "question_count": 2,
+          "section": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 2,
+            "average_ms": 2.713749992835801,
+            "p50_ms": 2.4545999913243577,
+            "p95_ms": 2.9728999943472445,
+            "max_ms": 2.9728999943472445
+          }
+        },
+        "none": {
+          "question_count": 111,
+          "section": {
+            "question_count": 104,
+            "top1": 0.16346153846153846,
+            "recall_at_3": 0.17307692307692307,
+            "recall_at_5": 0.17307692307692307,
+            "recall_at_10": 0.18269230769230768,
+            "mrr": 0.16773504273504272,
+            "relevant_set_coverage_at_10": 0.18269230769230768,
+            "map_at_10": 0.16773504273504272,
+            "ndcg_at_10": 0.17116374995830752
+          },
+          "receipt": {
+            "question_count": 111,
+            "top1": 0.16216216216216217,
+            "recall_at_3": 0.2072072072072072,
+            "recall_at_5": 0.23423423423423423,
+            "recall_at_10": 0.25225225225225223,
+            "mrr": 0.18943943943943944,
+            "relevant_set_coverage_at_10": 0.25225225225225223,
+            "map_at_10": 0.18943943943943944,
+            "ndcg_at_10": 0.2043897860832317
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 111,
+            "average_ms": 13.631652252353216,
+            "p50_ms": 3.861200006213039,
+            "p95_ms": 62.903099998948164,
+            "max_ms": 391.80270000360906
+          }
+        },
+        "quarter": {
+          "question_count": 2,
+          "section": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 2,
+            "average_ms": 2.9831499996362254,
+            "p50_ms": 2.2396999993361533,
+            "p95_ms": 3.7265999999362975,
+            "max_ms": 3.7265999999362975
+          }
+        }
+      },
+      "by_source_type": {
+        "pdf": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 4.385740001453087,
+            "p50_ms": 2.469099999871105,
+            "p95_ms": 12.61279999744147,
+            "max_ms": 12.61279999744147
+          }
+        },
+        "xml": {
+          "question_count": 115,
+          "section": {
+            "question_count": 108,
+            "top1": 0.1574074074074074,
+            "recall_at_3": 0.17592592592592593,
+            "recall_at_5": 0.17592592592592593,
+            "recall_at_10": 0.18518518518518517,
+            "mrr": 0.1646090534979424,
+            "relevant_set_coverage_at_10": 0.18518518518518517,
+            "map_at_10": 0.1646090534979424,
+            "ndcg_at_10": 0.16945398144133317
+          },
+          "receipt": {
+            "question_count": 115,
+            "top1": 0.16521739130434782,
+            "recall_at_3": 0.20869565217391303,
+            "recall_at_5": 0.23478260869565218,
+            "recall_at_10": 0.25217391304347825,
+            "mrr": 0.19154589371980676,
+            "relevant_set_coverage_at_10": 0.25217391304347825,
+            "map_at_10": 0.19154589371980676,
+            "ndcg_at_10": 0.20597622830642365
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 115,
+            "average_ms": 13.260242608426463,
+            "p50_ms": 3.846199993859045,
+            "p95_ms": 62.903099998948164,
+            "max_ms": 391.80270000360906
+          }
+        }
+      },
+      "by_review_status": {
+        "ambiguous": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 4.176590000861324,
+            "p50_ms": 3.9586000057170168,
+            "p95_ms": 6.0545000014826655,
+            "max_ms": 6.0545000014826655
+          }
+        },
+        "needs_review": {
+          "question_count": 74,
+          "section": {
+            "question_count": 67,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 74,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 74,
+            "average_ms": 3.675148648334151,
+            "p50_ms": 3.3459999976912513,
+            "p95_ms": 7.795800003805198,
+            "max_ms": 13.336999996681698
+          }
+        },
+        "reviewed": {
+          "question_count": 36,
+          "section": {
+            "question_count": 36,
+            "top1": 0.5,
+            "recall_at_3": 0.5555555555555556,
+            "recall_at_5": 0.5555555555555556,
+            "recall_at_10": 0.5833333333333334,
+            "mrr": 0.5216049382716049,
+            "relevant_set_coverage_at_10": 0.5833333333333334,
+            "map_at_10": 0.5216049382716049,
+            "ndcg_at_10": 0.5361397221017773
+          },
+          "receipt": {
+            "question_count": 36,
+            "top1": 0.5555555555555556,
+            "recall_at_3": 0.6944444444444444,
+            "recall_at_5": 0.7777777777777778,
+            "recall_at_10": 0.8333333333333334,
+            "mrr": 0.6396604938271605,
+            "relevant_set_coverage_at_10": 0.8333333333333334,
+            "map_at_10": 0.6396604938271605,
+            "ndcg_at_10": 0.6857573959788533
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 36,
+            "average_ms": 34.25360277752689,
+            "p50_ms": 15.464500000234693,
+            "p95_ms": 101.24180000275373,
+            "max_ms": 391.80270000360906
+          }
+        }
+      },
+      "by_split": {
+        "development": {
+          "question_count": 56,
+          "section": {
+            "question_count": 51,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 56,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 56,
+            "average_ms": 3.730669642858889,
+            "p50_ms": 3.3860999974422157,
+            "p95_ms": 7.795800003805198,
+            "max_ms": 13.336999996681698
+          }
+        },
+        "held_out": {
+          "question_count": 28,
+          "section": {
+            "question_count": 26,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 28,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 28,
+            "average_ms": 3.7431928566158086,
+            "p50_ms": 3.382799986866303,
+            "p95_ms": 6.445700011681765,
+            "max_ms": 9.038799995323643
+          }
+        },
+        "regression": {
+          "question_count": 36,
+          "section": {
+            "question_count": 36,
+            "top1": 0.5,
+            "recall_at_3": 0.5555555555555556,
+            "recall_at_5": 0.5555555555555556,
+            "recall_at_10": 0.5833333333333334,
+            "mrr": 0.5216049382716049,
+            "relevant_set_coverage_at_10": 0.5833333333333334,
+            "map_at_10": 0.5216049382716049,
+            "ndcg_at_10": 0.5361397221017773
+          },
+          "receipt": {
+            "question_count": 36,
+            "top1": 0.5555555555555556,
+            "recall_at_3": 0.6944444444444444,
+            "recall_at_5": 0.7777777777777778,
+            "recall_at_10": 0.8333333333333334,
+            "mrr": 0.6396604938271605,
+            "relevant_set_coverage_at_10": 0.8333333333333334,
+            "map_at_10": 0.6396604938271605,
+            "ndcg_at_10": 0.6857573959788533
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 36,
+            "average_ms": 34.25360277752689,
+            "p50_ms": 15.464500000234693,
+            "p95_ms": 101.24180000275373,
+            "max_ms": 391.80270000360906
+          }
+        }
+      },
+      "failure_taxonomy": {
+        "gold_ambiguity": 10,
+        "korean_spacing": 9,
+        "lexical_mismatch": 26,
+        "metadata_filter": 7,
+        "pdf": 4,
+        "ranking": 6,
+        "semantic_paraphrase": 23,
+        "table_target": 7,
+        "tokenizer": 7
+      }
+    },
+    "trigram": {
+      "benchmark_version": "periodic-full-v1.0",
+      "question_count": 120,
+      "prediction_count": 120,
+      "overall": {
+        "question_count": 120,
+        "section": {
+          "question_count": 113,
+          "top1": 0.07079646017699115,
+          "recall_at_3": 0.09734513274336283,
+          "recall_at_5": 0.13274336283185842,
+          "recall_at_10": 0.1592920353982301,
+          "mrr": 0.09228121927236971,
+          "relevant_set_coverage_at_10": 0.1592920353982301,
+          "map_at_10": 0.09228121927236971,
+          "ndcg_at_10": 0.10786700781704368
+        },
+        "receipt": {
+          "question_count": 120,
+          "top1": 0.14166666666666666,
+          "recall_at_3": 0.19166666666666668,
+          "recall_at_5": 0.23333333333333334,
+          "recall_at_10": 0.275,
+          "mrr": 0.17833333333333332,
+          "relevant_set_coverage_at_10": 0.275,
+          "map_at_10": 0.17833333333333332,
+          "ndcg_at_10": 0.2009541474453472
+        },
+        "table": {
+          "question_count": 9,
+          "top1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "relevant_set_coverage_at_10": 0.0,
+          "map_at_10": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        "latency": {
+          "sample_count": 120,
+          "average_ms": 2554.6909458328932,
+          "p50_ms": 396.7689999990398,
+          "p95_ms": 15666.967099998146,
+          "max_ms": 25781.46130000823
+        }
+      },
+      "reviewed_only": {
+        "question_count": 36,
+        "section": {
+          "question_count": 36,
+          "top1": 0.16666666666666666,
+          "recall_at_3": 0.19444444444444445,
+          "recall_at_5": 0.2777777777777778,
+          "recall_at_10": 0.3055555555555556,
+          "mrr": 0.19814814814814816,
+          "relevant_set_coverage_at_10": 0.3055555555555556,
+          "map_at_10": 0.19814814814814816,
+          "ndcg_at_10": 0.2232575208249782
+        },
+        "receipt": {
+          "question_count": 36,
+          "top1": 0.4166666666666667,
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.6111111111111112,
+          "recall_at_10": 0.6944444444444444,
+          "mrr": 0.48904320987654315,
+          "relevant_set_coverage_at_10": 0.6944444444444444,
+          "map_at_10": 0.48904320987654315,
+          "ndcg_at_10": 0.5369963001734301
+        },
+        "table": {
+          "question_count": 2,
+          "top1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "relevant_set_coverage_at_10": 0.0,
+          "map_at_10": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        "latency": {
+          "sample_count": 36,
+          "average_ms": 3570.656616667192,
+          "p50_ms": 364.14780000632163,
+          "p95_ms": 17932.222100003855,
+          "max_ms": 25781.46130000823
+        }
+      },
+      "by_category": {
+        "ambiguous_similar_sections": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 744.9796500004595,
+            "p50_ms": 602.9734999901848,
+            "p95_ms": 2255.654399996274,
+            "max_ms": 2255.654399996274
+          }
+        },
+        "company_concept": {
+          "question_count": 15,
+          "section": {
+            "question_count": 15,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 15,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.06666666666666667,
+            "recall_at_10": 0.06666666666666667,
+            "mrr": 0.016666666666666666,
+            "relevant_set_coverage_at_10": 0.06666666666666667,
+            "map_at_10": 0.016666666666666666,
+            "ndcg_at_10": 0.028711770538226204
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 15,
+            "average_ms": 831.313360001271,
+            "p50_ms": 408.3329999994021,
+            "p95_ms": 3963.172799994936,
+            "max_ms": 3963.172799994936
+          }
+        },
+        "company_section_title": {
+          "question_count": 15,
+          "section": {
+            "question_count": 15,
+            "top1": 0.06666666666666667,
+            "recall_at_3": 0.13333333333333333,
+            "recall_at_5": 0.26666666666666666,
+            "recall_at_10": 0.3333333333333333,
+            "mrr": 0.12555555555555556,
+            "relevant_set_coverage_at_10": 0.3333333333333333,
+            "map_at_10": 0.12555555555555556,
+            "ndcg_at_10": 0.17377294610838817
+          },
+          "receipt": {
+            "question_count": 15,
+            "top1": 0.3333333333333333,
+            "recall_at_3": 0.5333333333333333,
+            "recall_at_5": 0.6666666666666666,
+            "recall_at_10": 0.7333333333333333,
+            "mrr": 0.4588888888888889,
+            "relevant_set_coverage_at_10": 0.7333333333333333,
+            "map_at_10": 0.4588888888888889,
+            "ndcg_at_10": 0.5245635799179158
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 15,
+            "average_ms": 2703.573806665372,
+            "p50_ms": 419.3076999945333,
+            "p95_ms": 13887.167699998827,
+            "max_ms": 13887.167699998827
+          }
+        },
+        "difficult_or_ambiguous": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 709.712920000311,
+            "p50_ms": 502.2966999968048,
+            "p95_ms": 1714.1061000002082,
+            "max_ms": 1714.1061000002082
+          }
+        },
+        "exact_phrase": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.2,
+            "recall_at_3": 0.3,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.7,
+            "mrr": 0.3044444444444444,
+            "relevant_set_coverage_at_10": 0.7,
+            "map_at_10": 0.3044444444444444,
+            "ndcg_at_10": 0.3951447938128655
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.3,
+            "recall_at_3": 0.4,
+            "recall_at_5": 0.6,
+            "recall_at_10": 0.8,
+            "mrr": 0.40444444444444444,
+            "relevant_set_coverage_at_10": 0.8,
+            "map_at_10": 0.40444444444444444,
+            "ndcg_at_10": 0.4951447938128656
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 338.8349500033655,
+            "p50_ms": 348.9133999974001,
+            "p95_ms": 420.6860999984201,
+            "max_ms": 420.6860999984201
+          }
+        },
+        "narrative_description": {
+          "question_count": 20,
+          "section": {
+            "question_count": 20,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 20,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 20,
+            "average_ms": 3179.671579998103,
+            "p50_ms": 415.456600007019,
+            "p95_ms": 14235.953600000357,
+            "max_ms": 17932.222100003855
+          }
+        },
+        "partial_korean_phrase": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.2,
+            "mrr": 0.061111111111111116,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.061111111111111116,
+            "ndcg_at_10": 0.09319597492354388
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 423.0659499982721,
+            "p50_ms": 345.8193999977084,
+            "p95_ms": 881.2900999910198,
+            "max_ms": 881.2900999910198
+          }
+        },
+        "pdf_fallback": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 126.72621999518014,
+            "p50_ms": 143.93329998711124,
+            "p95_ms": 225.89269999298267,
+            "max_ms": 225.89269999298267
+          }
+        },
+        "spacing_or_expression_variation": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.3,
+            "recall_at_3": 0.3,
+            "recall_at_5": 0.3,
+            "recall_at_10": 0.3,
+            "mrr": 0.3,
+            "relevant_set_coverage_at_10": 0.3,
+            "map_at_10": 0.3,
+            "ndcg_at_10": 0.3
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 432.43055999919306,
+            "p50_ms": 357.43650000949856,
+            "p95_ms": 936.1629999912111,
+            "max_ms": 936.1629999912111
+          }
+        },
+        "table_related": {
+          "question_count": 10,
+          "section": {
+            "question_count": 3,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.2,
+            "mrr": 0.11111111111111112,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.11111111111111112,
+            "ndcg_at_10": 0.13010299956639812
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 16572.532109999156,
+            "p50_ms": 15666.967099998146,
+            "p95_ms": 25781.46130000823,
+            "max_ms": 25781.46130000823
+          }
+        },
+        "year_report_filtered": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.4,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 0.45,
+            "relevant_set_coverage_at_10": 0.5,
+            "map_at_10": 0.45,
+            "ndcg_at_10": 0.4630929753571458
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.4,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 0.45,
+            "relevant_set_coverage_at_10": 0.5,
+            "map_at_10": 0.45,
+            "ndcg_at_10": 0.4630929753571458
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 64.55465000035474,
+            "p50_ms": 36.09100000176113,
+            "p95_ms": 127.35039999824949,
+            "max_ms": 127.35039999824949
+          }
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "question_count": 25,
+          "section": {
+            "question_count": 25,
+            "top1": 0.12,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.36,
+            "recall_at_10": 0.48,
+            "mrr": 0.19711111111111113,
+            "relevant_set_coverage_at_10": 0.48,
+            "map_at_10": 0.19711111111111113,
+            "ndcg_at_10": 0.2623216851901791
+          },
+          "receipt": {
+            "question_count": 25,
+            "top1": 0.32,
+            "recall_at_3": 0.48,
+            "recall_at_5": 0.64,
+            "recall_at_10": 0.76,
+            "mrr": 0.43711111111111106,
+            "relevant_set_coverage_at_10": 0.76,
+            "map_at_10": 0.43711111111111106,
+            "ndcg_at_10": 0.5127960654758957
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 25,
+            "average_ms": 1757.6782640005695,
+            "p50_ms": 365.3792999975849,
+            "p95_ms": 12508.31509999989,
+            "max_ms": 13887.167699998827
+          }
+        },
+        "hard": {
+          "question_count": 20,
+          "section": {
+            "question_count": 20,
+            "top1": 0.05,
+            "recall_at_3": 0.05,
+            "recall_at_5": 0.05,
+            "recall_at_10": 0.05,
+            "mrr": 0.05,
+            "relevant_set_coverage_at_10": 0.05,
+            "map_at_10": 0.05,
+            "ndcg_at_10": 0.05
+          },
+          "receipt": {
+            "question_count": 20,
+            "top1": 0.05,
+            "recall_at_3": 0.05,
+            "recall_at_5": 0.05,
+            "recall_at_10": 0.05,
+            "mrr": 0.05,
+            "relevant_set_coverage_at_10": 0.05,
+            "map_at_10": 0.05,
+            "ndcg_at_10": 0.05
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 20,
+            "average_ms": 581.5996099991025,
+            "p50_ms": 437.51930000144057,
+            "p95_ms": 1714.1061000002082,
+            "max_ms": 2255.654399996274
+          }
+        },
+        "medium": {
+          "question_count": 75,
+          "section": {
+            "question_count": 68,
+            "top1": 0.058823529411764705,
+            "recall_at_3": 0.07352941176470588,
+            "recall_at_5": 0.07352941176470588,
+            "recall_at_10": 0.07352941176470588,
+            "mrr": 0.0661764705882353,
+            "relevant_set_coverage_at_10": 0.07352941176470588,
+            "map_at_10": 0.0661764705882353,
+            "ndcg_at_10": 0.06810190814075673
+          },
+          "receipt": {
+            "question_count": 75,
+            "top1": 0.10666666666666667,
+            "recall_at_3": 0.13333333333333333,
+            "recall_at_5": 0.14666666666666667,
+            "recall_at_10": 0.17333333333333334,
+            "mrr": 0.1262962962962963,
+            "relevant_set_coverage_at_10": 0.17333333333333334,
+            "map_at_10": 0.1262962962962963,
+            "ndcg_at_10": 0.1372612807539236
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 75,
+            "average_ms": 3346.5195293326783,
+            "p50_ms": 400.68930000416003,
+            "p95_ms": 16753.91290000698,
+            "max_ms": 25781.46130000823
+          }
+        }
+      },
+      "by_retrieval_target": {
+        "either": {
+          "question_count": 3,
+          "section": {
+            "question_count": 3,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 3,
+            "top1": 0.3333333333333333,
+            "recall_at_3": 0.3333333333333333,
+            "recall_at_5": 0.3333333333333333,
+            "recall_at_10": 0.6666666666666666,
+            "mrr": 0.3703703703703704,
+            "relevant_set_coverage_at_10": 0.6666666666666666,
+            "map_at_10": 0.3703703703703704,
+            "ndcg_at_10": 0.4336766652213271
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 3,
+            "average_ms": 18326.698800000788,
+            "p50_ms": 16753.91290000698,
+            "p95_ms": 25781.46130000823,
+            "max_ms": 25781.46130000823
+          }
+        },
+        "pdf_page": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 126.72621999518014,
+            "p50_ms": 143.93329998711124,
+            "p95_ms": 225.89269999298267,
+            "max_ms": 225.89269999298267
+          }
+        },
+        "section": {
+          "question_count": 105,
+          "section": {
+            "question_count": 105,
+            "top1": 0.0761904761904762,
+            "recall_at_3": 0.10476190476190476,
+            "recall_at_5": 0.14285714285714285,
+            "recall_at_10": 0.17142857142857143,
+            "mrr": 0.09931216931216931,
+            "relevant_set_coverage_at_10": 0.17142857142857143,
+            "map_at_10": 0.09931216931216931,
+            "ndcg_at_10": 0.11608544650786605
+          },
+          "receipt": {
+            "question_count": 105,
+            "top1": 0.1523809523809524,
+            "recall_at_3": 0.20952380952380953,
+            "recall_at_5": 0.2571428571428571,
+            "recall_at_10": 0.29523809523809524,
+            "mrr": 0.19322751322751322,
+            "relevant_set_coverage_at_10": 0.29523809523809524,
+            "map_at_10": 0.19322751322751322,
+            "ndcg_at_10": 0.21727112093121603
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 105,
+            "average_ms": 1335.2758219045686,
+            "p50_ms": 387.3125000100117,
+            "p95_ms": 11485.650199989323,
+            "max_ms": 17932.222100003855
+          }
+        },
+        "table": {
+          "question_count": 7,
+          "section": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "receipt": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 7,
+            "average_ms": 15820.746385712742,
+            "p50_ms": 15666.967099998146,
+            "p95_ms": 16962.8684999916,
+            "max_ms": 16962.8684999916
+          }
+        }
+      },
+      "by_report_type": {
+        "annual": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.6,
+            "recall_at_3": 0.6,
+            "recall_at_5": 0.6,
+            "recall_at_10": 0.6,
+            "mrr": 0.6,
+            "relevant_set_coverage_at_10": 0.6,
+            "map_at_10": 0.6,
+            "ndcg_at_10": 0.6
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.6,
+            "recall_at_3": 0.6,
+            "recall_at_5": 0.6,
+            "recall_at_10": 0.6,
+            "mrr": 0.6,
+            "relevant_set_coverage_at_10": 0.6,
+            "map_at_10": 0.6,
+            "ndcg_at_10": 0.6
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 66.32827999710571,
+            "p50_ms": 36.09100000176113,
+            "p95_ms": 127.35039999824949,
+            "max_ms": 127.35039999824949
+          }
+        },
+        "half": {
+          "question_count": 2,
+          "section": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 2,
+            "average_ms": 34.552150005765725,
+            "p50_ms": 33.41780000482686,
+            "p95_ms": 35.68650000670459,
+            "max_ms": 35.68650000670459
+          }
+        },
+        "none": {
+          "question_count": 111,
+          "section": {
+            "question_count": 104,
+            "top1": 0.04807692307692308,
+            "recall_at_3": 0.0673076923076923,
+            "recall_at_5": 0.10576923076923077,
+            "recall_at_10": 0.1346153846153846,
+            "mrr": 0.06661324786324786,
+            "relevant_set_coverage_at_10": 0.1346153846153846,
+            "map_at_10": 0.06661324786324786,
+            "ndcg_at_10": 0.0822888666322546
+          },
+          "receipt": {
+            "question_count": 111,
+            "top1": 0.12612612612612611,
+            "recall_at_3": 0.17117117117117117,
+            "recall_at_5": 0.21621621621621623,
+            "recall_at_10": 0.26126126126126126,
+            "mrr": 0.16126126126126125,
+            "relevant_set_coverage_at_10": 0.26126126126126126,
+            "map_at_10": 0.16126126126126125,
+            "ndcg_at_10": 0.1845366481069388
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 111,
+            "average_ms": 2757.1510990986158,
+            "p50_ms": 417.0968999969773,
+            "p95_ms": 16318.257300008554,
+            "max_ms": 25781.46130000823
+          }
+        },
+        "quarter": {
+          "question_count": 2,
+          "section": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 0.25,
+            "relevant_set_coverage_at_10": 0.5,
+            "map_at_10": 0.25,
+            "ndcg_at_10": 0.31546487678572877
+          },
+          "receipt": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 0.25,
+            "relevant_set_coverage_at_10": 0.5,
+            "map_at_10": 0.25,
+            "ndcg_at_10": 0.31546487678572877
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 2,
+            "average_ms": 59.19790000189096,
+            "p50_ms": 57.70400000619702,
+            "p95_ms": 60.691799997584894,
+            "max_ms": 60.691799997584894
+          }
+        }
+      },
+      "by_source_type": {
+        "pdf": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 126.72621999518014,
+            "p50_ms": 143.93329998711124,
+            "p95_ms": 225.89269999298267,
+            "max_ms": 225.89269999298267
+          }
+        },
+        "xml": {
+          "question_count": 115,
+          "section": {
+            "question_count": 108,
+            "top1": 0.07407407407407407,
+            "recall_at_3": 0.10185185185185185,
+            "recall_at_5": 0.1388888888888889,
+            "recall_at_10": 0.16666666666666666,
+            "mrr": 0.09655349794238682,
+            "relevant_set_coverage_at_10": 0.16666666666666666,
+            "map_at_10": 0.09655349794238682,
+            "ndcg_at_10": 0.11286085077153644
+          },
+          "receipt": {
+            "question_count": 115,
+            "top1": 0.14782608695652175,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.24347826086956523,
+            "recall_at_10": 0.28695652173913044,
+            "mrr": 0.18608695652173912,
+            "relevant_set_coverage_at_10": 0.28695652173913044,
+            "map_at_10": 0.18608695652173912,
+            "ndcg_at_10": 0.20969128429079706
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 115,
+            "average_ms": 2660.2546295649677,
+            "p50_ms": 408.3329999994021,
+            "p95_ms": 16318.257300008554,
+            "max_ms": 25781.46130000823
+          }
+        }
+      },
+      "by_review_status": {
+        "ambiguous": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 744.9796500004595,
+            "p50_ms": 602.9734999901848,
+            "p95_ms": 2255.654399996274,
+            "max_ms": 2255.654399996274
+          }
+        },
+        "needs_review": {
+          "question_count": 74,
+          "section": {
+            "question_count": 67,
+            "top1": 0.014925373134328358,
+            "recall_at_3": 0.04477611940298507,
+            "recall_at_5": 0.05970149253731343,
+            "recall_at_10": 0.08955223880597014,
+            "mrr": 0.034245439469320064,
+            "relevant_set_coverage_at_10": 0.08955223880597014,
+            "map_at_10": 0.034245439469320064,
+            "ndcg_at_10": 0.04704031542726447
+          },
+          "receipt": {
+            "question_count": 74,
+            "top1": 0.013513513513513514,
+            "recall_at_3": 0.05405405405405406,
+            "recall_at_5": 0.06756756756756757,
+            "recall_at_10": 0.0945945945945946,
+            "mrr": 0.03776276276276276,
+            "relevant_set_coverage_at_10": 0.0945945945945946,
+            "map_at_10": 0.03776276276276276,
+            "ndcg_at_10": 0.05111663361078618
+          },
+          "table": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 74,
+            "average_ms": 2304.992956755725,
+            "p50_ms": 396.91270000184886,
+            "p95_ms": 15666.967099998146,
+            "max_ms": 16962.8684999916
+          }
+        },
+        "reviewed": {
+          "question_count": 36,
+          "section": {
+            "question_count": 36,
+            "top1": 0.16666666666666666,
+            "recall_at_3": 0.19444444444444445,
+            "recall_at_5": 0.2777777777777778,
+            "recall_at_10": 0.3055555555555556,
+            "mrr": 0.19814814814814816,
+            "relevant_set_coverage_at_10": 0.3055555555555556,
+            "map_at_10": 0.19814814814814816,
+            "ndcg_at_10": 0.2232575208249782
+          },
+          "receipt": {
+            "question_count": 36,
+            "top1": 0.4166666666666667,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.6111111111111112,
+            "recall_at_10": 0.6944444444444444,
+            "mrr": 0.48904320987654315,
+            "relevant_set_coverage_at_10": 0.6944444444444444,
+            "map_at_10": 0.48904320987654315,
+            "ndcg_at_10": 0.5369963001734301
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 36,
+            "average_ms": 3570.656616667192,
+            "p50_ms": 364.14780000632163,
+            "p95_ms": 17932.222100003855,
+            "max_ms": 25781.46130000823
+          }
+        }
+      },
+      "by_split": {
+        "development": {
+          "question_count": 56,
+          "section": {
+            "question_count": 51,
+            "top1": 0.0196078431372549,
+            "recall_at_3": 0.0392156862745098,
+            "recall_at_5": 0.0392156862745098,
+            "recall_at_10": 0.058823529411764705,
+            "mrr": 0.028104575163398694,
+            "relevant_set_coverage_at_10": 0.058823529411764705,
+            "map_at_10": 0.028104575163398694,
+            "ndcg_at_10": 0.03507970247682133
+          },
+          "receipt": {
+            "question_count": 56,
+            "top1": 0.017857142857142856,
+            "recall_at_3": 0.03571428571428571,
+            "recall_at_5": 0.03571428571428571,
+            "recall_at_10": 0.05357142857142857,
+            "mrr": 0.025595238095238095,
+            "relevant_set_coverage_at_10": 0.05357142857142857,
+            "map_at_10": 0.025595238095238095,
+            "ndcg_at_10": 0.031947586184248
+          },
+          "table": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 56,
+            "average_ms": 2307.9828303561953,
+            "p50_ms": 417.0968999969773,
+            "p95_ms": 16318.257300008554,
+            "max_ms": 16962.8684999916
+          }
+        },
+        "held_out": {
+          "question_count": 28,
+          "section": {
+            "question_count": 26,
+            "top1": 0.038461538461538464,
+            "recall_at_3": 0.07692307692307693,
+            "recall_at_5": 0.11538461538461539,
+            "recall_at_10": 0.15384615384615385,
+            "mrr": 0.07158119658119658,
+            "relevant_set_coverage_at_10": 0.15384615384615385,
+            "map_at_10": 0.07158119658119658,
+            "ndcg_at_10": 0.09087062720418584
+          },
+          "receipt": {
+            "question_count": 28,
+            "top1": 0.03571428571428571,
+            "recall_at_3": 0.10714285714285714,
+            "recall_at_5": 0.14285714285714285,
+            "recall_at_10": 0.17857142857142858,
+            "mrr": 0.08432539682539683,
+            "relevant_set_coverage_at_10": 0.17857142857142858,
+            "map_at_10": 0.08432539682539683,
+            "ndcg_at_10": 0.10691307360286748
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 28,
+            "average_ms": 1741.8655999993332,
+            "p50_ms": 408.3329999994021,
+            "p95_ms": 14525.841499998933,
+            "max_ms": 15666.967099998146
+          }
+        },
+        "regression": {
+          "question_count": 36,
+          "section": {
+            "question_count": 36,
+            "top1": 0.16666666666666666,
+            "recall_at_3": 0.19444444444444445,
+            "recall_at_5": 0.2777777777777778,
+            "recall_at_10": 0.3055555555555556,
+            "mrr": 0.19814814814814816,
+            "relevant_set_coverage_at_10": 0.3055555555555556,
+            "map_at_10": 0.19814814814814816,
+            "ndcg_at_10": 0.2232575208249782
+          },
+          "receipt": {
+            "question_count": 36,
+            "top1": 0.4166666666666667,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.6111111111111112,
+            "recall_at_10": 0.6944444444444444,
+            "mrr": 0.48904320987654315,
+            "relevant_set_coverage_at_10": 0.6944444444444444,
+            "map_at_10": 0.48904320987654315,
+            "ndcg_at_10": 0.5369963001734301
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 36,
+            "average_ms": 3570.656616667192,
+            "p50_ms": 364.14780000632163,
+            "p95_ms": 17932.222100003855,
+            "max_ms": 25781.46130000823
+          }
+        }
+      },
+      "failure_taxonomy": {
+        "gold_ambiguity": 9,
+        "korean_spacing": 10,
+        "lexical_mismatch": 21,
+        "metadata_filter": 5,
+        "pdf": 5,
+        "ranking": 12,
+        "semantic_paraphrase": 25,
+        "table_target": 7,
+        "tokenizer": 8
+      }
+    },
+    "combined": {
+      "benchmark_version": "periodic-full-v1.0",
+      "question_count": 120,
+      "prediction_count": 120,
+      "overall": {
+        "question_count": 120,
+        "section": {
+          "question_count": 113,
+          "top1": 0.08849557522123894,
+          "recall_at_3": 0.12389380530973451,
+          "recall_at_5": 0.1592920353982301,
+          "recall_at_10": 0.21238938053097345,
+          "mrr": 0.11562017137238376,
+          "relevant_set_coverage_at_10": 0.21238938053097345,
+          "map_at_10": 0.11562017137238376,
+          "ndcg_at_10": 0.1377750113964804
+        },
+        "receipt": {
+          "question_count": 120,
+          "top1": 0.11666666666666667,
+          "recall_at_3": 0.18333333333333332,
+          "recall_at_5": 0.225,
+          "recall_at_10": 0.2916666666666667,
+          "mrr": 0.16188492063492063,
+          "relevant_set_coverage_at_10": 0.2916666666666667,
+          "map_at_10": 0.16188492063492063,
+          "ndcg_at_10": 0.19207732741135045
+        },
+        "table": {
+          "question_count": 9,
+          "top1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "relevant_set_coverage_at_10": 0.0,
+          "map_at_10": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        "latency": {
+          "sample_count": 120,
+          "average_ms": 2159.076645000581,
+          "p50_ms": 395.7743000064511,
+          "p95_ms": 16253.144700007397,
+          "max_ms": 18211.02560000145
+        }
+      },
+      "reviewed_only": {
+        "question_count": 36,
+        "section": {
+          "question_count": 36,
+          "top1": 0.2222222222222222,
+          "recall_at_3": 0.2777777777777778,
+          "recall_at_5": 0.3611111111111111,
+          "recall_at_10": 0.4722222222222222,
+          "mrr": 0.2714065255731922,
+          "relevant_set_coverage_at_10": 0.4722222222222222,
+          "map_at_10": 0.2714065255731922,
+          "ndcg_at_10": 0.3171354209493213
+        },
+        "receipt": {
+          "question_count": 36,
+          "top1": 0.3333333333333333,
+          "recall_at_3": 0.4722222222222222,
+          "recall_at_5": 0.5833333333333334,
+          "recall_at_10": 0.75,
+          "mrr": 0.43421516754850087,
+          "relevant_set_coverage_at_10": 0.75,
+          "map_at_10": 0.43421516754850087,
+          "ndcg_at_10": 0.5074069000601077
+        },
+        "table": {
+          "question_count": 2,
+          "top1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "relevant_set_coverage_at_10": 0.0,
+          "map_at_10": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        "latency": {
+          "sample_count": 36,
+          "average_ms": 2468.9466333337705,
+          "p50_ms": 387.7834000013536,
+          "p95_ms": 16140.219199995045,
+          "max_ms": 16282.646899999236
+        }
+      },
+      "by_category": {
+        "ambiguous_similar_sections": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 719.1618099983316,
+            "p50_ms": 593.9293999981601,
+            "p95_ms": 2420.306800006074,
+            "max_ms": 2420.306800006074
+          }
+        },
+        "company_concept": {
+          "question_count": 15,
+          "section": {
+            "question_count": 15,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.06666666666666667,
+            "recall_at_10": 0.06666666666666667,
+            "mrr": 0.013333333333333334,
+            "relevant_set_coverage_at_10": 0.06666666666666667,
+            "map_at_10": 0.013333333333333334,
+            "ndcg_at_10": 0.025790187148969444
+          },
+          "receipt": {
+            "question_count": 15,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.13333333333333333,
+            "recall_at_10": 0.2,
+            "mrr": 0.04111111111111111,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.04111111111111111,
+            "ndcg_at_10": 0.07824910349439712
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 15,
+            "average_ms": 373.69780000008177,
+            "p50_ms": 361.5208999981405,
+            "p95_ms": 712.4848000094062,
+            "max_ms": 712.4848000094062
+          }
+        },
+        "company_section_title": {
+          "question_count": 15,
+          "section": {
+            "question_count": 15,
+            "top1": 0.06666666666666667,
+            "recall_at_3": 0.13333333333333333,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.4,
+            "mrr": 0.12296296296296297,
+            "relevant_set_coverage_at_10": 0.4,
+            "map_at_10": 0.12296296296296297,
+            "ndcg_at_10": 0.18440083036895324
+          },
+          "receipt": {
+            "question_count": 15,
+            "top1": 0.13333333333333333,
+            "recall_at_3": 0.3333333333333333,
+            "recall_at_5": 0.4,
+            "recall_at_10": 0.6,
+            "mrr": 0.2562962962962963,
+            "relevant_set_coverage_at_10": 0.6,
+            "map_at_10": 0.2562962962962963,
+            "ndcg_at_10": 0.3351914641784809
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 15,
+            "average_ms": 1861.912940001154,
+            "p50_ms": 470.66500000073574,
+            "p95_ms": 12640.412799999467,
+            "max_ms": 12640.412799999467
+          }
+        },
+        "difficult_or_ambiguous": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 539.2274799989536,
+            "p50_ms": 406.52699999918696,
+            "p95_ms": 1351.035799991223,
+            "max_ms": 1351.035799991223
+          }
+        },
+        "exact_phrase": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.2,
+            "recall_at_3": 0.3,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.7,
+            "mrr": 0.3044444444444444,
+            "relevant_set_coverage_at_10": 0.7,
+            "map_at_10": 0.3044444444444444,
+            "ndcg_at_10": 0.3951447938128655
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.2,
+            "recall_at_3": 0.3,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.7,
+            "mrr": 0.3044444444444444,
+            "relevant_set_coverage_at_10": 0.7,
+            "map_at_10": 0.3044444444444444,
+            "ndcg_at_10": 0.3951447938128655
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 333.3920600009151,
+            "p50_ms": 356.8335999880219,
+            "p95_ms": 426.7351000016788,
+            "max_ms": 426.7351000016788
+          }
+        },
+        "narrative_description": {
+          "question_count": 20,
+          "section": {
+            "question_count": 20,
+            "top1": 0.05,
+            "recall_at_3": 0.05,
+            "recall_at_5": 0.05,
+            "recall_at_10": 0.1,
+            "mrr": 0.05714285714285714,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.05714285714285714,
+            "ndcg_at_10": 0.06666666666666667
+          },
+          "receipt": {
+            "question_count": 20,
+            "top1": 0.05,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.15,
+            "mrr": 0.07380952380952381,
+            "relevant_set_coverage_at_10": 0.15,
+            "map_at_10": 0.07380952380952381,
+            "ndcg_at_10": 0.09166666666666666
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 20,
+            "average_ms": 1856.8870800016157,
+            "p50_ms": 411.6502000106266,
+            "p95_ms": 13025.62040000339,
+            "max_ms": 16140.219199995045
+          }
+        },
+        "partial_korean_phrase": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.05,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.05,
+            "ndcg_at_10": 0.06309297535714575
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 379.3407000004663,
+            "p50_ms": 378.5046999983024,
+            "p95_ms": 578.8197999936529,
+            "max_ms": 578.8197999936529
+          }
+        },
+        "pdf_fallback": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 109.98727999685798,
+            "p50_ms": 123.5644999978831,
+            "p95_ms": 189.02710000111256,
+            "max_ms": 189.02710000111256
+          }
+        },
+        "spacing_or_expression_variation": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 449.1072400036501,
+            "p50_ms": 369.5653000031598,
+            "p95_ms": 899.5452999952249,
+            "max_ms": 899.5452999952249
+          }
+        },
+        "table_related": {
+          "question_count": 10,
+          "section": {
+            "question_count": 3,
+            "top1": 0.3333333333333333,
+            "recall_at_3": 0.3333333333333333,
+            "recall_at_5": 0.3333333333333333,
+            "recall_at_10": 0.3333333333333333,
+            "mrr": 0.3333333333333333,
+            "relevant_set_coverage_at_10": 0.3333333333333333,
+            "map_at_10": 0.3333333333333333,
+            "ndcg_at_10": 0.3333333333333333
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.3,
+            "mrr": 0.2111111111111111,
+            "relevant_set_coverage_at_10": 0.3,
+            "map_at_10": 0.2111111111111111,
+            "ndcg_at_10": 0.23010299956639813
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 16565.397629998915,
+            "p50_ms": 16282.646899999236,
+            "p95_ms": 18211.02560000145,
+            "max_ms": 18211.02560000145
+          }
+        },
+        "year_report_filtered": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.3,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 0.38333333333333336,
+            "relevant_set_coverage_at_10": 0.5,
+            "map_at_10": 0.38333333333333336,
+            "ndcg_at_10": 0.4130929753571458
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.3,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 0.38333333333333336,
+            "relevant_set_coverage_at_10": 0.5,
+            "map_at_10": 0.38333333333333336,
+            "ndcg_at_10": 0.4130929753571458
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 70.72265000169864,
+            "p50_ms": 47.0904999965569,
+            "p95_ms": 129.67190000927076,
+            "max_ms": 129.67190000927076
+          }
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "question_count": 25,
+          "section": {
+            "question_count": 25,
+            "top1": 0.12,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.32,
+            "recall_at_10": 0.52,
+            "mrr": 0.19555555555555557,
+            "relevant_set_coverage_at_10": 0.52,
+            "map_at_10": 0.19555555555555557,
+            "ndcg_at_10": 0.26869841574651815
+          },
+          "receipt": {
+            "question_count": 25,
+            "top1": 0.16,
+            "recall_at_3": 0.32,
+            "recall_at_5": 0.44,
+            "recall_at_10": 0.64,
+            "mrr": 0.27555555555555555,
+            "relevant_set_coverage_at_10": 0.64,
+            "map_at_10": 0.27555555555555555,
+            "ndcg_at_10": 0.3591727960322348
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 25,
+            "average_ms": 1250.5045880010584,
+            "p50_ms": 395.7743000064511,
+            "p95_ms": 7807.177000009688,
+            "max_ms": 12640.412799999467
+          }
+        },
+        "hard": {
+          "question_count": 20,
+          "section": {
+            "question_count": 20,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "receipt": {
+            "question_count": 20,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 20,
+            "average_ms": 521.8845949981187,
+            "p50_ms": 406.52699999918696,
+            "p95_ms": 1351.035799991223,
+            "max_ms": 2420.306800006074
+          }
+        },
+        "medium": {
+          "question_count": 75,
+          "section": {
+            "question_count": 68,
+            "top1": 0.07352941176470588,
+            "recall_at_3": 0.10294117647058823,
+            "recall_at_5": 0.11764705882352941,
+            "recall_at_10": 0.1323529411764706,
+            "mrr": 0.0908263305322129,
+            "relevant_set_coverage_at_10": 0.1323529411764706,
+            "map_at_10": 0.0908263305322129,
+            "ndcg_at_10": 0.10075170432557842
+          },
+          "receipt": {
+            "question_count": 75,
+            "top1": 0.10666666666666667,
+            "recall_at_3": 0.16,
+            "recall_at_5": 0.18666666666666668,
+            "recall_at_10": 0.22666666666666666,
+            "mrr": 0.1404973544973545,
+            "relevant_set_coverage_at_10": 0.22666666666666666,
+            "map_at_10": 0.1404973544973545,
+            "ndcg_at_10": 0.16093279184741582
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 75,
+            "average_ms": 2898.5185440010778,
+            "p50_ms": 391.2013999943156,
+            "p95_ms": 16807.55159999535,
+            "max_ms": 18211.02560000145
+          }
+        }
+      },
+      "by_retrieval_target": {
+        "either": {
+          "question_count": 3,
+          "section": {
+            "question_count": 3,
+            "top1": 0.3333333333333333,
+            "recall_at_3": 0.3333333333333333,
+            "recall_at_5": 0.3333333333333333,
+            "recall_at_10": 0.3333333333333333,
+            "mrr": 0.3333333333333333,
+            "relevant_set_coverage_at_10": 0.3333333333333333,
+            "map_at_10": 0.3333333333333333,
+            "ndcg_at_10": 0.3333333333333333
+          },
+          "receipt": {
+            "question_count": 3,
+            "top1": 0.6666666666666666,
+            "recall_at_3": 0.6666666666666666,
+            "recall_at_5": 0.6666666666666666,
+            "recall_at_10": 1.0,
+            "mrr": 0.7037037037037037,
+            "relevant_set_coverage_at_10": 1.0,
+            "map_at_10": 0.7037037037037037,
+            "ndcg_at_10": 0.7670099985546605
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 3,
+            "average_ms": 15629.504099997575,
+            "p50_ms": 15576.568699994823,
+            "p95_ms": 16282.646899999236,
+            "max_ms": 16282.646899999236
+          }
+        },
+        "pdf_page": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 109.98727999685798,
+            "p50_ms": 123.5644999978831,
+            "p95_ms": 189.02710000111256,
+            "max_ms": 189.02710000111256
+          }
+        },
+        "section": {
+          "question_count": 105,
+          "section": {
+            "question_count": 105,
+            "top1": 0.0761904761904762,
+            "recall_at_3": 0.11428571428571428,
+            "recall_at_5": 0.1523809523809524,
+            "recall_at_10": 0.20952380952380953,
+            "mrr": 0.1053817082388511,
+            "relevant_set_coverage_at_10": 0.20952380952380953,
+            "map_at_10": 0.1053817082388511,
+            "ndcg_at_10": 0.1292245360743075
+          },
+          "receipt": {
+            "question_count": 105,
+            "top1": 0.10476190476190476,
+            "recall_at_3": 0.18095238095238095,
+            "recall_at_5": 0.22857142857142856,
+            "recall_at_10": 0.29523809523809524,
+            "mrr": 0.1553817082388511,
+            "relevant_set_coverage_at_10": 0.29523809523809524,
+            "map_at_10": 0.1553817082388511,
+            "ndcg_at_10": 0.1880785647018864
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 105,
+            "average_ms": 884.6217590485355,
+            "p50_ms": 391.2013999943156,
+            "p95_ms": 2390.796899999259,
+            "max_ms": 16140.219199995045
+          }
+        },
+        "table": {
+          "question_count": 7,
+          "section": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "receipt": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 7,
+            "average_ms": 16966.49485714235,
+            "p50_ms": 16807.55159999535,
+            "p95_ms": 18211.02560000145,
+            "max_ms": 18211.02560000145
+          }
+        }
+      },
+      "by_report_type": {
+        "annual": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.6,
+            "recall_at_3": 0.6,
+            "recall_at_5": 0.6,
+            "recall_at_10": 0.6,
+            "mrr": 0.6,
+            "relevant_set_coverage_at_10": 0.6,
+            "map_at_10": 0.6,
+            "ndcg_at_10": 0.6
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.6,
+            "recall_at_3": 0.6,
+            "recall_at_5": 0.6,
+            "recall_at_10": 0.6,
+            "mrr": 0.6,
+            "relevant_set_coverage_at_10": 0.6,
+            "map_at_10": 0.6,
+            "ndcg_at_10": 0.6
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 73.45568000164349,
+            "p50_ms": 47.0904999965569,
+            "p95_ms": 129.67190000927076,
+            "max_ms": 129.67190000927076
+          }
+        },
+        "half": {
+          "question_count": 2,
+          "section": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "receipt": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 2,
+            "average_ms": 40.246250006021,
+            "p50_ms": 37.35300000698771,
+            "p95_ms": 43.13950000505429,
+            "max_ms": 43.13950000505429
+          }
+        },
+        "none": {
+          "question_count": 111,
+          "section": {
+            "question_count": 104,
+            "top1": 0.0673076923076923,
+            "recall_at_3": 0.09615384615384616,
+            "recall_at_5": 0.1346153846153846,
+            "recall_at_10": 0.19230769230769232,
+            "mrr": 0.09197191697191696,
+            "relevant_set_coverage_at_10": 0.19230769230769232,
+            "map_at_10": 0.09197191697191696,
+            "ndcg_at_10": 0.1147850628291426
+          },
+          "receipt": {
+            "question_count": 111,
+            "top1": 0.0990990990990991,
+            "recall_at_3": 0.16216216216216217,
+            "recall_at_5": 0.2072072072072072,
+            "recall_at_10": 0.27927927927927926,
+            "mrr": 0.14347919347919347,
+            "relevant_set_coverage_at_10": 0.27927927927927926,
+            "map_at_10": 0.14347919347919347,
+            "ndcg_at_10": 0.1749400859080234
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 111,
+            "average_ms": 2328.844463063466,
+            "p50_ms": 411.6502000106266,
+            "p95_ms": 16282.646899999236,
+            "max_ms": 18211.02560000145
+          }
+        },
+        "quarter": {
+          "question_count": 2,
+          "section": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 0.25,
+            "relevant_set_coverage_at_10": 0.5,
+            "map_at_10": 0.25,
+            "ndcg_at_10": 0.31546487678572877
+          },
+          "receipt": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 0.25,
+            "relevant_set_coverage_at_10": 0.5,
+            "map_at_10": 0.25,
+            "ndcg_at_10": 0.31546487678572877
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 2,
+            "average_ms": 69.8455500023556,
+            "p50_ms": 69.48089999787044,
+            "p95_ms": 70.21020000684075,
+            "max_ms": 70.21020000684075
+          }
+        }
+      },
+      "by_source_type": {
+        "pdf": {
+          "question_count": 5,
+          "section": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "receipt": {
+            "question_count": 5,
+            "top1": 0.2,
+            "recall_at_3": 0.2,
+            "recall_at_5": 0.2,
+            "recall_at_10": 0.2,
+            "mrr": 0.2,
+            "relevant_set_coverage_at_10": 0.2,
+            "map_at_10": 0.2,
+            "ndcg_at_10": 0.2
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 5,
+            "average_ms": 109.98727999685798,
+            "p50_ms": 123.5644999978831,
+            "p95_ms": 189.02710000111256,
+            "max_ms": 189.02710000111256
+          }
+        },
+        "xml": {
+          "question_count": 115,
+          "section": {
+            "question_count": 108,
+            "top1": 0.08333333333333333,
+            "recall_at_3": 0.12037037037037036,
+            "recall_at_5": 0.1574074074074074,
+            "recall_at_10": 0.21296296296296297,
+            "mrr": 0.11171369782480893,
+            "relevant_set_coverage_at_10": 0.21296296296296297,
+            "map_at_10": 0.11171369782480893,
+            "ndcg_at_10": 0.1348942248870582
+          },
+          "receipt": {
+            "question_count": 115,
+            "top1": 0.11304347826086956,
+            "recall_at_3": 0.1826086956521739,
+            "recall_at_5": 0.22608695652173913,
+            "recall_at_10": 0.2956521739130435,
+            "mrr": 0.16022774327122155,
+            "relevant_set_coverage_at_10": 0.2956521739130435,
+            "map_at_10": 0.16022774327122155,
+            "ndcg_at_10": 0.19173286338575699
+          },
+          "table": {
+            "question_count": 9,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 115,
+            "average_ms": 2248.1674869572644,
+            "p50_ms": 404.06840000650845,
+            "p95_ms": 16282.646899999236,
+            "max_ms": 18211.02560000145
+          }
+        }
+      },
+      "by_review_status": {
+        "ambiguous": {
+          "question_count": 10,
+          "section": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "receipt": {
+            "question_count": 10,
+            "top1": 0.1,
+            "recall_at_3": 0.1,
+            "recall_at_5": 0.1,
+            "recall_at_10": 0.1,
+            "mrr": 0.1,
+            "relevant_set_coverage_at_10": 0.1,
+            "map_at_10": 0.1,
+            "ndcg_at_10": 0.1
+          },
+          "table": {
+            "question_count": 0,
+            "top1": null,
+            "recall_at_3": null,
+            "recall_at_5": null,
+            "recall_at_10": null,
+            "mrr": null,
+            "relevant_set_coverage_at_10": null,
+            "map_at_10": null,
+            "ndcg_at_10": null
+          },
+          "latency": {
+            "sample_count": 10,
+            "average_ms": 719.1618099983316,
+            "p50_ms": 593.9293999981601,
+            "p95_ms": 2420.306800006074,
+            "max_ms": 2420.306800006074
+          }
+        },
+        "needs_review": {
+          "question_count": 74,
+          "section": {
+            "question_count": 67,
+            "top1": 0.014925373134328358,
+            "recall_at_3": 0.04477611940298507,
+            "recall_at_5": 0.05970149253731343,
+            "recall_at_10": 0.08955223880597014,
+            "mrr": 0.034245439469320064,
+            "relevant_set_coverage_at_10": 0.08955223880597014,
+            "map_at_10": 0.034245439469320064,
+            "ndcg_at_10": 0.04704031542726447
+          },
+          "receipt": {
+            "question_count": 74,
+            "top1": 0.013513513513513514,
+            "recall_at_3": 0.05405405405405406,
+            "recall_at_5": 0.06756756756756757,
+            "recall_at_10": 0.0945945945945946,
+            "mrr": 0.03776276276276276,
+            "relevant_set_coverage_at_10": 0.0945945945945946,
+            "map_at_10": 0.03776276276276276,
+            "ndcg_at_10": 0.05111663361078618
+          },
+          "table": {
+            "question_count": 7,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 74,
+            "average_ms": 2202.9121689198732,
+            "p50_ms": 362.11799999000505,
+            "p95_ms": 16807.55159999535,
+            "max_ms": 18211.02560000145
+          }
+        },
+        "reviewed": {
+          "question_count": 36,
+          "section": {
+            "question_count": 36,
+            "top1": 0.2222222222222222,
+            "recall_at_3": 0.2777777777777778,
+            "recall_at_5": 0.3611111111111111,
+            "recall_at_10": 0.4722222222222222,
+            "mrr": 0.2714065255731922,
+            "relevant_set_coverage_at_10": 0.4722222222222222,
+            "map_at_10": 0.2714065255731922,
+            "ndcg_at_10": 0.3171354209493213
+          },
+          "receipt": {
+            "question_count": 36,
+            "top1": 0.3333333333333333,
+            "recall_at_3": 0.4722222222222222,
+            "recall_at_5": 0.5833333333333334,
+            "recall_at_10": 0.75,
+            "mrr": 0.43421516754850087,
+            "relevant_set_coverage_at_10": 0.75,
+            "map_at_10": 0.43421516754850087,
+            "ndcg_at_10": 0.5074069000601077
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 36,
+            "average_ms": 2468.9466333337705,
+            "p50_ms": 387.7834000013536,
+            "p95_ms": 16140.219199995045,
+            "max_ms": 16282.646899999236
+          }
+        }
+      },
+      "by_split": {
+        "development": {
+          "question_count": 56,
+          "section": {
+            "question_count": 51,
+            "top1": 0.0196078431372549,
+            "recall_at_3": 0.0392156862745098,
+            "recall_at_5": 0.0392156862745098,
+            "recall_at_10": 0.058823529411764705,
+            "mrr": 0.028104575163398694,
+            "relevant_set_coverage_at_10": 0.058823529411764705,
+            "map_at_10": 0.028104575163398694,
+            "ndcg_at_10": 0.03507970247682133
+          },
+          "receipt": {
+            "question_count": 56,
+            "top1": 0.017857142857142856,
+            "recall_at_3": 0.03571428571428571,
+            "recall_at_5": 0.03571428571428571,
+            "recall_at_10": 0.05357142857142857,
+            "mrr": 0.025595238095238095,
+            "relevant_set_coverage_at_10": 0.05357142857142857,
+            "map_at_10": 0.025595238095238095,
+            "ndcg_at_10": 0.031947586184248
+          },
+          "table": {
+            "question_count": 5,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 56,
+            "average_ms": 2120.175819643659,
+            "p50_ms": 391.2013999943156,
+            "p95_ms": 16807.55159999535,
+            "max_ms": 18211.02560000145
+          }
+        },
+        "held_out": {
+          "question_count": 28,
+          "section": {
+            "question_count": 26,
+            "top1": 0.038461538461538464,
+            "recall_at_3": 0.07692307692307693,
+            "recall_at_5": 0.11538461538461539,
+            "recall_at_10": 0.15384615384615385,
+            "mrr": 0.07158119658119658,
+            "relevant_set_coverage_at_10": 0.15384615384615385,
+            "map_at_10": 0.07158119658119658,
+            "ndcg_at_10": 0.09087062720418584
+          },
+          "receipt": {
+            "question_count": 28,
+            "top1": 0.03571428571428571,
+            "recall_at_3": 0.10714285714285714,
+            "recall_at_5": 0.14285714285714285,
+            "recall_at_10": 0.17857142857142858,
+            "mrr": 0.08432539682539683,
+            "relevant_set_coverage_at_10": 0.17857142857142858,
+            "map_at_10": 0.08432539682539683,
+            "ndcg_at_10": 0.10691307360286748
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 28,
+            "average_ms": 1838.4740250003233,
+            "p50_ms": 446.03899998764973,
+            "p95_ms": 16056.710699995165,
+            "max_ms": 17298.615899999277
+          }
+        },
+        "regression": {
+          "question_count": 36,
+          "section": {
+            "question_count": 36,
+            "top1": 0.2222222222222222,
+            "recall_at_3": 0.2777777777777778,
+            "recall_at_5": 0.3611111111111111,
+            "recall_at_10": 0.4722222222222222,
+            "mrr": 0.2714065255731922,
+            "relevant_set_coverage_at_10": 0.4722222222222222,
+            "map_at_10": 0.2714065255731922,
+            "ndcg_at_10": 0.3171354209493213
+          },
+          "receipt": {
+            "question_count": 36,
+            "top1": 0.3333333333333333,
+            "recall_at_3": 0.4722222222222222,
+            "recall_at_5": 0.5833333333333334,
+            "recall_at_10": 0.75,
+            "mrr": 0.43421516754850087,
+            "relevant_set_coverage_at_10": 0.75,
+            "map_at_10": 0.43421516754850087,
+            "ndcg_at_10": 0.5074069000601077
+          },
+          "table": {
+            "question_count": 2,
+            "top1": 0.0,
+            "recall_at_3": 0.0,
+            "recall_at_5": 0.0,
+            "recall_at_10": 0.0,
+            "mrr": 0.0,
+            "relevant_set_coverage_at_10": 0.0,
+            "map_at_10": 0.0,
+            "ndcg_at_10": 0.0
+          },
+          "latency": {
+            "sample_count": 36,
+            "average_ms": 2468.9466333337705,
+            "p50_ms": 387.7834000013536,
+            "p95_ms": 16140.219199995045,
+            "max_ms": 16282.646899999236
+          }
+        }
+      },
+      "failure_taxonomy": {
+        "gold_ambiguity": 9,
+        "korean_spacing": 10,
+        "lexical_mismatch": 21,
+        "metadata_filter": 5,
+        "pdf": 4,
+        "ranking": 8,
+        "semantic_paraphrase": 23,
+        "table_target": 7,
+        "tokenizer": 9
+      }
+    }
+  },
+  "query_plans": {
+    "section_fts": {
+      "planning_ms": 12.15,
+      "execution_ms": 911.816
+    },
+    "section_trigram": {
+      "planning_ms": 12.026,
+      "execution_ms": 7117.69
+    },
+    "section_combined": {
+      "planning_ms": 12.714,
+      "execution_ms": 7263.831
+    },
+    "table_fts": {
+      "planning_ms": 7.993,
+      "execution_ms": 714.95
+    },
+    "table_trigram": {
+      "planning_ms": 0.348,
+      "execution_ms": 13741.574
+    },
+    "table_combined": {
+      "planning_ms": 1.133,
+      "execution_ms": 12100.646
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "sample_size": 24,
+  "length_min": 31,
+  "length_max": 5985,
+  "pdf_chunks": 1,
+  "first_load": {
+    "sections": 24,
+    "chunks": 24,
+    "unique_texts": 24,
+    "embedded": 24,
+    "reused": 0,
+    "input_tokens": 23013
+  },
+  "second_load": {
+    "sections": 24,
+    "chunks": 24,
+    "unique_texts": 24,
+    "embedded": 0,
+    "reused": 24,
+    "input_tokens": 0
+  },
+  "first_provider_stats": {
+    "requests": 25,
+    "successes": 25,
+    "failed_attempts": 0,
+    "permanent_failures": 0,
+    "retries": 0,
+    "rate_limit_retries": 0,
+    "input_tokens": 26162
+  },
+  "second_provider_stats": {
+    "requests": 0,
+    "successes": 0,
+    "failed_attempts": 0,
+    "permanent_failures": 0,
+    "retries": 0,
+    "rate_limit_retries": 0,
+    "input_tokens": 0
+  },
+  "rate_limit_header_names": [
+    "x-ratelimit-limit-requests",
+    "x-ratelimit-limit-tokens",
+    "x-ratelimit-remaining-requests",
+    "x-ratelimit-remaining-tokens",
+    "x-ratelimit-reset-requests",
+    "x-ratelimit-reset-tokens"
+  ],
+  "integrity": {
+    "vectors": 24,
+    "dimension_1024": 24,
+    "null_vectors": 0,
+    "non_finite_vectors": 0
+  },
+  "smoke_search": {
+    "result_count": 1,
+    "top_section_id": 145833,
+    "expected_section_id": 145833,
+    "top_score": 0.9836017596747486,
+    "metadata_filters": [
+      "company",
+      "receipt_no",
+      "loader_namespace"
+    ],
+    "provenance_complete": true
+  }
+}

@@ -1,9 +1,13 @@
 .env
+.git/
 __pycache__/
 *.pyc
 eval/runs/
 logs/
 data/
+artifacts/
+analysis_results*
+reports/
 role2_final*
 mirae-asset-feature-retrieval-v1/
 sections_full.jsonl

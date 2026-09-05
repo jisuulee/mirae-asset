@@ -1,0 +1,52 @@
+{
+  "target_receipts": 1054,
+  "disclosure_mapped": 1054,
+  "receipts_with_main_file": 1054,
+  "source_files_mapped": 1472,
+  "sections": 82862,
+  "tables": 1401752,
+  "parent_links_expected": 67921,
+  "parent_links_resolved": 67921,
+  "parent_resolution_rate": 1.0,
+  "section_provenance_missing": 0,
+  "table_provenance_missing": 0,
+  "orphan_sections": 0,
+  "orphan_tables": 0,
+  "duplicate_sections": 0,
+  "duplicate_tables": 0,
+  "hierarchy_only_sections": 8222,
+  "table_only_sections": 42194,
+  "pdf_sections": 1784,
+  "pdf_page_provenance_missing": 0,
+  "contracts": 1106,
+  "correction_links": 461,
+  "file_roles": {
+    "alternative_html": 3,
+    "audit_report": 208,
+    "consolidated_audit_report": 207,
+    "main": 1054
+  },
+  "content_by_file_role": [
+    {
+      "file_role": "alternative_html",
+      "sections": 0,
+      "tables": 0
+    },
+    {
+      "file_role": "audit_report",
+      "sections": 0,
+      "tables": 0
+    },
+    {
+      "file_role": "consolidated_audit_report",
+      "sections": 0,
+      "tables": 0
+    },
+    {
+      "file_role": "main",
+      "sections": 82862,
+      "tables": 1401752
+    }
+  ],
+  "passed": true
+}

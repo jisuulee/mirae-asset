@@ -1,0 +1,1565 @@
+{
+  "taxonomy": {
+    "candidate_found_but_low_rank": 42,
+    "expansion_drift": 9,
+    "still_no_candidate": 11,
+    "ambiguous_gold": 9
+  },
+  "failures": [
+    {
+      "question_id": "full-pk-001",
+      "query": "사업의 개요",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "사업의개요",
+          "source": "no_space"
+        },
+        {
+          "query": "1. 사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. (금융업)사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. (제조서비스업)사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 6,
+      "expanded_union_gold_rank": 13,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-002",
+      "query": "회사 연혁",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "회사연혁",
+          "source": "no_space"
+        },
+        {
+          "query": "2. 회사의 연혁",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 1,
+      "expanded_union_gold_rank": 6,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 6,
+      "expanded_final_gold_rank": 3,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-pk-003",
+      "query": "주요 제품 및 서비스",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "주요제품및서비스",
+          "source": "no_space"
+        },
+        {
+          "query": "2. 주요 제품 및 서비스",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. (제조서비스업)주요 제품 및 서비스",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "4. 주요 상품 및 서비스(상세)",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "4-3. 주요 상품 및 서비스 - 외환업무",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 3,
+      "expanded_union_gold_rank": 10,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 10,
+      "expanded_final_gold_rank": 7,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-pk-006",
+      "query": "재무에 관한 사항",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "재무에관한사항",
+          "source": "no_space"
+        },
+        {
+          "query": "iii. 재무에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "8. 기타 재무에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "5. 정관에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "6. 배당에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 53,
+      "expanded_union_gold_rank": 52,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-007",
+      "query": "반도체",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [],
+      "original_union_gold_rank": 30,
+      "expanded_union_gold_rank": 30,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-008",
+      "query": "지적재산권",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "4. 지적재산권 보유현황",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 4,
+      "expanded_union_gold_rank": 5,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 5,
+      "expanded_final_gold_rank": 2,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-pk-011",
+      "query": "고객의 요구",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "고객의요구",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-pk-012",
+      "query": "??? ??",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "?????",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-pk-015",
+      "query": "연결재무제표",
+      "category": "year_report_filtered",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "연결 재무제표",
+          "source": "corpus_word_decomposition"
+        },
+        {
+          "query": "2. 연결재무제표",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "3. 연결재무제표 주석",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 연결재무제표 작성기준 (연결)",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "4. 재무제표",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 15,
+      "expanded_union_gold_rank": 14,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-016",
+      "query": "I. 회사의 개요",
+      "category": "exact_phrase",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "i.회사의개요",
+          "source": "no_space"
+        },
+        {
+          "query": "1. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 회사의 연혁",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "vi. 이사회 등 회사의 기관에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 45,
+      "expanded_union_gold_rank": 63,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-017",
+      "query": "1. 회사의 개요",
+      "category": "exact_phrase",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "1.회사의개요",
+          "source": "no_space"
+        },
+        {
+          "query": "i. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 회사의 연혁",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. (금융업)사업의 개요",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 11,
+      "expanded_union_gold_rank": 16,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-020",
+      "query": "회사 의 개요",
+      "category": "spacing_or_expression_variation",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "회사의개요",
+          "source": "no_space"
+        },
+        {
+          "query": "1. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "i. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 개요",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 27,
+      "expanded_union_gold_rank": 17,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-021",
+      "query": "１. 회사의 개요",
+      "category": "spacing_or_expression_variation",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "1.회사의개요",
+          "source": "no_space"
+        },
+        {
+          "query": "i. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 회사의 연혁",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. (금융업)사업의 개요",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 11,
+      "expanded_union_gold_rank": 16,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-022",
+      "query": "회사 의   개요",
+      "category": "spacing_or_expression_variation",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "회사의개요",
+          "source": "no_space"
+        },
+        {
+          "query": "1. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "i. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 개요",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 27,
+      "expanded_union_gold_rank": 17,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-024",
+      "query": "재무위험",
+      "category": "partial_korean_phrase",
+      "difficulty": "medium",
+      "expansions": [],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-pk-025",
+      "query": "일반적 사항",
+      "category": "partial_korean_phrase",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "일반적사항",
+          "source": "no_space"
+        },
+        {
+          "query": "5. 정관에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "6. 배당에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 이사회에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "iii. 재무에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 2,
+      "expanded_union_gold_rank": 49,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-029",
+      "query": "재고자산",
+      "category": "table_related",
+      "difficulty": "medium",
+      "expansions": [],
+      "original_union_gold_rank": 38,
+      "expanded_union_gold_rank": 38,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-034",
+      "query": "연결재무제표 주석",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "연결재무제표주석",
+          "source": "no_space"
+        },
+        {
+          "query": "연결 재무제표",
+          "source": "corpus_word_decomposition"
+        },
+        {
+          "query": "3. 연결재무제표 주석",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 연결재무제표",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "5. 재무제표 주석",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 20,
+      "expanded_union_gold_rank": 30,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-pk-035",
+      "query": "회사 의 개요",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "회사의개요",
+          "source": "no_space"
+        },
+        {
+          "query": "1. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "i. 회사의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 사업의 개요",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 개요",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 36,
+      "expanded_union_gold_rank": 10,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-company_section_title-013",
+      "query": "이마트의 ‘임원 및 직원’ 관련 항목을 찾아줘.",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "이마트의‘임원및직원’관련항목을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "1. 임원 및 직원 등의 현황",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "viii. 임원 및 직원 등에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 5,
+      "expanded_union_gold_rank": 7,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 7,
+      "expanded_final_gold_rank": 9,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-company_section_title-014",
+      "query": "미래에셋증권의 ‘대주주 등과의 거래’ 관련 항목을 찾아줘.",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "미래에셋증권의‘대주주등과의거래’관련항목을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "x. 대주주 등과의 거래내용",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 11,
+      "expanded_union_gold_rank": 14,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-company_section_title-015",
+      "query": "세아베스틸지주의 ‘감사제도’ 관련 항목을 찾아줘.",
+      "category": "company_section_title",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "세아베스틸지주의‘감사제도’관련항목을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 90,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-company_concept-006",
+      "query": "기아에서 회사가 보유한 상표·특허 같은 지식재산을 어떻게 관리하는지 설명한 부분을 찾아줘.",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "기아에서회사가보유한상표·특허같은지식재산을어떻게관리하는지설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 51,
+      "expanded_union_gold_rank": 53,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-company_concept-008",
+      "query": "LG이노텍에서 회사의 핵심 제품군과 각 제품이 어떤 시장을 대상으로 하는지 설명한 부분을 찾아줘.",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "lg이노텍에서회사의핵심제품군과각제품이어떤시장을대상으로하는지설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 75,
+      "expanded_union_gold_rank": 73,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-company_concept-009",
+      "query": "POSCO홀딩스에서 제품 생산에 필요한 핵심 원재료와 가격 변동 요인을 설명한 부분을 찾아줘.",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "posco홀딩스에서제품생산에필요한핵심원재료와가격변동요인을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-company_concept-010",
+      "query": "한국항공우주에서 제품이나 서비스를 고객에게 판매하는 조직과 유통 경로를 설명한 부분을 찾아줘.",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "한국항공우주에서제품이나서비스를고객에게판매하는조직과유통경로를설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 52,
+      "expanded_union_gold_rank": 60,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-company_concept-011",
+      "query": "에코프로비엠에서 주주환원을 위해 배당과 자사주 정책을 어떻게 운영하는지 설명한 부분을 찾아줘.",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "에코프로비엠에서주주환원을위해배당과자사주정책을어떻게운영하는지설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 8,
+      "expanded_union_gold_rank": 9,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 9,
+      "expanded_final_gold_rank": 10,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-company_concept-013",
+      "query": "OCI홀딩스에서 현재 진행 중인 소송이 회사 재무에 미칠 불확실성을 설명한 부분을 찾아줘.",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "oci홀딩스에서현재진행중인소송이회사재무에미칠불확실성을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 45,
+      "expanded_union_gold_rank": 48,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-company_concept-015",
+      "query": "NAVER에서 게임 사업에 적용되는 규제와 회사가 준수해야 하는 의무를 설명한 부분을 찾아줘.",
+      "category": "company_concept",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "naver에서게임사업에적용되는규제와회사가준수해야하는의무를설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 40,
+      "expanded_union_gold_rank": 44,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-005",
+      "query": "LIG디펜스앤에어로스페이스에서 유도무기와 감시정찰 장비 등 방산 제품 구성을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "lig디펜스앤에어로스페이스에서유도무기와감시정찰장비등방산제품구성을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-narrative_description-006",
+      "query": "두산에너빌리티에서 조선회사가 건조하는 상선·해양설비·특수선의 종류를 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "두산에너빌리티에서조선회사가건조하는상선·해양설비·특수선의종류를설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 48,
+      "expanded_union_gold_rank": 41,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-008",
+      "query": "우리금융지주에서 금융회사가 고객 기반과 계열사 협업을 경쟁력으로 활용하는 내용을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "우리금융지주에서금융회사가고객기반과계열사협업을경쟁력으로활용하는내용을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 54,
+      "expanded_union_gold_rank": 56,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-010",
+      "query": "JYP Ent에서 공급망 운영을 위해 공급자 금융이나 구매 약정을 사용하는 내용을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "jypent에서공급망운영을위해공급자금융이나구매약정을사용하는내용을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 28,
+      "expanded_union_gold_rank": 17,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-011",
+      "query": "와이지엔터테인먼트에서 회사의 생산설비 가동률과 생산능력 산정 방법을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "와이지엔터테인먼트에서회사의생산설비가동률과생산능력산정방법을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 77,
+      "expanded_union_gold_rank": 79,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-012",
+      "query": "삼성생명에서 종속회사 변동과 해외 법인을 포함한 연결대상 회사 현황을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "삼성생명에서종속회사변동과해외법인을포함한연결대상회사현황을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 27,
+      "expanded_union_gold_rank": 22,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-013",
+      "query": "카카오에서 시장·신용·유동성 위험을 식별하고 관리하는 조직과 정책을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "카카오에서시장·신용·유동성위험을식별하고관리하는조직과정책을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 53,
+      "expanded_union_gold_rank": 45,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-015",
+      "query": "NC에서 임직원의 안전사고를 줄이기 위한 관리체계와 교육 활동을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "nc에서임직원의안전사고를줄이기위한관리체계와교육활동을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 78,
+      "expanded_union_gold_rank": 77,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-016",
+      "query": "알테오젠에서 회사의 해외 생산·판매 거점과 글로벌 사업 운영 현황을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "알테오젠에서회사의해외생산·판매거점과글로벌사업운영현황을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-narrative_description-017",
+      "query": "레인보우로보틱스에서 차입금과 회사채를 통해 자금을 조달한 내역을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "레인보우로보틱스에서차입금과회사채를통해자금을조달한내역을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 29,
+      "expanded_union_gold_rank": 29,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-018",
+      "query": "현대건설에서 공정가치를 수준별로 구분해 금융상품을 평가하는 기준을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "현대건설에서공정가치를수준별로구분해금융상품을평가하는기준을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 81,
+      "expanded_union_gold_rank": 81,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-019",
+      "query": "효성중공업에서 매출채권 손실 가능성을 반영하기 위한 대손충당금 정책을 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "효성중공업에서매출채권손실가능성을반영하기위한대손충당금정책을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 82,
+      "expanded_union_gold_rank": 75,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-narrative_description-020",
+      "query": "현대자동차에서 관계회사와의 거래 및 채권·채무 규모를 설명한 부분을 찾아줘.",
+      "category": "narrative_description",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "현대자동차에서관계회사와의거래및채권·채무규모를설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-exact_phrase-006",
+      "query": "한미반도체 보고서에서 ‘2. 감사제도에 관한 사항’ 항목을 찾아줘.",
+      "category": "exact_phrase",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "한미반도체보고서에서‘2.감사제도에관한사항’항목을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "2. 감사제도에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "1. 외부감사에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 내부통제에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "2. 우발부채 등에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 15,
+      "expanded_union_gold_rank": 25,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-exact_phrase-007",
+      "query": "두산퓨얼셀 보고서에서 ‘5. 정관에 관한 사항’ 항목을 찾아줘.",
+      "category": "exact_phrase",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "두산퓨얼셀보고서에서‘5.정관에관한사항’항목을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "5. 정관에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 42,
+      "expanded_union_gold_rank": 13,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-exact_phrase-008",
+      "query": "HMM 보고서에서 ‘5. 위험관리 및 파생거래’ 항목을 찾아줘.",
+      "category": "exact_phrase",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "hmm보고서에서‘5.위험관리및파생거래’항목을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "5. 위험관리 및 파생거래",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "5. (제조서비스업)위험관리 및 파생거래",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 5,
+      "expanded_union_gold_rank": 11,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-exact_phrase-010",
+      "query": "두산로보틱스 보고서에서 ‘7-1. 증권의 발행을 통한 자금조달 실적’ 항목을 찾아줘.",
+      "category": "exact_phrase",
+      "difficulty": "easy",
+      "expansions": [
+        {
+          "query": "두산로보틱스보고서에서‘7-1.증권의발행을통한자금조달실적’항목을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "7-1. 증권의 발행을 통한 자금조달 실적",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "7. 증권의 발행을 통한 자금조달에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "7-2. 증권의 발행을 통해 조달된 자금의 사용실적",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 12,
+      "expanded_union_gold_rank": 15,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-partial_korean_phrase-005",
+      "query": "현대모비스 공시 제목에서 자기주식 부분만 기억나는데 해당 내용을 찾아줘.",
+      "category": "partial_korean_phrase",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "현대모비스공시제목에서자기주식부분만기억나는데해당내용을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-partial_korean_phrase-006",
+      "query": "하이브 공시 제목에서 주요 제품 및 서비 부분만 기억나는데 해당 내용을 찾아줘.",
+      "category": "partial_korean_phrase",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "하이브공시제목에서주요제품및서비부분만기억나는데해당내용을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 34,
+      "expanded_union_gold_rank": 32,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-partial_korean_phrase-007",
+      "query": "LG에너지솔루션 공시 제목에서 우발부채 등에 관한 부분만 기억나는데 해당 내용을 찾아줘.",
+      "category": "partial_korean_phrase",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "lg에너지솔루션공시제목에서우발부채등에관한부분만기억나는데해당내용을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "2. 우발부채 등에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 7,
+      "expanded_union_gold_rank": 10,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 10,
+      "expanded_final_gold_rank": 10,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-partial_korean_phrase-008",
+      "query": "한화솔루션 공시 제목에서 연결재무제표 주석 부분만 기억나는데 해당 내용을 찾아줘.",
+      "category": "partial_korean_phrase",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "한화솔루션공시제목에서연결재무제표주석부분만기억나는데해당내용을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "연결 재무제표",
+          "source": "corpus_word_decomposition"
+        },
+        {
+          "query": "3. 연결재무제표 주석",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": 60,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-partial_korean_phrase-009",
+      "query": "LG유플러스 공시 제목에서 감사제도에 관한 사 부분만 기억나는데 해당 내용을 찾아줘.",
+      "category": "partial_korean_phrase",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "lg유플러스공시제목에서감사제도에관한사부분만기억나는데해당내용을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "2. 감사제도에 관한 사항",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": 10,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-spacing_or_expression_variation-004",
+      "query": "한전기술 공시에서 ‘원 재료 및 생산설비’처럼 띄어 쓴 항목을 찾아줘.",
+      "category": "spacing_or_expression_variation",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "한전기술공시에서‘원재료및생산설비’처럼띄어쓴항목을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "3. 원재료 및 생산설비",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 12,
+      "expanded_union_gold_rank": 15,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-spacing_or_expression_variation-006",
+      "query": "한화에어로스페이스 공시에서 ‘주 요 지적재산권 현황(상세)’처럼 띄어 쓴 항목을 찾아줘.",
+      "category": "spacing_or_expression_variation",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "한화에어로스페이스공시에서‘주요지적재산권현황(상세)’처럼띄어쓴항목을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-spacing_or_expression_variation-007",
+      "query": "대우건설 공시에서 ‘대 주주 등과의 거래내용’처럼 띄어 쓴 항목을 찾아줘.",
+      "category": "spacing_or_expression_variation",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "대우건설공시에서‘대주주등과의거래내용’처럼띄어쓴항목을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "거래 내용",
+          "source": "corpus_word_decomposition"
+        },
+        {
+          "query": "x. 대주주 등과의 거래내용",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 3,
+      "expanded_union_gold_rank": 9,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-year_report_filtered-005",
+      "query": "현대모비스의 2025년 자기주식 내용을 찾아줘.",
+      "category": "year_report_filtered",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "현대모비스의2025년자기주식내용을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "still_no_candidate"
+    },
+    {
+      "question_id": "full-year_report_filtered-006",
+      "query": "삼성바이오로직스의 2025년 위험관리 및 파생거래 내용을 찾아줘.",
+      "category": "year_report_filtered",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "삼성바이오로직스의2025년위험관리및파생거래내용을찾아줘.",
+          "source": "no_space"
+        },
+        {
+          "query": "5. 위험관리 및 파생거래",
+          "source": "corpus_title_path_ngram"
+        },
+        {
+          "query": "5. (제조서비스업)위험관리 및 파생거래",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": 1,
+      "expanded_union_gold_rank": 2,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 2,
+      "expanded_final_gold_rank": 2,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-year_report_filtered-009",
+      "query": "SK하이닉스의 2023년 주주총회 내용을 찾아줘.",
+      "category": "year_report_filtered",
+      "difficulty": "medium",
+      "expansions": [
+        {
+          "query": "sk하이닉스의2023년주주총회내용을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 5,
+      "expanded_union_gold_rank": 6,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 6,
+      "expanded_final_gold_rank": 7,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-ambi-001",
+      "query": "LG이노텍 공시에서 ‘27. 주당손익’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "lg이노텍공시에서‘27.주당손익’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-ambi-002",
+      "query": "KB금융 공시에서 ‘20-B. 주식기준보상’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "kb금융공시에서‘20-b.주식기준보상’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-ambi-003",
+      "query": "효성중공업 공시에서 ‘28. 기타충당부채, 우발부채 및 우발자산에 대한 주석 - 별도’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "효성중공업공시에서‘28.기타충당부채,우발부채및우발자산에대한주석-별도’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        },
+        {
+          "query": "기타 충당부채",
+          "source": "corpus_word_decomposition"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-ambi-004",
+      "query": "에스엠 공시에서 ‘35. 특수관계자 - 연결 (연결)’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "에스엠공시에서‘35.특수관계자-연결(연결)’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        },
+        {
+          "query": "35. 특수관계자 등과의 거래 (연결)",
+          "source": "corpus_title_path_ngram"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-ambi-005",
+      "query": "한화에어로스페이스 공시에서 ‘45. 보고기간 후 사건 (연결)’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "한화에어로스페이스공시에서‘45.보고기간후사건(연결)’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-ambi-006",
+      "query": "케이티 공시에서 ‘13. 충당부채’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "케이티공시에서‘13.충당부채’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-ambi-008",
+      "query": "한화솔루션 공시에서 ‘3. 중요한 회계정책 정보 (연결)’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "한화솔루션공시에서‘3.중요한회계정책정보(연결)’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-ambi-009",
+      "query": "한화솔루션 공시에서 ‘27. 범주별 금융상품 (금융업) (연결)’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "한화솔루션공시에서‘27.범주별금융상품(금융업)(연결)’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-ambi-010",
+      "query": "한화오션 공시에서 ‘38. 사업결합 및 사업양수 (연결)’에 해당하는 내용을 찾아줘. 특정 연도 하나로 한정하지 않아.",
+      "category": "ambiguous_similar_sections",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "한화오션공시에서‘38.사업결합및사업양수(연결)’에해당하는내용을찾아줘.특정연도하나로한정하지않아.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": null,
+      "expanded_union_gold_rank": null,
+      "rank_movement": "unchanged",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "ambiguous_gold"
+    },
+    {
+      "question_id": "full-difficult_or_ambiguous-001",
+      "query": "메리츠금융지주에서 회사가 예상하지 못한 시장 변화로 자금 지급 능력에 문제가 생기지 않도록 관리하는 내용을 찾아줘.",
+      "category": "difficult_or_ambiguous",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "메리츠금융지주에서회사가예상하지못한시장변화로자금지급능력에문제가생기지않도록관리하는내용을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 12,
+      "expanded_union_gold_rank": 14,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-difficult_or_ambiguous-002",
+      "query": "LG생활건강에서 회계상 추정이 달라질 때 금융상품 평가액이 바뀔 수 있음을 설명한 부분을 찾아줘.",
+      "category": "difficult_or_ambiguous",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "lg생활건강에서회계상추정이달라질때금융상품평가액이바뀔수있음을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 52,
+      "expanded_union_gold_rank": 32,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-difficult_or_ambiguous-003",
+      "query": "LG씨엔에스에서 제품을 직접 만드는 대신 고객 요구에 맞춘 기술 인력과 장비를 조합해 제공하는 사업을 설명한 부분을 찾아줘.",
+      "category": "difficult_or_ambiguous",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "lg씨엔에스에서제품을직접만드는대신고객요구에맞춘기술인력과장비를조합해제공하는사업을설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 33,
+      "expanded_union_gold_rank": 41,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    },
+    {
+      "question_id": "full-difficult_or_ambiguous-004",
+      "query": "두산에너빌리티에서 장기적인 주주 보상을 위해 이익 배분과 자기주식 활용을 함께 설명한 부분을 찾아줘.",
+      "category": "difficult_or_ambiguous",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "두산에너빌리티에서장기적인주주보상을위해이익배분과자기주식활용을함께설명한부분을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 1,
+      "expanded_union_gold_rank": 2,
+      "rank_movement": "worsened",
+      "expanded_hybrid_gold_rank": 2,
+      "expanded_final_gold_rank": 2,
+      "failure_category": "expansion_drift"
+    },
+    {
+      "question_id": "full-difficult_or_ambiguous-005",
+      "query": "삼성생명에서 재판 결과를 예측할 수 없어 추정 손실을 부채로 반영한 내용을 찾아줘.",
+      "category": "difficult_or_ambiguous",
+      "difficulty": "hard",
+      "expansions": [
+        {
+          "query": "삼성생명에서재판결과를예측할수없어추정손실을부채로반영한내용을찾아줘.",
+          "source": "no_space"
+        }
+      ],
+      "original_union_gold_rank": 17,
+      "expanded_union_gold_rank": 16,
+      "rank_movement": "improved",
+      "expanded_hybrid_gold_rank": null,
+      "expanded_final_gold_rank": null,
+      "failure_category": "candidate_found_but_low_rank"
+    }
+  ]
+}

@@ -67,7 +67,7 @@ jobs:
           APP_DIR=/opt/mirae-asset
           APP_NAME=disclosure-agent
           NEW_IMAGE="$APP_NAME:$DEPLOY_SHA"
-          DB_COMPOSE="$APP_DIR/mirae-asset-feature-retrieval-v1/mirae-asset-feature-retrieval-v1/docker-compose.yml"
+          DB_COMPOSE="$APP_DIR/docker-compose.yml"
 
           cd "$APP_DIR"
           test -s .env || { echo "Missing $APP_DIR/.env"; exit 1; }

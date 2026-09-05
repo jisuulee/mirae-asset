@@ -1,0 +1,133 @@
+{
+  "ceiling": {
+    "10": {
+      "original_union": 54,
+      "three_way_union": 64,
+      "new_title": 10,
+      "none": 49,
+      "fts+title_combined": 13,
+      "fts+vector+title_combined": 3,
+      "title_combined": 10,
+      "no_channel_hit": 49,
+      "fts": 5,
+      "vector": 24,
+      "vector+title_combined": 9,
+      "eligible": 113,
+      "original_recall": 0.4778761061946903,
+      "three_way_recall": 0.5663716814159292
+    },
+    "20": {
+      "original_union": 66,
+      "three_way_union": 71,
+      "new_title": 5,
+      "none": 42,
+      "fts+vector+title_combined": 9,
+      "fts+title_combined": 11,
+      "no_channel_hit": 42,
+      "fts+vector": 6,
+      "title_combined": 5,
+      "vector": 26,
+      "vector+title_combined": 14,
+      "eligible": 113,
+      "original_recall": 0.584070796460177,
+      "three_way_recall": 0.6283185840707964
+    },
+    "50": {
+      "original_union": 80,
+      "three_way_union": 82,
+      "new_title": 2,
+      "none": 31,
+      "fts+vector+title_combined": 11,
+      "fts+title_combined": 9,
+      "fts+vector": 7,
+      "no_channel_hit": 31,
+      "vector+title_combined": 17,
+      "vector": 36,
+      "title_combined": 2,
+      "eligible": 113,
+      "original_recall": 0.7079646017699115,
+      "three_way_recall": 0.7256637168141593
+    },
+    "100": {
+      "original_union": 92,
+      "three_way_union": 94,
+      "new_title": 2,
+      "none": 19,
+      "fts+vector+title_combined": 12,
+      "fts+title_combined": 8,
+      "fts+vector": 7,
+      "no_channel_hit": 19,
+      "vector+title_combined": 17,
+      "vector": 48,
+      "title_combined": 2,
+      "eligible": 113,
+      "original_recall": 0.8141592920353983,
+      "three_way_recall": 0.831858407079646
+    }
+  },
+  "newly_recovered": {
+    "10": [
+      "full-pk-006",
+      "full-pk-020",
+      "full-pk-022",
+      "full-pk-029",
+      "full-pk-030",
+      "full-pk-034",
+      "full-pk-035",
+      "full-exact_phrase-005",
+      "full-ambi-002",
+      "full-ambi-003"
+    ],
+    "20": [
+      "full-pk-020",
+      "full-pk-022",
+      "full-pk-035",
+      "full-ambi-002",
+      "full-ambi-003"
+    ],
+    "50": [
+      "full-ambi-002",
+      "full-ambi-003"
+    ],
+    "100": [
+      "full-ambi-002",
+      "full-ambi-003"
+    ]
+  },
+  "subsets": {
+    "top100_neither": {
+      "questions": 21,
+      "title_candidate_recovered": 2,
+      "question_ids": [
+        "full-ambi-002",
+        "full-ambi-003"
+      ]
+    },
+    "semantic_mismatch": {
+      "questions": 36,
+      "title_candidate_recovered": 2,
+      "question_ids": [
+        "full-ambi-002",
+        "full-ambi-003"
+      ]
+    },
+    "lexical_mismatch": {
+      "questions": 56,
+      "title_candidate_recovered": 2,
+      "question_ids": [
+        "full-ambi-002",
+        "full-ambi-003"
+      ]
+    },
+    "partial_korean_phrase": {
+      "questions": 10,
+      "title_candidate_recovered": 0,
+      "question_ids": []
+    },
+    "company_section_title": {
+      "questions": 15,
+      "title_candidate_recovered": 0,
+      "question_ids": []
+    }
+  }
+}

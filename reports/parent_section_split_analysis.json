@@ -1,0 +1,348 @@
+[
+  {
+    "question_id": "full-pk-008",
+    "current_parent_rank": 11,
+    "aggregated_parent_rank": 11,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 11,
+        "vector_chunk_id": 2409,
+        "score": 0.49488022134961174
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 16283,
+        "chunk_count": 3,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "gold_chunk_retrieved_but_parent_misranked"
+  },
+  {
+    "question_id": "full-pk-031",
+    "current_parent_rank": 6,
+    "aggregated_parent_rank": 6,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 6,
+        "vector_chunk_id": 2394,
+        "score": 0.6259302989008555
+      },
+      {
+        "rank": 44,
+        "vector_chunk_id": 2395,
+        "score": 0.3851984012004146
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 12505,
+        "chunk_count": 3,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": null
+  },
+  {
+    "question_id": "full-pk-034",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [],
+    "gold_shapes": [
+      {
+        "body_length": 98951,
+        "chunk_count": 17,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "semantic_mismatch"
+  },
+  {
+    "question_id": "full-company_concept-006",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [],
+    "gold_shapes": [
+      {
+        "body_length": 10026,
+        "chunk_count": 2,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "semantic_mismatch"
+  },
+  {
+    "question_id": "full-company_concept-008",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [],
+    "gold_shapes": [
+      {
+        "body_length": 19598,
+        "chunk_count": 4,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "semantic_mismatch"
+  },
+  {
+    "question_id": "full-company_concept-009",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [],
+    "gold_shapes": [
+      {
+        "body_length": 63852,
+        "chunk_count": 11,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "no_gold_chunk_retrieved"
+  },
+  {
+    "question_id": "full-company_concept-015",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 40,
+        "vector_chunk_id": 8464,
+        "score": 0.513986124549884
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 30693,
+        "chunk_count": 6,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "gold_chunk_retrieved_but_parent_misranked"
+  },
+  {
+    "question_id": "full-narrative_description-005",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [],
+    "gold_shapes": [
+      {
+        "body_length": 10213,
+        "chunk_count": 2,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "no_gold_chunk_retrieved"
+  },
+  {
+    "question_id": "full-narrative_description-006",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 48,
+        "vector_chunk_id": 19960,
+        "score": 0.5430207920107541
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 46564,
+        "chunk_count": 11,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "gold_chunk_retrieved_but_parent_misranked"
+  },
+  {
+    "question_id": "full-narrative_description-008",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [],
+    "gold_shapes": [
+      {
+        "body_length": 29986,
+        "chunk_count": 6,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "semantic_mismatch"
+  },
+  {
+    "question_id": "full-narrative_description-010",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 28,
+        "vector_chunk_id": 24140,
+        "score": 0.4944919494314739
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 29541,
+        "chunk_count": 5,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "gold_chunk_retrieved_but_parent_misranked"
+  },
+  {
+    "question_id": "full-narrative_description-016",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [],
+    "gold_shapes": [
+      {
+        "body_length": 11397,
+        "chunk_count": 2,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "no_gold_chunk_retrieved"
+  },
+  {
+    "question_id": "full-narrative_description-017",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 29,
+        "vector_chunk_id": 13498,
+        "score": 0.574030530633869
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 26534,
+        "chunk_count": 5,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "gold_chunk_retrieved_but_parent_misranked"
+  },
+  {
+    "question_id": "full-narrative_description-018",
+    "current_parent_rank": null,
+    "aggregated_parent_rank": null,
+    "rank_change": 0,
+    "gold_raw_chunk_hits": [],
+    "gold_shapes": [
+      {
+        "body_length": 18329,
+        "chunk_count": 4,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "semantic_mismatch"
+  },
+  {
+    "question_id": "full-spacing_or_expression_variation-010",
+    "current_parent_rank": 9,
+    "aggregated_parent_rank": 10,
+    "rank_change": -1,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 9,
+        "vector_chunk_id": 8692,
+        "score": 0.5335360139984028
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 10623,
+        "chunk_count": 2,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "insufficient_multiple_chunk_signal"
+  },
+  {
+    "question_id": "full-difficult_or_ambiguous-001",
+    "current_parent_rank": 12,
+    "aggregated_parent_rank": 10,
+    "rank_change": 2,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 13,
+        "vector_chunk_id": 27317,
+        "score": 0.6191267216872884
+      },
+      {
+        "rank": 37,
+        "vector_chunk_id": 27315,
+        "score": 0.6063652595364055
+      },
+      {
+        "rank": 39,
+        "vector_chunk_id": 27316,
+        "score": 0.6060347291203388
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 23957,
+        "chunk_count": 5,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": null
+  },
+  {
+    "question_id": "full-difficult_or_ambiguous-005",
+    "current_parent_rank": 17,
+    "aggregated_parent_rank": 15,
+    "rank_change": 2,
+    "gold_raw_chunk_hits": [
+      {
+        "rank": 19,
+        "vector_chunk_id": 25856,
+        "score": 0.5488174164131501
+      },
+      {
+        "rank": 29,
+        "vector_chunk_id": 25860,
+        "score": 0.5360361360832764
+      }
+    ],
+    "gold_shapes": [
+      {
+        "body_length": 73941,
+        "chunk_count": 13,
+        "split": true,
+        "long": true
+      }
+    ],
+    "failure_category": "gold_chunk_retrieved_but_parent_misranked"
+  }
+]
