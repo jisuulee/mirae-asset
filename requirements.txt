@@ -4,3 +4,5 @@ python-dotenv>=1.0
 psycopg2-binary>=2.9
 fastapi>=0.110
 uvicorn[standard]>=0.29
+lxml==6.1.1
+pypdf==6.16.1
