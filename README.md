@@ -222,8 +222,6 @@ python integration_check.py
 uvicorn server:app --host 127.0.0.1 --port 8000
 ```
 
-[검색 호출 예제](examples/retrieval_handoff_demo.py) · [V1 회귀 실행](eval/run_retrieval_v1_freeze_benchmark.py) · [라우터 평가](eval/evaluate_question_router.py). 기존 결과 재현에는 동일 코퍼스·정답셋·캐시 조건이 필요합니다.
-
 ## 팀 역할
 
 | 담당 | 구현 범위 |
@@ -232,12 +230,3 @@ uvicorn server:app --host 127.0.0.1 --port 8000
 | 팀원 · 공시 전처리 | 원천 공시 전처리·정규화·정정 관계 처리 파이프라인 |
 | 팀원 · LLM Agent | HyperCLOVA X 연동, 에이전트 루프, 도구 호출, 답변 생성·검증 |
 | 팀원 · API·인프라 | FastAPI 서버, Docker 및 NCP 배포 workflow |
-
-팀 프로젝트를 개인 기여 중심으로 설명하는 포트폴리오 복사본이며, 기존 Git 커밋 기록과 팀원 기여를 보존합니다.
-
-## 현재 한계와 다음 과제
-
-- Retrieval V1 evidence 인터페이스와 팀 API Agent 연결은 후속 통합 과제입니다. [통합 계약](docs/retrieval_to_llm_handoff.md)
-- 후보 120문항 중 84문항은 독립 검토가 미완료이며, 현재 채널 Top100 어디에도 정답 후보가 없는 질문이 19개 남아 있습니다. [평가·실패 분석](docs/retrieval_v1_freeze.md)
-- reranker는 규칙 기반이며 의미적 불일치와 외부 embedding API 지연 편차가 남아 있습니다. 검색 평가와 서비스 전체 답변 평가를 구분합니다.
-- 코퍼스·DB 덤프는 기본 실행 구성에 포함되지 않습니다. 데이터 재배포 조건과 팀 코드 공개·라이선스 범위는 별도로 확인해야 합니다.
